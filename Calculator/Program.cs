@@ -21,6 +21,7 @@ namespace Maths
             Console.Write("Do you want to + - * /? ");
             string operation = Console.ReadLine();
 
+            //If else statements will determine the answers
             if (operation == "+")
             {
                 Console.WriteLine("Answer: " + (firstNum + secondNum));
