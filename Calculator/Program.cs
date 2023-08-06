@@ -13,6 +13,7 @@ namespace Maths
             Console.Write("Input the first number: ");
             double firstNum = double.Parse(Console.ReadLine());
 
+             //Ask the user for the second number
             Console.Write("Input the second number: ");
             double secondNum = double.Parse(Console.ReadLine());
 
