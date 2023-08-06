@@ -6,6 +6,8 @@ namespace Maths
     {
         static void Main(string[] args)
         {
+            //Console.Write allows you to stay on the same line in the terminal as compared to Console.WriteLine which 
+            //places user in the next line like /n
             Console.Write("Input the first number: ");
             double firstNum = double.Parse(Console.ReadLine());
 
