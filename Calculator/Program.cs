@@ -17,6 +17,7 @@ namespace Maths
             Console.Write("Input the second number: ");
             double secondNum = double.Parse(Console.ReadLine());
 
+            //Ask the user which operator they would want to user
             Console.Write("Do you want to + - * /? ");
             string operation = Console.ReadLine();
 
