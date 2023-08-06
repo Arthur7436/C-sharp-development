@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/HelloWorldProject
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/HelloWorldProject.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/HelloWorldProject.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/HelloWorldProject.dll
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/ref/HelloWorldProject.dll
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/bin/Debug/net6.0/HelloWorldProject.pdb
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.dll
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/ref/HelloWorldProject.dll
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.pdb
+/home/arthur/Desktop/Self_Development/Challenger/HelloWorld/obj/Debug/net6.0/HelloWorldProject.genruntimeconfig.cache
