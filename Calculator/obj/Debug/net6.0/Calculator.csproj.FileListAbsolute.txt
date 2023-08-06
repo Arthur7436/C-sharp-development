@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/Calculator
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/Calculator.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/Calculator.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/Calculator.dll
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/ref/Calculator.dll
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/bin/Debug/net6.0/Calculator.pdb
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.dll
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/ref/Calculator.dll
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.pdb
+/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/Debug/net6.0/Calculator.genruntimeconfig.cache
