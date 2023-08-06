@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/Maths/Maths.csproj",
+      "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/Calculator/Maths.csproj",
       "projectName": "Maths",
-      "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/Maths/Maths.csproj",
+      "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/Calculator/Maths.csproj",
       "packagesPath": "/home/arthur/.nuget/packages/",
-      "outputPath": "/home/arthur/Desktop/Self_Development/Challenger/Maths/obj/",
+      "outputPath": "/home/arthur/Desktop/Self_Development/Challenger/Calculator/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/arthur/.nuget/NuGet/NuGet.Config"

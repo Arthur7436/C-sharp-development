@@ -8,16 +8,20 @@ namespace Maths
         {
             Console.Write("Input the first number: ");
             int firstNum = int.Parse(Console.ReadLine());
-            
+
             Console.Write("Input the second number: ");
             int secondNum = int.Parse(Console.ReadLine());
 
             Console.Write("Do you want to + - * /? ");
             string operation = Console.ReadLine();
-            
-            
 
-        
+            if (operation == "+")
+            {
+                Console.WriteLine("Answer: " + (firstNum + secondNum));
+            }
+
+
+
         }
     }
 }
