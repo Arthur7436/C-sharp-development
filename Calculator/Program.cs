@@ -10,6 +10,7 @@ namespace Maths
             //places user in the next line like /n
 
             //Ask the user for the first number
+            //Double allows the program to use decimals
             Console.Write("Input the first number: ");
             double firstNum = double.Parse(Console.ReadLine());
 
