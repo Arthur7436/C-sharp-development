@@ -7,10 +7,10 @@ namespace Maths
         static void Main(string[] args)
         {
             Console.Write("Input the first number: ");
-            int firstNum = int.Parse(Console.ReadLine());
+            double firstNum = double.Parse(Console.ReadLine());
 
             Console.Write("Input the second number: ");
-            int secondNum = int.Parse(Console.ReadLine());
+            double secondNum = double.Parse(Console.ReadLine());
 
             Console.Write("Do you want to + - * /? ");
             string operation = Console.ReadLine();
@@ -18,6 +18,21 @@ namespace Maths
             if (operation == "+")
             {
                 Console.WriteLine("Answer: " + (firstNum + secondNum));
+            }
+            else if (operation == "-")
+            {
+                Console.WriteLine("Answer: " + (firstNum - secondNum));
+            }
+            else if (operation == "*")
+            {
+                Console.WriteLine("Answer: " + (firstNum * secondNum));
+            }
+            else if (operation == "/")
+            {
+                Console.WriteLine("Answer: " + (firstNum / secondNum));
+            }
+            else {
+                Console.WriteLine("Error please try again");
             }
 
 
