@@ -26,7 +26,7 @@ namespace Maths
 
                 //Ask the user for the second number
                 Console.Write("Input the second number: ");
-                //Store the second value into the string firstNumInput
+                //Store the second value into the string secondNumInput
                 string secondNumInput = Console.ReadLine();
                 //If the user inputs "q", then the program breaks
                 if (secondNumInput == "q")
@@ -34,6 +34,7 @@ namespace Maths
                     break;
                 }
 
+                //If user DOES NOT input "q", then parse the string into 2 decimal places and store it in the variable secondNum
                 double secondNum = double.Parse(secondNumInput);
 
                 //Ask the user which operator they would want to user
