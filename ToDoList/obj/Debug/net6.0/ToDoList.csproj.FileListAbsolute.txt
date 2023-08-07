@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.dll
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ref/ToDoList.dll
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.pdb
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.dll
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ref/ToDoList.dll
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.pdb
+/home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.genruntimeconfig.cache
