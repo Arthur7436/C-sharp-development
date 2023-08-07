@@ -63,6 +63,7 @@ namespace Maths
 
                 //Ask the user which operator they would want to user
                 Console.Write("Do you want to + - * /? ");
+                //Store the answer to variable 'operation'
                 string operation = Console.ReadLine();
 
                 //If else statements will determine the answers
