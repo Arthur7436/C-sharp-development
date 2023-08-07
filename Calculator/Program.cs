@@ -69,7 +69,7 @@ namespace Maths
                 //If else statements will determine the answers
                 if (operation == "+")
                 {
-                    Console.WriteLine("Answer: " + (firstNum + secondNum).ToString("F2"));
+                    Console.WriteLine("Answer: " + (firstNum + secondNum).ToString("F2")); //ToString("F2") makes the value to 2 decimal places
                 }
                 else if (operation == "-")
                 {
