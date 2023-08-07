@@ -10,19 +10,30 @@ namespace Maths
             {
                 //Console.Write allows you to stay on the same line in the terminal as compared to Console.WriteLine which 
                 //places user in the next line like /n
-
-                //Ask the user for the first number
-                Console.Write("Input the first number: ");
-                //Store the first value into the string firstNumInput
-                string firstNumInput = Console.ReadLine();
-                //If the user inputs "q", then the program breaks
-                if (firstNumInput == "q")
+                double firstNum;
+                do
                 {
-                    break;
-                }
-                //If user DOES NOT input "q", then parse the string into 2 decimal places and store it in the variable firstNum
-                double firstNum = double.Parse(firstNumInput);
+                    //Ask the user for the first number
+                    Console.Write("Input the first number: ");
+                    //Store the first value into the string firstNumInput
+                    string firstNumInput = Console.ReadLine();
+                    //If the user inputs "q", then the program breaks
+                    if (firstNumInput == "q")
+                    {
+                        return;
+                    }
 
+                    if (double.TryParse(firstNumInput, out firstNum))
+                    {
+                        break; //Parsing successful, break the loop
+                    }
+                    // If the user inputs a non numerical character then give an error for them to try again
+                    else
+                    {
+                        Console.WriteLine("Invalid input, please try again.");
+                    }
+                }
+                while (true);
 
                 //Ask the user for the second number
                 Console.Write("Input the second number: ");
