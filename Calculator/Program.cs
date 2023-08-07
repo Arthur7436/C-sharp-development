@@ -13,20 +13,22 @@ namespace Maths
 
                 //Ask the user for the first number
                 Console.Write("Input the first number: ");
-                //If the user inputs "q", then the program breaks
+                //Store the first value into the string firstNumInput
                 string firstNumInput = Console.ReadLine();
+                //If the user inputs "q", then the program breaks
                 if (firstNumInput == "q")
                 {
                     break;
                 }
-
+                //If user DOES NOT input "q", then parse the string into 2 decimal places and store it in the variable firstNum
                 double firstNum = double.Parse(firstNumInput);
 
 
                 //Ask the user for the second number
                 Console.Write("Input the second number: ");
-                //If the user inputs "q", then the program breaks
+                //Store the second value into the string firstNumInput
                 string secondNumInput = Console.ReadLine();
+                //If the user inputs "q", then the program breaks
                 if (secondNumInput == "q")
                 {
                     break;
