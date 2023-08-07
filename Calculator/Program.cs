@@ -34,7 +34,7 @@ namespace Maths
                 }
                 else
                 {
-                    double secondNum = double.Parse(Console.ReadLine());
+                    double secondNum = double.Parse(secondNumInput);
                 }
 
                 //Ask the user which operator they would want to user
