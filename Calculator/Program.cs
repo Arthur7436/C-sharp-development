@@ -8,9 +8,9 @@ namespace Maths
         {
             while (true)
             {
-                //Console.Write allows you to stay on the same line in the terminal as compared to Console.WriteLine which 
-                //places user in the next line like /n
+                //declare the variable so that the entire while loop can access it
                 double firstNum;
+                double secondNum;
                 do
                 {
                     //Ask the user for the first number
@@ -33,20 +33,33 @@ namespace Maths
                         Console.WriteLine("Invalid input, please try again.");
                     }
                 }
+                //do while loop will only break when user enters a number
                 while (true);
 
-                //Ask the user for the second number
-                Console.Write("Input the second number: ");
-                //Store the second value into the string secondNumInput
-                string secondNumInput = Console.ReadLine();
-                //If the user inputs "q", then the program breaks
-                if (secondNumInput == "q")
+                do
                 {
-                    break;
-                }
+                    //Ask the user for the second number
+                    Console.Write("Input the second number: ");
+                    //Store the second value into the string secondNumInput
+                    string secondNumInput = Console.ReadLine();
+                    //If the user inputs "q", then the program breaks
+                    if (secondNumInput == "q")
+                    {
+                        return;
+                    }
 
-                //If user DOES NOT input "q", then parse the string into 2 decimal places and store it in the variable secondNum
-                double secondNum = double.Parse(secondNumInput);
+                    if (double.TryParse(secondNumInput, out secondNum))
+                    {
+                        break; //Parsing successful, break the loop
+                    }
+                    // If the user inputs a non numerical character then give an error for them to try again
+                    else
+                    {
+                        Console.WriteLine("Invalid input, please try again.");
+                    }
+                }
+                //do while loop will only break when user enters a number
+                while (true);
 
                 //Ask the user which operator they would want to user
                 Console.Write("Do you want to + - * /? ");
