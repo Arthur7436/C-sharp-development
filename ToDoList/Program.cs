@@ -22,7 +22,8 @@ namespace ToDoList
                         Console.BackgroundColor = ConsoleColor.DarkBlue;
                         Console.ForegroundColor = ConsoleColor.White;
                     }
-                    
+
+                    Console.WriteLine(options[i]);
                 }
 
             } while(true);
