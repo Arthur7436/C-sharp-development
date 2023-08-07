@@ -19,11 +19,10 @@ namespace Maths
                 {
                     break;
                 }
-                else
-                {
-                    double firstNum = double.Parse(firstNumInput);
 
-                }
+                double firstNum = double.Parse(firstNumInput);
+
+
                 //Ask the user for the second number
                 Console.Write("Input the second number: ");
                 //If the user inputs "q", then the program breaks
@@ -32,10 +31,8 @@ namespace Maths
                 {
                     break;
                 }
-                else
-                {
-                    double secondNum = double.Parse(secondNumInput);
-                }
+
+                double secondNum = double.Parse(secondNumInput);
 
                 //Ask the user which operator they would want to user
                 Console.Write("Do you want to + - * /? ");
