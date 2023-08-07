@@ -8,12 +8,11 @@ namespace ToDoList
         {
             string[] options = { "Option 1", "Option 2", "Option 3", "Exit" };
             int selectedIndex = 0;
-            ConsoleKeyInfo keyInfo;
 
             do
             {
                 Console.Clear();
-                Console.WriteLine("Use arrow keys to navigate through menu");
+                Console.WriteLine("<---Use arrow keys to navigate through menu--->");
 
                 for (int i = 0; i < options.Length; i++)
                 {
@@ -24,9 +23,13 @@ namespace ToDoList
                     }
 
                     Console.WriteLine(options[i]);
+                    Console.ResetColor();
                 }
 
-            } while(true);
+                Console.ReadLine();
+
+
+            } while (true);
         }
     }
 }
