@@ -27,7 +27,15 @@ namespace Maths
                 //Ask the user for the second number
                 Console.Write("Input the second number: ");
                 //If the user inputs "q", then the program breaks
-                double secondNum = double.Parse(Console.ReadLine());
+                string secondNumInput = Console.ReadLine();
+                if (secondNumInput == "q")
+                {
+                    break;
+                }
+                else
+                {
+                    double secondNum = double.Parse(Console.ReadLine());
+                }
 
                 //Ask the user which operator they would want to user
                 Console.Write("Do you want to + - * /? ");
