@@ -9,6 +9,7 @@ namespace ToDoList
             string[] options = { "Option 1", "Option 2", "Option 3", "Exit" };
             int selectedIndex = 0;
 
+
             do
             {
                 Console.Clear();
@@ -26,7 +27,15 @@ namespace ToDoList
                     Console.ResetColor();
                 }
 
-                Console.ReadLine();
+
+
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+                if (keyInfo.Key == ConsoleKey.UpArrow)
+                {
+                    selectedIndex = (selectedIndex - 1 + options.Length) % options.Length;
+                }
+
 
 
             } while (true);
