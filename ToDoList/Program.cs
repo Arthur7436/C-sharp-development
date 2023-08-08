@@ -36,6 +36,11 @@ namespace ToDoList
                     selectedIndex = (selectedIndex - 1 + options.Length) % options.Length;
                 }
 
+                else if (keyInfo.Key == ConsoleKey.DownArrow)
+                {
+                    selectedIndex = (selectedIndex + 1 + options.Length) % options.Length;
+                }
+
 
 
             } while (true);
