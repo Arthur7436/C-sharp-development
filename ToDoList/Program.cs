@@ -11,6 +11,7 @@ namespace ToDoList
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
+            string[] array = { "ToDo1", "Todo2" };
 
             do
             {
@@ -47,6 +48,13 @@ namespace ToDoList
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     Console.WriteLine("You have selected " + options[selectedIndex]);
+                    if (options[selectedIndex] == "Show list")
+                    {
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            Console.WriteLine(array[i]);
+                        }
+                    }
                     break;
                 }
 
