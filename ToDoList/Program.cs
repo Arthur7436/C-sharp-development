@@ -12,16 +12,12 @@ namespace ToDoList
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
 
-            Console.WriteLine(topLine);
-            Console.WriteLine(middleLine);
-            Console.WriteLine(bottomLine);
-
-
-
             do
             {
                 Console.Clear();
-                Console.WriteLine("<---Use arrow keys to navigate through menu--->");
+                Console.WriteLine(topLine);
+                Console.WriteLine(middleLine);
+                Console.WriteLine(bottomLine);
 
                 for (int i = 0; i < options.Length; i++)
                 {
