@@ -26,7 +26,7 @@ namespace ToDoList
                     Console.ResetColor();
                 }
 
-                Console.ReadLine(); //Test
+                Console.ReadLine();
 
 
             } while (true);
