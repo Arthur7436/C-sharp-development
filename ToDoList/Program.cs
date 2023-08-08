@@ -40,7 +40,11 @@ namespace ToDoList
                 {
                     selectedIndex = (selectedIndex + 1 + options.Length) % options.Length;
                 }
-
+                else if (keyInfo.Key == ConsoleKey.Enter)
+                {
+                    Console.WriteLine("You have selected " + options[selectedIndex]);
+                    break;
+                }
 
 
             } while (true);
