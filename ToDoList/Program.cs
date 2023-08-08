@@ -6,7 +6,7 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
-            string[] options = { "Option 1", "Option 2", "Option 3", "Exit" };
+            string[] options = { "Show list", "Add", "Delete", "Exit" };
             int selectedIndex = 0;
 
 
@@ -19,7 +19,7 @@ namespace ToDoList
                 {
                     if (i == selectedIndex)
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.BackgroundColor = ConsoleColor.Magenta;
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
