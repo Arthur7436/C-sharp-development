@@ -55,6 +55,12 @@ namespace ToDoList
                             Console.WriteLine(array[i]);
                         }
                     }
+                    else if (options[selectedIndex] == "Add")
+                    {
+                        Console.WriteLine("What would you like to add to your list?");
+                        string addInput = Console.ReadLine();
+                        string[] array = addInput.ToArray();
+                    }
                     break;
                 }
 
