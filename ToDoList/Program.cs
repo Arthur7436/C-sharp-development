@@ -8,6 +8,14 @@ namespace ToDoList
         {
             string[] options = { "Option 1", "Option 2", "Option 3", "Exit" };
             int selectedIndex = 0;
+            string topLine = "╔═══════════════════════════════════════╗";
+            string middleLine = "║    Use arrow keys to navigate!        ║";
+            string bottomLine = "╚═══════════════════════════════════════╝";
+
+            Console.WriteLine(topLine);
+            Console.WriteLine(middleLine);
+            Console.WriteLine(bottomLine);
+
 
 
             do
