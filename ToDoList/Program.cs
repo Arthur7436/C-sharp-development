@@ -12,7 +12,7 @@ namespace ToDoList
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
-            List<string> inputList = new List<string> { "1. Hello" };
+            List<string> inputList = new List<string> { "Hello" };
 
             //string[] inputList = { "ToDo1", "Todo2" };
 
@@ -50,7 +50,7 @@ namespace ToDoList
                 }
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
-                    Console.WriteLine("You have selected " + menuOptions[selectedIndex]);
+                    Console.WriteLine("You have chosen to select " + menuOptions[selectedIndex]);
 
                     if (menuOptions[selectedIndex] == "Exit")
                     {
@@ -62,7 +62,7 @@ namespace ToDoList
                         Console.WriteLine("Here is your list:");
                         for (int i = 0; i < inputList.Count; i++)
                         {
-                            Console.WriteLine(inputList[i]);
+                            Console.WriteLine((i + 1) + ". " + inputList[i]);
                         }
                         Console.WriteLine("Press any key to return to main menu");
                         Console.ReadKey();
@@ -81,13 +81,14 @@ namespace ToDoList
                     else if (menuOptions[selectedIndex] == "Delete")
                     {
                         Console.Clear();
-                        Console.WriteLine("What would you like to delete from your list?");
+                        Console.WriteLine("What number from the list did you want to delete?");
                         for (int i = 0; i < inputList.Count; i++)
                         {
-                            Console.WriteLine(inputList[i]);
+                            Console.WriteLine((i + 1) + ". " + inputList[i]);
                         }
 
                         int deleteNum = int.Parse(Console.ReadLine());
+
 
                         if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
                         {
@@ -100,6 +101,10 @@ namespace ToDoList
                                 Console.WriteLine(inputList[i]);
                             }
 
+                        }
+                        else if (keyInfo.Key == ConsoleKey.Enter)
+                        {
+                            break;
                         }
                         else
                         {
