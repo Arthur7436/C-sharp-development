@@ -71,12 +71,24 @@ namespace ToDoList
                     {
                         Console.Clear();
                         Console.WriteLine("What would you like to delete from your list?");
+                        Console.WriteLine("Choose the list by it's number");
                         for (int i = 0; i < inputList.Count; i++)
                         {
                             Console.WriteLine(inputList[i]);
                         }
 
-                        Console.ReadLine();
+                        int deleteNum = int.Parse(Console.ReadLine());
+
+                        if (deleteNum > 0 && deleteNum < (menuOptions.Length + 1))
+                        {
+                            Console.WriteLine("Okay!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("The number you inputted doesn't exist");
+                        }
+
+
 
 
                     }
