@@ -79,7 +79,7 @@ namespace ToDoList
 
                         int deleteNum = int.Parse(Console.ReadLine());
 
-                        if (deleteNum > 0 && deleteNum < (menuOptions.Length + 1))
+                        if (deleteNum > 0 && deleteNum < (inputList.Length + 1))
                         {
                             Console.WriteLine("Okay!");
                         }
