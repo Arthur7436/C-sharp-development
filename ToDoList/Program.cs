@@ -79,13 +79,13 @@ namespace ToDoList
 
                         int deleteNum = int.Parse(Console.ReadLine());
 
-                        if (deleteNum > 0 && deleteNum < (inputList.Length + 1))
+                        if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
                         {
                             Console.WriteLine("Okay!");
                         }
                         else
                         {
-                            Console.WriteLine("The number you inputted doesn't exist");
+                            Console.WriteLine("The list number you inputted doesn't exist");
                         }
 
 
