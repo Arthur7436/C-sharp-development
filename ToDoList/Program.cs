@@ -6,12 +6,14 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
-            string[] options = { "Show list", "Add", "Delete", "Exit" };
+            string[] menuOptions = { "Show list", "Add", "Delete", "Exit" };
             int selectedIndex = 0;
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
-            string[] array = { "ToDo1", "Todo2" };
+            List<string> inputList = new List<string> { "Hello" };
+
+            //string[] inputList = { "ToDo1", "Todo2" };
 
             do
             {
@@ -20,7 +22,7 @@ namespace ToDoList
                 Console.WriteLine(middleLine);
                 Console.WriteLine(bottomLine);
 
-                for (int i = 0; i < options.Length; i++)
+                for (int i = 0; i < menuOptions.Length; i++)
                 {
                     if (i == selectedIndex)
                     {
@@ -28,7 +30,7 @@ namespace ToDoList
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
-                    Console.WriteLine(options[i]);
+                    Console.WriteLine(menuOptions[i]);
                     Console.ResetColor();
                 }
 
@@ -38,30 +40,46 @@ namespace ToDoList
 
                 if (keyInfo.Key == ConsoleKey.UpArrow)
                 {
-                    selectedIndex = (selectedIndex - 1 + options.Length) % options.Length;
+                    selectedIndex = (selectedIndex - 1 + menuOptions.Length) % menuOptions.Length;
                 }
 
                 else if (keyInfo.Key == ConsoleKey.DownArrow)
                 {
-                    selectedIndex = (selectedIndex + 1 + options.Length) % options.Length;
+                    selectedIndex = (selectedIndex + 1 + menuOptions.Length) % menuOptions.Length;
                 }
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
-                    Console.WriteLine("You have selected " + options[selectedIndex]);
-                    if (options[selectedIndex] == "Show list")
+                    Console.WriteLine("You have selected " + menuOptions[selectedIndex]);
+                    if (menuOptions[selectedIndex] == "Show list")
                     {
-                        for (int i = 0; i < array.Length; i++)
+                        for (int i = 0; i < inputList.Count; i++)
                         {
-                            Console.WriteLine(array[i]);
+                            Console.WriteLine(inputList[i]);
                         }
                     }
-                    else if (options[selectedIndex] == "Add")
+                    else if (menuOptions[selectedIndex] == "Add")
                     {
+                        Console.Clear();
                         Console.WriteLine("What would you like to add to your list?");
                         string addInput = Console.ReadLine();
-                        string[] array = addInput.ToArray();
+                        inputList.Add(addInput);
+
+                        Console.WriteLine("You have added the following to your list: " + addInput);
+
+                    }
+                    else if (menuOptions[selectedIndex] == "Delete")
+                    {
+                        Console.Clear();
+                        Console.WriteLine("What would you like to delete from your list?");
+                        for (int i = 0; i < inputList.Count; i++)
+                        {
+                            Console.WriteLine(inputList[i]);
+                        }
+
+
                     }
                     break;
+
                 }
 
 
