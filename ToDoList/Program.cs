@@ -60,8 +60,15 @@ namespace ToDoList
                     {
                         for (int i = 0; i < inputList.Count; i++)
                         {
+                                
+                            Console.WriteLine("Here is your list:");
                             Console.WriteLine(inputList[i]);
+                            Console.WriteLine("Press any key to return to main menu");
+                            Console.ReadKey();
+                            
                         }
+
+                        
                     }
                     else if (menuOptions[selectedIndex] == "Add")
                     {
