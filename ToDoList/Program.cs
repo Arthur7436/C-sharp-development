@@ -90,20 +90,21 @@ namespace ToDoList
                                 Console.WriteLine(inputList[i]);
                             }
 
-
-
-
+                        }
+                        else if (keyInfo.Key == ConsoleKey.Enter)
+                        {
+                            if (menuOptions[selectedIndex] == "Exit")
+                            {
+                                break;
+                            }
                         }
                         else
                         {
                             Console.WriteLine("The list number you inputted doesn't exist");
                         }
 
-
-
-
                     }
-                    break;
+
 
                 }
 
