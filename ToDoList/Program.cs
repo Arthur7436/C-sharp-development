@@ -58,16 +58,15 @@ namespace ToDoList
                     }
                     else if (menuOptions[selectedIndex] == "Show list")
                     {
+                        Console.Clear();
+                        Console.WriteLine("Here is your list:");
                         for (int i = 0; i < inputList.Count; i++)
                         {
-                            Console.Clear();
-                            Console.WriteLine("Here is your list:");
+
                             Console.WriteLine(inputList[i]);
-                            Console.WriteLine("Press any key to return to main menu");
-                            Console.ReadKey();
-
                         }
-
+                        Console.WriteLine("Press any key to return to main menu");
+                        Console.ReadKey();
 
                     }
                     else if (menuOptions[selectedIndex] == "Add")

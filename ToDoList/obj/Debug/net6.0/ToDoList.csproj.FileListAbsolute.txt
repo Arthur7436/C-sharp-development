@@ -13,6 +13,7 @@ C:/Github/C-sharp-development/ToDoList/obj/Debug/net6.0/refint/ToDoList.dll
 C:/Github/C-sharp-development/ToDoList/obj/Debug/net6.0/ToDoList.pdb
 C:/Github/C-sharp-development/ToDoList/obj/Debug/net6.0/ToDoList.genruntimeconfig.cache
 C:/Github/C-sharp-development/ToDoList/obj/Debug/net6.0/ref/ToDoList.dll
+<<<<<<< HEAD
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.deps.json
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/bin/Debug/net6.0/ToDoList.runtimeconfig.json
@@ -43,3 +44,5 @@ C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\refint\ToDoList.dll
 C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.pdb
 C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.genruntimeconfig.cache
 C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ref\ToDoList.dll
+=======
+>>>>>>> 8c74624a1a97e50c201e30f5bfa497214c01c7a8
