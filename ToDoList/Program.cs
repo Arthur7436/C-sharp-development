@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ToDoList
 {
@@ -50,7 +51,7 @@ namespace ToDoList
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     Console.WriteLine("You have selected " + menuOptions[selectedIndex]);
-                    
+
                     if (menuOptions[selectedIndex] == "Exit")
                     {
                         break;
