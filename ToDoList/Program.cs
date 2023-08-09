@@ -11,7 +11,7 @@ namespace ToDoList
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
-            List<string> inputList = new List<string> { "Hello" };
+            List<string> inputList = new List<string> { "1. Hello" };
 
             //string[] inputList = { "ToDo1", "Todo2" };
 
@@ -75,6 +75,8 @@ namespace ToDoList
                         {
                             Console.WriteLine(inputList[i]);
                         }
+
+                        Console.ReadLine();
 
 
                     }
