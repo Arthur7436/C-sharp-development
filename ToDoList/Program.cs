@@ -62,7 +62,6 @@ namespace ToDoList
                         Console.WriteLine("Here is your list:");
                         for (int i = 0; i < inputList.Count; i++)
                         {
-
                             Console.WriteLine(inputList[i]);
                         }
                         Console.WriteLine("Press any key to return to main menu");
@@ -83,7 +82,6 @@ namespace ToDoList
                     {
                         Console.Clear();
                         Console.WriteLine("What would you like to delete from your list?");
-                        Console.WriteLine("Choose the list by it's number");
                         for (int i = 0; i < inputList.Count; i++)
                         {
                             Console.WriteLine(inputList[i]);
