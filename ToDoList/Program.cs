@@ -50,7 +50,12 @@ namespace ToDoList
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     Console.WriteLine("You have selected " + menuOptions[selectedIndex]);
-                    if (menuOptions[selectedIndex] == "Show list")
+                    
+                    if (menuOptions[selectedIndex] == "Exit")
+                    {
+                        break;
+                    }
+                    else if (menuOptions[selectedIndex] == "Show list")
                     {
                         for (int i = 0; i < inputList.Count; i++)
                         {
@@ -90,13 +95,6 @@ namespace ToDoList
                                 Console.WriteLine(inputList[i]);
                             }
 
-                        }
-                        else if (keyInfo.Key == ConsoleKey.Enter)
-                        {
-                            if (menuOptions[selectedIndex] == "Exit")
-                            {
-                                break;
-                            }
                         }
                         else
                         {
