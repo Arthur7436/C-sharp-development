@@ -81,7 +81,17 @@ namespace ToDoList
 
                         if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
                         {
-                            Console.WriteLine("Okay!");
+                            inputList.RemoveAt(deleteNum - 1);
+                            Console.WriteLine("Item was successfully deleted");
+
+                            Console.WriteLine("Here is the remainder of your list");
+                            for (int i = 0; i < inputList.Count; i++)
+                            {
+                                Console.WriteLine(inputList[i]);
+                            }
+
+
+
                         }
                         else
                         {
