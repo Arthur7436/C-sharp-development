@@ -64,11 +64,9 @@ namespace ToDoList
                         {
 
                             Console.WriteLine(inputList[i]);
-                            Console.WriteLine("Press any key to return to main menu");
-                            Console.ReadKey();
-
                         }
-
+                        Console.WriteLine("Press any key to return to main menu");
+                        Console.ReadKey();
 
                     }
                     else if (menuOptions[selectedIndex] == "Add")
