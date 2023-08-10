@@ -8,11 +8,12 @@ namespace ToDoList
         static void Main(string[] args)
         {
             string[] menuOptions = { "Show list", "Add", "Delete", "Exit" };
+            List<string> inputList = new List<string> { "Hello" };
             int selectedIndex = 0;
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
-            List<string> inputList = new List<string> { "Hello" };
+
 
             do
             {
