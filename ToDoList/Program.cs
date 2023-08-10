@@ -141,7 +141,6 @@ namespace ToDoList
                                 break;
 
                             }
-
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
