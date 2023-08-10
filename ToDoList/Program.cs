@@ -64,6 +64,7 @@ namespace ToDoList
                         {
                             Console.WriteLine((i + 1) + ". " + inputList[i]);
                         }
+                        Console.WriteLine();
                         Console.WriteLine("Press any key to return to main menu");
                         Console.ReadKey();
 
@@ -76,40 +77,105 @@ namespace ToDoList
                         inputList.Add(addInput);
 
                         Console.WriteLine("You have added the following to your list: " + addInput);
+                        Console.WriteLine()
 
                     }
                     else if (menuOptions[selectedIndex] == "Delete")
                     {
-                        Console.Clear();
-                        Console.WriteLine("What number from the list did you want to delete?");
-                        for (int i = 0; i < inputList.Count; i++)
+                        do
                         {
-                            Console.WriteLine((i + 1) + ". " + inputList[i]);
-                        }
 
-                        int deleteNum = int.Parse(Console.ReadLine());
+                            Console.Clear();
+                            Console.WriteLine("What number from the list did you want to delete?");
 
 
-                        if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
-                        {
-                            inputList.RemoveAt(deleteNum - 1);
-                            Console.WriteLine("Item was successfully deleted");
-
-                            Console.WriteLine("Here is the remainder of your list");
                             for (int i = 0; i < inputList.Count; i++)
                             {
-                                Console.WriteLine(inputList[i]);
+                                Console.WriteLine((i + 1) + ". " + inputList[i]);
+                            }
+                            Console.WriteLine();
+                            Console.WriteLine("To exit please type 'Exit'");
+                            // int deleteNum = int.Parse(Console.ReadLine());
+                            // bool isValidNumber;
+                            int deleteNum;
+                            decimal decimalValue;
+                            bool isNumber;
+                            bool isDecimal;
+
+                            string input = Console.ReadLine();
+                            isNumber = int.TryParse(input, out deleteNum);
+                            isDecimal = decimal.TryParse(input, out decimalValue);
+
+                            if (input == "Exit")
+                            {
+                                break;
+                            }
+                            if (!isNumber)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Error: Please enter a number");
+                                Console.ResetColor();
+                                Console.WriteLine("Please press 'Enter' to try again");
+                                Console.ReadLine();
+                            }
+                            else if (!isDecimal)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Error: Please enter a whole number");
+                                Console.ResetColor();
+                                Console.WriteLine("Please press 'Enter' to try again");
+                                Console.ReadLine();
+                            }
+                            else if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
+                            {
+
+
+                                inputList.RemoveAt(deleteNum - 1);
+                                Console.WriteLine("Item was successfully deleted");
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("You have deleted list number " + deleteNum);
+                                Console.ResetColor();
+                                Console.WriteLine("Please press 'Enter' to return to menu");
+                                Console.ReadLine();
+
+                                // Console.WriteLine("Here is the remainder of your list");
+                                //for (int i = 0; i < inputList.Count; i++)
+                                //{
+                                // Console.WriteLine(inputList[i]);
+                                // }
+                                break;
+
                             }
 
-                        }
-                        else if (keyInfo.Key == ConsoleKey.Enter)
-                        {
-                            break;
-                        }
-                        else
-                        {
-                            Console.WriteLine("The list number you inputted doesn't exist");
-                        }
+                            // isValidNumber = int.Parse(deleteNum);
+                            // if (!isValidNumber)
+                            // {
+                            //     Console.WriteLine("Error: please enter a number");
+                            // }
+                            // else
+                            // {
+                            //     break;
+                            // }
+
+                            //If the number inputted is not a number
+                            //Give an error message 
+                            //Loop the question until a number is placed
+
+
+
+                            // else if (!isValidNumber) // If the input is non numerical
+                            // {
+                            //     Console.WriteLine("Error: Please enter a number");
+                            // }
+                            else
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("Error: The list number " + "'" + deleteNum + "'" + " doesn't exist");
+                                Console.ResetColor();
+                                Console.WriteLine("Please press 'Enter' to try again");
+                                Console.ReadLine();
+                            }
+                        } while (true);
 
                     }
 
