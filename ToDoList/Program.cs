@@ -14,8 +14,6 @@ namespace ToDoList
             string bottomLine = "╚═══════════════════════════════════════╝";
             List<string> inputList = new List<string> { "Hello" };
 
-            //string[] inputList = { "ToDo1", "Todo2" };
-
             do
             {
                 Console.Clear();
