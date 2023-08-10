@@ -110,7 +110,7 @@ namespace ToDoList
                             {
                                 break;
                             }
-                            else if (!isNumber)
+                            else if (!isNumber) //if input is not a number then give an error
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Error: Please enter a number");
@@ -118,7 +118,7 @@ namespace ToDoList
                                 Console.WriteLine("Please press 'Enter' to try again");
                                 Console.ReadLine();
                             }
-                            else if (!isDecimal)
+                            else if (isDecimal) //FIX CODE HERE
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Error: Please enter a whole number");
@@ -126,10 +126,8 @@ namespace ToDoList
                                 Console.WriteLine("Please press 'Enter' to try again");
                                 Console.ReadLine();
                             }
-                            else if (deleteNum > 0 && deleteNum < (inputList.Count + 1))
+                            else if (deleteNum > 0 && deleteNum < (inputList.Count + 1)) //if the list number is valid then remove from list
                             {
-
-
                                 inputList.RemoveAt(deleteNum - 1);
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("You have successfully deleted list number: " + deleteNum);
@@ -139,7 +137,7 @@ namespace ToDoList
                                 break;
 
                             }
-                            else
+                            else //when users input a non numerical number
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Error: The list number " + "'" + deleteNum + "'" + " doesn't exist");
