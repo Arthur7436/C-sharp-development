@@ -138,8 +138,6 @@ namespace ToDoList
                                 Console.ResetColor();
                                 Console.WriteLine("Please press 'Enter' to return to menu");
                                 Console.ReadLine();
-
-
                                 break;
 
                             }
