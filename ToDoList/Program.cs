@@ -150,10 +150,7 @@ namespace ToDoList
                                 Console.ReadLine();
                             }
                         } while (true);
-
                     }
-
-
                 }
 
 
