@@ -77,7 +77,9 @@ namespace ToDoList
                         inputList.Add(addInput);
 
                         Console.WriteLine("You have added the following to your list: " + addInput);
-                        Console.WriteLine()
+                        Console.WriteLine("Please press 'Enter' to return to main menu");
+                        Console.ReadLine();
+
 
                     }
                     else if (menuOptions[selectedIndex] == "Delete")
@@ -131,9 +133,8 @@ namespace ToDoList
 
 
                                 inputList.RemoveAt(deleteNum - 1);
-                                Console.WriteLine("Item was successfully deleted");
                                 Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("You have deleted list number " + deleteNum);
+                                Console.WriteLine("You have successfully deleted list number: " + deleteNum);
                                 Console.ResetColor();
                                 Console.WriteLine("Please press 'Enter' to return to menu");
                                 Console.ReadLine();

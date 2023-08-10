@@ -29,20 +29,5 @@ C:/Github/C-sharp-development/ToDoList/obj/Debug/net6.0/ref/ToDoList.dll
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ref/ToDoList.dll
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.pdb
 /home/arthur/Desktop/Self_Development/Challenger/ToDoList/obj/Debug/net6.0/ToDoList.genruntimeconfig.cache
-C:\Github\C-sharp-development\ToDoList\bin\Debug\net6.0\ToDoList.exe
-C:\Github\C-sharp-development\ToDoList\bin\Debug\net6.0\ToDoList.deps.json
-C:\Github\C-sharp-development\ToDoList\bin\Debug\net6.0\ToDoList.runtimeconfig.json
-C:\Github\C-sharp-development\ToDoList\bin\Debug\net6.0\ToDoList.dll
-C:\Github\C-sharp-development\ToDoList\bin\Debug\net6.0\ToDoList.pdb
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.csproj.AssemblyReference.cache
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.GeneratedMSBuildEditorConfig.editorconfig
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.AssemblyInfoInputs.cache
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.AssemblyInfo.cs
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.csproj.CoreCompileInputs.cache
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.dll
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\refint\ToDoList.dll
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.pdb
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ToDoList.genruntimeconfig.cache
-C:\Github\C-sharp-development\ToDoList\obj\Debug\net6.0\ref\ToDoList.dll
 =======
 >>>>>>> 8c74624a1a97e50c201e30f5bfa497214c01c7a8
