@@ -15,14 +15,14 @@ namespace ToDoList
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
 
-
+            //program doesn't stop until they select 'Exit' option
             do
             {
                 Console.Clear();
                 Console.WriteLine(topLine);
                 Console.WriteLine(middleLine);
                 Console.WriteLine(bottomLine);
-
+                //whatever the selectedIndex is depending on the up and down arrow key, the background of that option will change
                 for (int i = 0; i < menuOptions.Length; i++)
                 {
                     if (i == selectedIndex)
