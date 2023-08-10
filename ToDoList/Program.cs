@@ -152,8 +152,6 @@ namespace ToDoList
                         } while (true);
                     }
                 }
-
-
             } while (true);
         }
     }
