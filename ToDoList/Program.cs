@@ -94,10 +94,10 @@ namespace ToDoList
                             {
                                 Console.WriteLine((i + 1) + ". " + inputList[i]);
                             }
+
                             Console.WriteLine();
                             Console.WriteLine("To exit please type 'Exit'");
-                            // int deleteNum = int.Parse(Console.ReadLine());
-                            // bool isValidNumber;
+
                             int deleteNum;
                             decimal decimalValue;
                             bool isNumber;
