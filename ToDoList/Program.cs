@@ -36,7 +36,7 @@ namespace ToDoList
                 }
 
 
-
+                //read the users key input and match to the option accordingly
                 ConsoleKeyInfo keyInfo = Console.ReadKey();
 
                 if (keyInfo.Key == ConsoleKey.UpArrow)
