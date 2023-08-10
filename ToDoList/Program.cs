@@ -50,13 +50,12 @@ namespace ToDoList
                 }
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
-                    Console.WriteLine("You have chosen to select " + menuOptions[selectedIndex]);
 
-                    if (menuOptions[selectedIndex] == "Exit")
+                    if (menuOptions[selectedIndex] == "Exit") //if user selects exit then quit the program
                     {
                         break;
                     }
-                    else if (menuOptions[selectedIndex] == "Show list")
+                    else if (menuOptions[selectedIndex] == "Show list") //if user selects show list
                     {
                         Console.Clear();
                         Console.WriteLine("Here is your list:");
@@ -69,7 +68,7 @@ namespace ToDoList
                         Console.ReadKey();
 
                     }
-                    else if (menuOptions[selectedIndex] == "Add")
+                    else if (menuOptions[selectedIndex] == "Add") //if user selects add
                     {
                         Console.Clear();
                         Console.WriteLine("What would you like to add to your list?");
