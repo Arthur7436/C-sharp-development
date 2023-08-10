@@ -81,7 +81,7 @@ namespace ToDoList
 
 
                     }
-                    else if (menuOptions[selectedIndex] == "Delete")
+                    else if (menuOptions[selectedIndex] == "Delete") //if user selects delete
                     {
                         do
                         {
