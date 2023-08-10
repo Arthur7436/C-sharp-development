@@ -139,11 +139,7 @@ namespace ToDoList
                                 Console.WriteLine("Please press 'Enter' to return to menu");
                                 Console.ReadLine();
 
-                                // Console.WriteLine("Here is the remainder of your list");
-                                //for (int i = 0; i < inputList.Count; i++)
-                                //{
-                                // Console.WriteLine(inputList[i]);
-                                // }
+
                                 break;
 
                             }
