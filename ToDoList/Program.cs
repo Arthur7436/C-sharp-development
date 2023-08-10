@@ -7,9 +7,10 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
-            string[] menuOptions = { "Show list", "Add", "Delete", "Exit" }; //list of the menu options for users to choose
-            List<string> inputList = new List<string> { "Hello" };
-            int selectedIndex = 0;
+            string[] menuOptions = { "Show list", "Add", "Delete", "Exit" }; //list of the menu options 
+            List<string> inputList = new List<string> { "My first list" }; //creation of dynamic list to store new lists 
+            int selectedIndex = 0; //initialize variable to 0
+            //heading of program
             string topLine = "╔═══════════════════════════════════════╗";
             string middleLine = "║    Use arrow keys to navigate!        ║";
             string bottomLine = "╚═══════════════════════════════════════╝";
