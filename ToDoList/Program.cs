@@ -7,7 +7,7 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
-            string[] menuOptions = { "Show list", "Add", "Delete", "Exit" };
+            string[] menuOptions = { "Show list", "Add", "Delete", "Exit" }; //list of the menu options for users to choose
             List<string> inputList = new List<string> { "Hello" };
             int selectedIndex = 0;
             string topLine = "╔═══════════════════════════════════════╗";
