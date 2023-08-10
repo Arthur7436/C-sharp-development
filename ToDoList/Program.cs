@@ -93,23 +93,24 @@ namespace ToDoList
                                 Console.WriteLine((i + 1) + ". " + inputList[i]);
                             }
 
-                            Console.WriteLine();
+                            Console.WriteLine(); //add space for UI/UX
                             Console.WriteLine("To exit please type 'Exit'");
 
+                            //state variables for use below
                             int deleteNum;
                             decimal decimalValue;
                             bool isNumber;
                             bool isDecimal;
 
                             string input = Console.ReadLine();
-                            isNumber = int.TryParse(input, out deleteNum);
-                            isDecimal = decimal.TryParse(input, out decimalValue);
+                            isNumber = int.TryParse(input, out deleteNum); //parse input if it is a number
+                            isDecimal = decimal.TryParse(input, out decimalValue); //parse input if it is a decimal
 
-                            if (input == "Exit")
+                            if (input == "Exit") //for user to leave the delete section
                             {
                                 break;
                             }
-                            if (!isNumber)
+                            else if (!isNumber)
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Error: Please enter a number");
