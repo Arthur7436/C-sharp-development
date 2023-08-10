@@ -110,18 +110,18 @@ namespace ToDoList
                             {
                                 break;
                             }
-                            else if (!isNumber) //if input is not a number then give an error
+                            else if (isDecimal && !isNumber) //if input was a decimal and not a whole number
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("Error: Please enter a number");
+                                Console.WriteLine("Error: Please enter a whole number");
                                 Console.ResetColor();
                                 Console.WriteLine("Please press 'Enter' to try again");
                                 Console.ReadLine();
                             }
-                            else if (isDecimal) //FIX CODE HERE
+                            else if (!isNumber) //if input is not a number then give an error
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("Error: Please enter a whole number");
+                                Console.WriteLine("Error: Please enter a number");
                                 Console.ResetColor();
                                 Console.WriteLine("Please press 'Enter' to try again");
                                 Console.ReadLine();
