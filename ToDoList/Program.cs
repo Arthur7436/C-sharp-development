@@ -85,10 +85,8 @@ namespace ToDoList
                     {
                         do
                         {
-
                             Console.Clear();
                             Console.WriteLine("What number from the list did you want to delete?");
-
 
                             for (int i = 0; i < inputList.Count; i++)
                             {
