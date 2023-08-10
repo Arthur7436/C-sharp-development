@@ -142,26 +142,6 @@ namespace ToDoList
 
                             }
 
-                            // isValidNumber = int.Parse(deleteNum);
-                            // if (!isValidNumber)
-                            // {
-                            //     Console.WriteLine("Error: please enter a number");
-                            // }
-                            // else
-                            // {
-                            //     break;
-                            // }
-
-                            //If the number inputted is not a number
-                            //Give an error message 
-                            //Loop the question until a number is placed
-
-
-
-                            // else if (!isValidNumber) // If the input is non numerical
-                            // {
-                            //     Console.WriteLine("Error: Please enter a number");
-                            // }
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
