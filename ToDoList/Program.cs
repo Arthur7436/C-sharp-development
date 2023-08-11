@@ -75,7 +75,9 @@ namespace ToDoList
                         string addInput = Console.ReadLine();
                         inputList.Add(addInput);
 
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("You have successfully added to your list: " + addInput);
+                        Console.ResetColor();
                         Console.WriteLine("Please press 'Enter' to return to main menu");
                         Console.ReadLine();
 
