@@ -97,6 +97,7 @@ namespace ToDoList
 
                             Console.WriteLine(); //add space for UI/UX
                             Console.WriteLine("To exit please type 'Exit'");
+                            Console.Write("Enter list number: ");
 
                             //state variables for use below
                             int deleteNum;
