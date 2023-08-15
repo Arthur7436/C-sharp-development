@@ -75,7 +75,9 @@ namespace ToDoList
                         string addInput = Console.ReadLine();
                         inputList.Add(addInput);
 
-                        Console.WriteLine("You have added the following to your list: " + addInput);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("You have successfully added to your list: " + addInput);
+                        Console.ResetColor();
                         Console.WriteLine("Please press 'Enter' to return to main menu");
                         Console.ReadLine();
 
@@ -95,6 +97,7 @@ namespace ToDoList
 
                             Console.WriteLine(); //add space for UI/UX
                             Console.WriteLine("To exit please type 'Exit'");
+                            Console.Write("Enter list number: ");
 
                             //state variables for use below
                             int deleteNum;
@@ -106,7 +109,7 @@ namespace ToDoList
                             isNumber = int.TryParse(input, out deleteNum); //parse input if it is a number
                             isDecimal = decimal.TryParse(input, out decimalValue); //parse input if it is a decimal
 
-                            if (input == "Exit") //for user to leave the delete section
+                            if (input == "Exit" || input == "exit") //for user to leave the delete section
                             {
                                 break;
                             }
