@@ -11,7 +11,7 @@ namespace TemperatureConverter
             {
                 Console.Clear();
                 Console.WriteLine("Which temperature would you like to convert FROM?");
-                for (int i = 0; i < temperatureOptions.Count; i++) //list out the 
+                for (int i = 0; i < temperatureOptions.Count; i++) //list out 
                 {
                     Console.WriteLine((i + 1) + ". " + temperatureOptions[i]);
                 }
