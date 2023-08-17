@@ -13,3 +13,5 @@
 /home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/ref/WeatherApplication.dll
 /home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.pdb
 /home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.genruntimeconfig.cache
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.csproj.CopyComplete

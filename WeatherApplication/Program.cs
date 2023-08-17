@@ -15,7 +15,7 @@ namespace WeatherApplication
                 string city = Console.ReadLine();
 
 
-                if (city.All(char => char.IsLetter(c) || char.IsWhiteSpace(c)) && !string.IsNullOrWhiteSpace(city))
+                if (city.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)) && !string.IsNullOrWhiteSpace(city))
                 {
                     Console.WriteLine("The city entered is valid");
                 }
