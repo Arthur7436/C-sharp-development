@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/WeatherApplication
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/WeatherApplication.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/WeatherApplication.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/WeatherApplication.dll
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/ref/WeatherApplication.dll
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/bin/Debug/net6.0/WeatherApplication.pdb
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.dll
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/ref/WeatherApplication.dll
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.pdb
+/home/arthur/Desktop/Self_Development/Challenger/WeatherApplication/obj/Debug/net6.0/WeatherApplication.genruntimeconfig.cache
