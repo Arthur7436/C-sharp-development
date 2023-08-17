@@ -6,7 +6,15 @@ namespace WeatherApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Welcome to the Weather App!");
+            do
+            {
+                Console.Write("Please enter the city that you want to check the weather at: ");
+                string city = Console.ReadLine();
+
+
+            }
+            while (true);
         }
     }
 }
