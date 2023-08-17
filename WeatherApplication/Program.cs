@@ -13,6 +13,14 @@ namespace WeatherApplication
                 string city = Console.ReadLine();
 
 
+                if (city.All(char => char.IsLetter(c) || char.IsWhiteSpace(c)) && !string.IsNullOrWhiteSpace(city))
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid city name. Please enter a valid city name");
+                }
             }
             while (true);
         }
