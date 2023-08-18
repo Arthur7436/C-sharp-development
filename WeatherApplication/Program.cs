@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
 
@@ -6,9 +7,9 @@ namespace WeatherApplication
 {
     class Program
     {
-        static void Main(string[] args)
+        static async void Main(string[] args)
         {
-            string url = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3d4dfc51d1c525476468da067621d472";
+            string url = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3d4dfc51d1c525476468da067621d472&units=metric";
 
             Console.WriteLine("Welcome to the Weather App!");
             do
@@ -23,7 +24,18 @@ namespace WeatherApplication
 
                     using (HttpClient httpClient = new HttpClient())
                     {
+                        HttpResponseMessage response = await httpClient.GetAsync(url);
 
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string content = await response.Content.ReadAsStringAsync();
+                            Console.WriteLine("Response from the API: ");
+                            Console.WriteLine(content);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Error fetching data: {response.StatusCode}");
+                        }
                     }
                 }
                 else
