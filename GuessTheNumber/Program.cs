@@ -10,7 +10,7 @@ namespace GuessTheNumber
             {
                 Console.WriteLine("HelloWorld");
                 Console.ReadLine();
-
+                //This is from the VS IDE
 
             }
             while (true);

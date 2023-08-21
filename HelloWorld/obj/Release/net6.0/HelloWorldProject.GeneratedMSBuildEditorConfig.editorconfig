@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HelloWorldProject
-build_property.ProjectDir = C:\Github\C-sharp-development\HelloWorld\
+build_property.ProjectDir = C:\Visual Studio Projects\HelloWorld\
