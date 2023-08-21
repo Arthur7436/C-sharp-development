@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/GuessTheNumber
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/GuessTheNumber.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/GuessTheNumber.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/GuessTheNumber.dll
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/ref/GuessTheNumber.dll
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/bin/Debug/net6.0/GuessTheNumber.pdb
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.dll
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/ref/GuessTheNumber.dll
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.pdb
+/home/arthur/Desktop/Self_Development/Challenger/GuessTheNumber/obj/Debug/net6.0/GuessTheNumber.genruntimeconfig.cache

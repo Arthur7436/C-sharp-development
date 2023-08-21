@@ -1,12 +1,19 @@
 ﻿using System;
 
-namespace YourNamespace
+namespace GuessTheNumber
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Your code here
+            do
+            {
+                Console.WriteLine("HelloWorld");
+                Console.ReadLine();
+
+
+            }
+            while (true);
         }
     }
 }
