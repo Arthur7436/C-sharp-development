@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj",
-      "projectName": "WeatherApp",
-      "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj",
+      "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/MethodCallingBasics.csproj",
+      "projectName": "MethodCallingBasics",
+      "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/MethodCallingBasics.csproj",
       "packagesPath": "/home/arthur/.nuget/packages/",
       "outputPath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/",
       "projectStyle": "PackageReference",

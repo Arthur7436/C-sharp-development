@@ -8,7 +8,7 @@ namespace MethodCallingBasics
         static void Main(string[] args)
         {
             string name = OtherClass.GetName();
-            Console.WriteLine($"Hello {name}");
+            Console.WriteLine($"Hello {name} it works");
         }
     }
 }

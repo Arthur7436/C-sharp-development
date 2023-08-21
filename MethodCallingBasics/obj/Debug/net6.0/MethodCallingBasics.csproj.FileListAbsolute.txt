@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/MethodCallingBasics
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/MethodCallingBasics.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/MethodCallingBasics.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/MethodCallingBasics.dll
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/ref/MethodCallingBasics.dll
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/bin/Debug/net6.0/MethodCallingBasics.pdb
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.dll
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/ref/MethodCallingBasics.dll
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.pdb
+/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/Debug/net6.0/MethodCallingBasics.genruntimeconfig.cache

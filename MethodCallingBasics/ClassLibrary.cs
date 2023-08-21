@@ -7,7 +7,7 @@ namespace ClassLibrary
     {
         public static string GetName()
         {
-            return "David";
+            return "Arthur";
         }
     }
 }
