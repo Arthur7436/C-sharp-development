@@ -1,7 +1,7 @@
 ﻿using System;
 using ClassLibrary;
 
-namespace WeatherApp
+namespace MethodCallingBasics
 {
     class Program
     {
