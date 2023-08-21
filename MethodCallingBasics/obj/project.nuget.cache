@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "03/8WFlrIGctMe+kJG232YcdoeQIhP41fvYY8PxhjpAwyiSahliS7aR4N52SjYVwqCTozJBs9+VYN50t1o/Dug==",
+  "dgSpecHash": "fCtA4mKMguKuDCnbR/w76GcvLR9lBhcV8ylHEpOhAkNR/o0Wh388xiX5VMmGlVhp2N1peqSC0ryuf4exg6Hlyw==",
   "success": true,
-  "projectFilePath": "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/WeatherApp.csproj",
+  "projectFilePath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

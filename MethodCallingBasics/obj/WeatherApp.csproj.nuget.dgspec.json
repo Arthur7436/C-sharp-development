@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/WeatherApp.csproj": {}
+    "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj": {}
   },
   "projects": {
-    "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/WeatherApp.csproj": {
+    "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/WeatherApp.csproj",
+        "projectUniqueName": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj",
         "projectName": "WeatherApp",
-        "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/WeatherApp.csproj",
+        "projectPath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/WeatherApp.csproj",
         "packagesPath": "/home/arthur/.nuget/packages/",
-        "outputPath": "/home/arthur/Desktop/Self_Development/Challenger/WeatherApp/obj/",
+        "outputPath": "/home/arthur/Desktop/Self_Development/Challenger/MethodCallingBasics/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/arthur/.nuget/NuGet/NuGet.Config"
