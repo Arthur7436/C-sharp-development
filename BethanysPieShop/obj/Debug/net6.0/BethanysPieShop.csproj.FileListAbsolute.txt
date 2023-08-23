@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/BethanysPieShop
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/BethanysPieShop.deps.json
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/BethanysPieShop.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/BethanysPieShop.dll
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/ref/BethanysPieShop.dll
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/bin/Debug/net6.0/BethanysPieShop.pdb
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.dll
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/ref/BethanysPieShop.dll
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.pdb
+/home/arthur/Desktop/Self_Development/Challenger/BethanysPieShop/obj/Debug/net6.0/BethanysPieShop.genruntimeconfig.cache

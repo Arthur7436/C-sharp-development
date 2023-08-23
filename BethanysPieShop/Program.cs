@@ -17,7 +17,7 @@ namespace BethanysPieShop
             {
                 welcome();
 
-                Console.WriteLine("");
+                Console.Write("");
 
                 listMenu();
 
@@ -54,11 +54,11 @@ namespace BethanysPieShop
         public static void askForPrompt()
         {
             Console.Write("Insert action: ");
-            Console.WriteLine();
             int userPrompt = int.Parse(Console.ReadLine());
 
             if (userPrompt == 1)
             {
+                Console.WriteLine();
                 Console.WriteLine("Creating an employee");
                 Console.Write("Enter the first name: ");
                 string employeeFirstName = Console.ReadLine();
@@ -68,7 +68,6 @@ namespace BethanysPieShop
                 String employeeHourlyRate = Console.ReadLine();
 
                 Console.WriteLine("Employee created!");
-                Console.WriteLine("");
                 Console.WriteLine("");
 
                 //store the employee details into an instance
@@ -89,18 +88,42 @@ namespace BethanysPieShop
             else if (userPrompt == 2)
             {
                 Console.WriteLine("Select an employee:");
-                //show list of employees registered
 
+                //show list of employees registered
                 for (int i = 0; i < employeeList.Count; i++)
                 {
                     Console.WriteLine($"{i + 1}. {employeeList[i].firstName} {employeeList[i].lastName}");
                 }
-
                 Console.WriteLine();
 
-
-                //let the database of employees to be in parallel with the list that is shown
+                Console.Write("Select employee's number: ");
+                int selectedEmployee = int.Parse(Console.ReadLine());
                 //if user chooses existing employee, then Ask 'Enter the number of hours worked', then store that to the employee's instance
+                if (selectedEmployee >= 1 && selectedEmployee <= employeeList.Count)
+                {
+                    EmployeesClass employeeNumber = employeeList[selectedEmployee - 1];
+
+                    Console.Write("Enter the number of hours worked: ");
+                    int hoursWorked = int.Parse(Console.ReadLine());
+
+                    //Associate the hoursWorked value to the selected employee
+                    EmployeesClass employee = new EmployeesClass();
+                    {
+                        employee.hoursWorked = hoursWorked;
+                    }
+
+                    employeeList.Add(employee);
+                    Console.WriteLine(employee);
+
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid selection. Please try again.");
+                    // Optionally, you can loop back to let the user try again
+                }
+
+
                 //if number is not valid, then ask the user to input a valid number again
                 //When a number is inputted, then print '{employeeFirstName} {employeeLastName} has now worked {hoursWorked} hours in total.'  
                 //else if employee DOES NOT exist, then Ask to select an employee that exists
