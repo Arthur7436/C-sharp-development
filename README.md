@@ -1,33 +1,24 @@
-# C-sharp-development
-Repository for me to practice learning C# by creating mini projects 
-I have created a separate cs file:
 using System;
 
 namespace Employees
 {
-    class Employees
-    {
-        public static string employees()
-        {
-            public string firstName { get; set; };
-            public string lastName { get; set; };
-            public int hourlyRate { get; set; };
-
-            
-
-        }
+    class EmployeesClass
+    {        
+            public string firstName { get; set; }
+            public string lastName { get; set; }
+            public int hourlyRate { get; set; }
     }
 }
 
-In my other file is:
 using System;
+using System.Collections.Generic;
 using Employees;
 
 namespace BethanysPieShop
 {
     class Program
     {
-        List<string> employeeList = new List<string>();
+        static List<EmployeesClass> employeeList = new List<EmployeesClass>();
 
         public static void Main(string[] args)
         {
@@ -91,11 +82,11 @@ namespace BethanysPieShop
                 Console.WriteLine("");
 
                 //store the employee details into an instance
-                Employees.employees() employeeInstance = new Employees.employees();
+                EmployeesClass employeeInstance = new EmployeesClass();
                 {
-                    employeeInstance.firstName = employeeFirstName;
-                    employeeInstance.lastName = employeeLastName;
-                    employeeInstance.hourlyRate = employeeHourlyRate
+                    EmployeesClass.firstName = employeeFirstName;
+                    EmployeesClass.lastName = employeeLastName;
+                    EmployeesClass.hourlyRate = int.Parse(employeeHourlyRate);
                 }
 
                 employeeList.Add(employeeInstance);
@@ -119,4 +110,28 @@ namespace BethanysPieShop
         
     }
 }
-The issue is that I can't somehow have the List employeeList and the new instance to be connected. It seems that they are not connected.
+This is my new code and it looks like it has been fixed. However I'm getting an error:
+C:\Visual Studio Projects\BethanysPieShop\Employees.cs(7,27): warning CS8618: Non-nullable property 'firstName' must contain a non-null value when exiting constructor. Consider declaring the property as null
+able. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Employees.cs(8,27): warning CS8618: Non-nullable property 'lastName' must contain a non-null value when exiting constructor. Consider declaring the property as nulla
+ble. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(75,21): error CS0120: An object reference is required for the non-static field, method, or property 'EmployeesClass.firstName' [C:\Visual Studio Projects\
+BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(76,21): error CS0120: An object reference is required for the non-static field, method, or property 'EmployeesClass.lastName' [C:\Visual Studio Projects\B
+ethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(77,21): error CS0120: An object reference is required for the non-static field, method, or property 'EmployeesClass.hourlyRate' [C:\Visual Studio Projects
+\BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(56,40): warning CS8604: Possible null reference argument for parameter 's' in 'int int.Parse(string s)'. [C:\Visual Studio Projects\BethanysPieShop\Bethan
+ysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(62,44): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.cs
+proj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(64,43): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.cs
+proj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(66,45): warning CS8600: Converting null literal or possible null value to non-nullable type. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.cs
+proj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(75,48): warning CS8601: Possible null reference assignment. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(76,47): warning CS8601: Possible null reference assignment. [C:\Visual Studio Projects\BethanysPieShop\BethanysPieShop.csproj]
+C:\Visual Studio Projects\BethanysPieShop\Program.cs(77,59): warning CS8604: Possible null reference argument for parameter 's' in 'int int.Parse(string s)'. [C:\Visual Studio Projects\BethanysPieShop\Bethan
+ysPieShop.csproj]
+
+The build failed. Fix the build errors and run again.
