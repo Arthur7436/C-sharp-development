@@ -1,0 +1,14 @@
+C:\Visual Studio Projects\BethanysPieShop\bin\Debug\net7.0\BethanysPieShop.exe
+C:\Visual Studio Projects\BethanysPieShop\bin\Debug\net7.0\BethanysPieShop.dll
+C:\Visual Studio Projects\BethanysPieShop\bin\Debug\net7.0\BethanysPieShop.deps.json
+C:\Visual Studio Projects\BethanysPieShop\bin\Debug\net7.0\BethanysPieShop.runtimeconfig.json
+C:\Visual Studio Projects\BethanysPieShop\bin\Debug\net7.0\BethanysPieShop.pdb
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.AssemblyInfo.cs
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.dll
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\refint\BethanysPieShop.dll
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.pdb
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\BethanysPieShop.genruntimeconfig.cache
+C:\Visual Studio Projects\BethanysPieShop\obj\Debug\net7.0\ref\BethanysPieShop.dll
