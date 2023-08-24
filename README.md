@@ -1,19 +1,3 @@
-This is separate file:
-using System;
-
-namespace Employees
-{
-    class EmployeesClass
-    {
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public int hourlyRate { get; set; }
-        public int hoursWorked { get; set; }
-    }
-}
-
-This is separate file:
-
 using System;
 using System.Collections.Generic;
 using Employees;
@@ -133,54 +117,49 @@ namespace BethanysPieShop
 
                     Console.WriteLine();
                 }
-                else if (userPrompt == 3)
-                {
-                    Console.WriteLine("Select an employee:");
+            }
+            else if (userPrompt == 3)
+            {
+                Console.WriteLine("Select an employee:");
 
-                    //show list of employees registered
-                    for (int i = 0; i < employeeList.Count; i++)
-                    {
-                        Console.WriteLine($"{i + 1}. {employeeList[i].firstName} {employeeList[i].lastName}");
-                    }
+                //show list of employees registered
+                for (int i = 0; i < employeeList.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {employeeList[i].firstName} {employeeList[i].lastName}");
+                }
+                Console.WriteLine();
+
+                Console.Write("Select employee's number: ");
+                int selectedEmployee = int.Parse(Console.ReadLine());
+                //if user chooses existing employee
+                if (selectedEmployee >= 1 && selectedEmployee <= employeeList.Count)
+                {
+                    //Create an instance of that existing employee and notify the user who they have selected
+                    EmployeesClass employee = employeeList[selectedEmployee - 1];
+
+                    //Calculate the wage earned AND reset hours worked to 0
+                    int wageEarned = employeeList[selectedEmployee - 1].hoursWorked * employeeList[selectedEmployee - 1].hourlyRate;
+                    Console.WriteLine($"The wage for {employeeList[selectedEmployee - 1].hoursWorked} hours of work is {wageEarned}.");
+                    Console.WriteLine($"{employeeList[selectedEmployee - 1].firstName} {employeeList[selectedEmployee - 1].lastName} has received a wage of {wageEarned}. The hours worked is reset to 0.");
+
+                    employeeList[selectedEmployee - 1].hoursWorked = 0;
+                    Console.WriteLine($"{employeeList[selectedEmployee - 1].hoursWorked} is reset for {employeeList[selectedEmployee - 1].firstName}");
+
                     Console.WriteLine();
 
-                    Console.Write("Select employee's number: ");
-                    int selectedEmployee = int.Parse(Console.ReadLine());
-                    //if user chooses existing employee
-                    if (selectedEmployee >= 1 && selectedEmployee <= employeeList.Count)
-                    {
-                        //Create an instance of that existing employee and notify the user who they have selected
-                        EmployeesClass employee = employeeList[selectedEmployee - 1];
-
-                        //Calculate the wage earned AND reset hours worked to 0
-                        int wageEarned = employeeList[selectedEmployee - 1].hoursWorked * employeeList[selectedEmployee].hourlyRate;
-                        Console.WriteLine($"Wage earned is {wageEarned}");
-
-                        Console.WriteLine();
-
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid selection. Please try again.");
-                    }
-
-
-
-
-                    //if number is not valid, then ask the user to input a valid number again
-                    //When a number is inputted, then print '{employeeFirstName} {employeeLastName} has now worked {hoursWorked} hours in total.'  
-                    //else if employee DOES NOT exist, then Ask to select an employee that exists
-                    //break
-
                 }
-                return true;
             }
-
+            else
+            {
+                Console.WriteLine("Invalid selection. Please try again.");
+            }
+            return true;
         }
     }
 }
 
-I'm getting error where it says i'm missing curly brackets. how do i fix this?
-Can you give me hints as to how I can optimally update my code?
-What's the difference between the green button that opens a new terminal visual studio and type dotnet run in the terminal which essentially do the same thing?
-Is my style of creating this program good for building my knowledge for real world swe?
+
+
+Is there any suggestions on how I can improve this code?
+
+Can you give me your version of the updated version of this code?
