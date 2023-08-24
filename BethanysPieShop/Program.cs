@@ -95,6 +95,7 @@ namespace BethanysPieShop
 
                 Console.WriteLine();
 
+                
 
             }
             else if (userPrompt == 2)
@@ -140,7 +141,7 @@ namespace BethanysPieShop
                     EmployeesClass employee = employeeList[selectedEmployee - 1];
 
                     //Calculate the wage earned AND reset hours worked to 0
-                    int wageEarned = employeeList[selectedEmployee - 1].hoursWorked * employeeList[selectedEmployee - 1].hourlyRate;
+                    double wageEarned = employeeList[selectedEmployee - 1].hoursWorked * employeeList[selectedEmployee - 1].hourlyRate * EmployeesClass.taxRate;
                     Console.WriteLine($"The wage for {employeeList[selectedEmployee - 1].hoursWorked} hours of work is {wageEarned}.");
                     Console.WriteLine($"{employeeList[selectedEmployee - 1].firstName} {employeeList[selectedEmployee - 1].lastName} has received a wage of {wageEarned}. The hours worked is reset to 0.");
 

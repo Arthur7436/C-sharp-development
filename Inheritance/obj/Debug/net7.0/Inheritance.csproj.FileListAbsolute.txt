@@ -1,0 +1,14 @@
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.AssemblyInfoInputs.cache
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.AssemblyInfo.cs
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.csproj.CoreCompileInputs.cache
+C:\Visual Studio Projects\Inheritance\bin\Debug\net7.0\Inheritance.exe
+C:\Visual Studio Projects\Inheritance\bin\Debug\net7.0\Inheritance.deps.json
+C:\Visual Studio Projects\Inheritance\bin\Debug\net7.0\Inheritance.runtimeconfig.json
+C:\Visual Studio Projects\Inheritance\bin\Debug\net7.0\Inheritance.dll
+C:\Visual Studio Projects\Inheritance\bin\Debug\net7.0\Inheritance.pdb
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.dll
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\refint\Inheritance.dll
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.pdb
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\Inheritance.genruntimeconfig.cache
+C:\Visual Studio Projects\Inheritance\obj\Debug\net7.0\ref\Inheritance.dll

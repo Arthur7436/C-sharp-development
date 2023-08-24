@@ -8,5 +8,8 @@ namespace Employees
         public string lastName { get; set; }
         public int hourlyRate { get; set; }
         public int hoursWorked { get; set; }
+        public static double taxRate = 0.45;
     }
+
+    
 }
