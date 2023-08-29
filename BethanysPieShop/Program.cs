@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Employees;
-//Find a way to improve the code.
+//Find a way to improve the code..
 namespace BethanysPieShop
 {
     class Program
