@@ -8,5 +8,6 @@ namespace Employees
         public string lastName { get; set; }
         public int hourlyRate { get; set; }
         public int hoursWorked { get; set; }
+        public int tax { get; set; }
     }
 }
