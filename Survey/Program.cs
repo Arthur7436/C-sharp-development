@@ -1,12 +1,12 @@
-﻿using System; // 2. Importing Libraries
+﻿using System;
 
-namespace HelloWorld // 1. Namespace Declaration
+namespace Program
 {
-    class Program // 3. Class Definition
+    class Program
     {
-        static void Main(string[] args) // 4. Main Method
+        static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            
         }
     }
 }
