@@ -1,9 +1,12 @@
-﻿using System; // 2. Importing Libraries
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
-namespace HelloWorld // 1. Namespace Declaration
+namespace DataModel.Models
 {
-    public class FormData // 3. Class Definition
+    public class Update
     {
+        [Required]
+        [MaxLength(140)]
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string email { get; set; }

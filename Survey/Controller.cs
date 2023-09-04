@@ -1,18 +1,59 @@
-﻿public class SurveyController : Controller
+﻿using DataModel.Models;
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Http;
+using System.Web;
+
+namespace FormEncode.Controllers
 {
-    public IActionResult DisplayForm()
+    public class UpdatesController : ApiController
     {
-        return View();
+        static readonly Dictionary<Guid, Update> updates = new Dictionary<Guid, Update>();
+
+        [HttpPost]
+        [ActionName("Complex")]
+        public HttpResponseMessage PostComplex(Update update)
+        {
+            if (DataModel.IsValid && update != null)
+            {
+                // Convert any HTML markup in the status text.
+                update.Status = HttpUtility.HtmlEncode(update.Status);
+
+                // Assign a new ID.
+                var id = Guid.NewGuid();
+                updates[id] = update;
+
+                // Create a 201 response.
+                var response = new HttpResponseMessage(HttpStatusCode.Created)
+                {
+                    Content = new StringContent(update.Status)
+                };
+                response.Headers.Location =
+                    new Uri(Url.Link("DefaultApi", new { action = "status", id = id }));
+                return response;
+            }
+            else
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
+            }
+        }
+
+        [HttpGet]
+        public Update Status(Guid id)
+        {
+            Update update;
+            if (updates.TryGetValue(id, out update))
+            {
+                return update;
+            }
+            else
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+        }
+
     }
 
-    [HttpPost]
-    public IActionResult HandleFormSubmission(FormData formData)
-    {
-        if (ModelState.IsValid)
-        {
-            // Process form data
-            return RedirectToAction("Success");
-        }
-        return View("DisplayForm");
-    }
+
 }
