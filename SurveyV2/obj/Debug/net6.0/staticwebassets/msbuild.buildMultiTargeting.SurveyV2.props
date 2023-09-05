@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SurveyV2.props" />
+</Project>
