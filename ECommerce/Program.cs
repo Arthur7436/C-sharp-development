@@ -1,4 +1,7 @@
 ﻿using System;
+using ECommercePlatform.Roles;
+using ECommercePlatform.People;
+
 
 namespace ECommercePlatform
 {
@@ -6,7 +9,7 @@ namespace ECommercePlatform
     {
         static void Main(string[] args)
         {
-            
+
         }
     }
 }
