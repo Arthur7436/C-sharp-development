@@ -8,7 +8,7 @@ public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        "Freezing"
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
@@ -23,9 +23,12 @@ public class WeatherForecastController : ControllerBase
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+            Date = "07/09/2023",
             TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            Summary = "This is the summary section",
+            Age = 24,
+            RandomProperty = "This is a random property I added to the JSON"
+
         })
         .ToArray();
     }
