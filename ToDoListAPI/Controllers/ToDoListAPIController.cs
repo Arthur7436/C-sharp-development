@@ -31,13 +31,18 @@ namespace ToDoListAPI.Controllers
                 instance1.IsCompleted = false;
             }
 
-
-
             Task instance2 = new Task();
             {
                 instance2.Id = 100;
                 instance2.Description = "This is the second instance";
                 instance2.IsCompleted = true;
+            }
+
+            Task instance3 = new Task();
+            {
+                instance3.Id = 1;
+                instance3.Description = "This is the third instance";
+                instance3.IsCompleted = false;
             }
 
             taskList.Add(instance1);
