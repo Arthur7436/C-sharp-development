@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 
 namespace MiniAPI.Controllers
 {
+
+
+
     [ApiController]
-    [Route("[controller]")]
+    [Route("[Api]")]
     public class TaskController : ControllerBase
     {
-        //     private static readonly string[] Summaries = new[]
-        //     {
-        //     "Freezing"
-        // };
-
+        private static List<Task> tasks = new List<Task>();
         private readonly ILogger<TaskController> _logger;
 
         public TaskController(ILogger<TaskController> logger)
@@ -19,14 +20,9 @@ namespace MiniAPI.Controllers
         }
 
         [HttpGet(Name = "GetTaskAPI")]
-        public IEnumerable<Task> Get()
+        public IActionResult Get()
         {
-            return Enumerable.Range(1, 2).Select(index => new Task
-            {
-
-
-            })
-            .ToArray();
+            Console.Write("asd");
         }
     }
 
