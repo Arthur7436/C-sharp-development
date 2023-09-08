@@ -45,8 +45,18 @@ namespace ToDoListAPI.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] Task newTask)
         {
-            taskList.Add(newTask);
-
+            for (int i = 0; i < taskList.Count; i++)
+            {
+                if (newTask.Id == taskList[i].Id)
+                {
+                    return BadRequest("This Id already exists please try again");
+                }
+                else
+                {
+                    taskList.Add(newTask);
+                    break;
+                }
+            }
             return Ok(newTask);
         }
 
