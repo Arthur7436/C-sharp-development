@@ -57,17 +57,17 @@ namespace ToDoListAPI.Controllers
             return Ok(taskList);
         }
 
-        // [Route("create")]
-        // [HttpPost]
-        // public IActionResult Create([FromBody] Task newTask)
-        // {
-        //     taskList.Add(newTask);
+        [Route("create")]
+        [HttpPost]
+        public IActionResult Create([FromBody] Task newTask)
+        {
+            taskList.Add(newTask);
 
 
-        //     return Ok(newTask);
+            return Ok(newTask);
 
 
-        // }
+        }
     }
 
 
