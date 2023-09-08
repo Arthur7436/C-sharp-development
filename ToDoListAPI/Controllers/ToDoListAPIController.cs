@@ -49,6 +49,8 @@ namespace ToDoListAPI.Controllers
                 return BadRequest("Error");
             }
 
+            return Ok(taskList[0]);
+
 
         }
     }
