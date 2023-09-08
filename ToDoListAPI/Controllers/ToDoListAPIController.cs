@@ -52,20 +52,22 @@ namespace ToDoListAPI.Controllers
 
         [Route("put")]
         [HttpPut]
-        public IActionResult Put([FromBody] Task newTask)
+        public IActionResult Put([FromBody] Task put)
         {
-            Task instance = new Task();
+
             for (int i = 0; i < taskList.Count; i++)
             {
-                if (instance.Id == taskList[i].Id)
+                if (put.Id == taskList[i].Id)
                 {
-                    instance.Id == taskList[i].Id;
-                    instance.Description == taskList[i].Description;
-                    instance.IsCompleted == taskList[i].IsCompleted;
-                }
-            }
+                    taskList[i].Id = put.Id;
+                    taskList[i].Description = put.Description;
+                    taskList[i].IsCompleted = put.IsCompleted;
 
-            return Ok(newTask);
+                    break;
+                }
+
+            }
+            return Ok(put);
         }
 
 
