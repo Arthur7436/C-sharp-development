@@ -12,8 +12,8 @@ namespace ToDoListAPI.Controllers
     [Route("api/tasks")]
     public class ViewController : ControllerBase
     {
-        public static List<Task> taskList = new List<Task>();
 
+        public static List<Task> taskList = new List<Task>();
         private readonly ILogger<ViewController> _logger;
 
         public ViewController(ILogger<ViewController> logger)
@@ -25,6 +25,15 @@ namespace ToDoListAPI.Controllers
         [HttpGet(Name = "GetTaskAPI")]
         public IActionResult Get()
         {
+            Task instance = new Task();
+            {
+                instance.Id = 10;
+                instance.Description = "Description";
+                instance.IsCompleted = true;
+            }
+
+            taskList.Add(instance);
+
             return Ok(taskList);
         }
 
@@ -35,8 +44,6 @@ namespace ToDoListAPI.Controllers
             taskList.Add(newTask);
 
             return Ok(newTask);
-
-
         }
     }
 }
