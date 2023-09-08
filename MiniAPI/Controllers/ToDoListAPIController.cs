@@ -7,13 +7,13 @@ using ToDoListAPI;
 namespace ToDoListAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class TaskController : ControllerBase
+    [Route("api/potato/[controller]")]
+    public class PotatoThisIsController : ControllerBase
     {
         private static List<Task> tasks = new List<Task>();
-        private readonly ILogger<TaskController> _logger;
+        private readonly ILogger<PotatoThisIsController> _logger;
 
-        public TaskController(ILogger<TaskController> logger)
+        public PotatoThisIsController(ILogger<PotatoThisIsController> logger)
         {
             _logger = logger;
         }
@@ -23,7 +23,7 @@ namespace ToDoListAPI.Controllers
         {
             if (tasks == null || tasks.Count == 0)
             {
-                return NotFound("Bro no task was found!");
+                return NotFound("Bro no task was found Please use a different API call!");
             }
 
             return Ok(tasks);
