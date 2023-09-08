@@ -16,12 +16,12 @@ namespace MiniAPI.Controllers
 
         private readonly ILogger<ToDoController> _logger;
 
-        public ToDoControllerController(ILogger<ToDoController> logger)
+        public ToDoController(ILogger<ToDoController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "GetToDoAPI")]
         public IEnumerable<Task> Get()
         {
             return Enumerable.Range(1, 2).Select(index => new Task
