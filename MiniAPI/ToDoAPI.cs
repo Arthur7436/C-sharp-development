@@ -1,6 +1,6 @@
 namespace MiniAPI;
 
-public class WeatherForecast
+public class Task
 {
     public string Date { get; set; }
 
