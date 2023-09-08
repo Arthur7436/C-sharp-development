@@ -2,26 +2,23 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MiniAPI.Controllers
 {
-
-
-
     [ApiController]
     [Route("[controller]")]
-    public class ToDoController : ControllerBase
+    public class TaskController : ControllerBase
     {
         //     private static readonly string[] Summaries = new[]
         //     {
         //     "Freezing"
         // };
 
-        private readonly ILogger<ToDoController> _logger;
+        private readonly ILogger<TaskController> _logger;
 
-        public ToDoController(ILogger<ToDoController> logger)
+        public TaskController(ILogger<TaskController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetToDoAPI")]
+        [HttpGet(Name = "GetTaskAPI")]
         public IEnumerable<Task> Get()
         {
             return Enumerable.Range(1, 2).Select(index => new Task
