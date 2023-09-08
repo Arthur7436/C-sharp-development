@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AXAAzg2hMWCdWfV4B+ebTmTG0Jbequ/tZTKOo/7KmsbuwiUDtzvKDoz1PJ8Sfvv9fQeO/CmPNhI/AGl7BfzCHg==",
+  "dgSpecHash": "IywZyX1vIbZPp+2mmhJmq09bk5h+FAxrE/R0T2x2ZgCVvGHbK2Sgbp1qxxHVAXL5bJpAA7AVNscOqF0UPca1dA==",
   "success": true,
-  "projectFilePath": "C:\\C-sharp-development\\MiniAPI\\MiniAPI.csproj",
+  "projectFilePath": "C:\\C-sharp-development\\ToDoListAPI\\MiniAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\athai\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\athai\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\C-sharp-development\\MiniAPI\\MiniAPI.csproj",
+      "projectUniqueName": "C:\\C-sharp-development\\ToDoListAPI\\MiniAPI.csproj",
       "projectName": "MiniAPI",
-      "projectPath": "C:\\C-sharp-development\\MiniAPI\\MiniAPI.csproj",
+      "projectPath": "C:\\C-sharp-development\\ToDoListAPI\\MiniAPI.csproj",
       "packagesPath": "C:\\Users\\athai\\.nuget\\packages\\",
-      "outputPath": "C:\\C-sharp-development\\MiniAPI\\obj\\",
+      "outputPath": "C:\\C-sharp-development\\ToDoListAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
