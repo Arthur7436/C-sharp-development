@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System.Security.Cryptography.X509Certificates;
 using ToDoListAPI;
 using System.Text.Json;
+using System.ComponentModel;
 
 namespace ToDoListAPI.Controllers
 {
@@ -23,6 +24,25 @@ namespace ToDoListAPI.Controllers
         [HttpGet(Name = "GetTaskAPI")]
         public IActionResult Get()
         {
+            Task instance1 = new Task();
+            {
+                instance1.Id = 21;
+                instance1.Description = "This is the first instance";
+                instance1.IsCompleted = false;
+            }
+
+
+
+            Task instance2 = new Task();
+            {
+                instance2.Id = 100;
+                instance2.Description = "This is the second instance";
+                instance2.IsCompleted = true;
+            }
+
+            taskList.Add(instance1);
+            taskList.Add(instance2);
+
             if (taskList == null || taskList.Count == 0)
             {
                 return NotFound("No list has been found");
@@ -32,9 +52,12 @@ namespace ToDoListAPI.Controllers
         }
 
         [Route("create")]
-        [HttpPost(Name = "PostTaskAPI")]
+        [HttpPost]
         public IActionResult Create([FromBody] Task newTask)
         {
+
+            // taskList.Add(newTask);
+
             Task instance1 = new Task();
             {
                 instance1.Id = 21;
@@ -42,14 +65,13 @@ namespace ToDoListAPI.Controllers
                 instance1.IsCompleted = false;
             }
 
-            taskList.Add(newTask);
+            newTask.Id = 20;
 
-            if (taskList == null || taskList.Count == 0)
-            {
-                return BadRequest("Task data is null or malformed");
-            }
+            // taskList.Add(instance1);
 
-            return Ok(taskList);
+            // return Ok(taskList);
+
+            return Ok(newTask);
 
 
         }
