@@ -1,12 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
+using System.Security.Cryptography.X509Certificates;
 
-namespace MiniAPI.Controllers
+namespace ToDoListAPI.Controllers
 {
-
-
-
     [ApiController]
     [Route("[Api]")]
     public class TaskController : ControllerBase
@@ -20,9 +18,12 @@ namespace MiniAPI.Controllers
         }
 
         [HttpGet(Name = "GetTaskAPI")]
-        public IActionResult Get()
+        public IActionResult ToDoListAPIController.Get()
         {
-            Console.Write("asd");
+            if (tasks == null || tasks.Count == 0)
+            {
+                return NotFound();
+            }
         }
     }
 

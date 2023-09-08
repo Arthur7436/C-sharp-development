@@ -1,4 +1,4 @@
-namespace MiniAPI;
+namespace ToDoListAPI;
 
 public class Task
 {
