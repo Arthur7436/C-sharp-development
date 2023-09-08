@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography.X509Certificates;
 using ToDoListAPI;
+using System.Text.Json;
 
 namespace ToDoListAPI.Controllers
 {
     [ApiController]
-    [Route("/[controller]")]
+    [Route("/Get")]
     public class ViewController : ControllerBase
     {
-        private static List<Task> tasks = new List<Task>();
+        public static List<Task> taskList = new List<Task>();
+
         private readonly ILogger<ViewController> _logger;
 
         public ViewController(ILogger<ViewController> logger)
@@ -21,12 +23,33 @@ namespace ToDoListAPI.Controllers
         [HttpGet(Name = "GetTaskAPI")]
         public IActionResult Get()
         {
-            if (tasks == null || tasks.Count == 0)
+            if (taskList == null || taskList.Count == 0)
             {
                 return NotFound("No list has been found");
             }
 
-            return Ok(tasks);
+            return Ok(taskList);
+        }
+
+        [Route("/Post")]
+        [HttpPost(Name = "PostTaskAPI")]
+        public IActionResult Create([FromBody] Task newTask)
+        {
+            Task instance1 = new Task();
+            {
+                instance1.Id = 21;
+                instance1.Description = "This is the first instance";
+                instance1.IsCompleted = false;
+            }
+
+            taskList.Add(instance1);
+
+            if (tasks == null || tasks.Count == 0)
+            {
+                return BadRequest("Error");
+            }
+
+
         }
     }
 
