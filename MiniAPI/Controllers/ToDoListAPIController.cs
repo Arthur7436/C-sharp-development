@@ -2,11 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using System.Security.Cryptography.X509Certificates;
+using ToDoListAPI;
 
 namespace ToDoListAPI.Controllers
 {
     [ApiController]
-    [Route("[Api]")]
+    [Route("api/[controller]")]
     public class TaskController : ControllerBase
     {
         private static List<Task> tasks = new List<Task>();
@@ -18,7 +19,7 @@ namespace ToDoListAPI.Controllers
         }
 
         [HttpGet(Name = "GetTaskAPI")]
-        public IActionResult ToDoListAPIController.Get()
+        public IActionResult Get()
         {
             if (tasks == null || tasks.Count == 0)
             {
