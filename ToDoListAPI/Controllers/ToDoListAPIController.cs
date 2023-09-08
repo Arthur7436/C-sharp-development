@@ -8,7 +8,7 @@ using System.Text.Json;
 namespace ToDoListAPI.Controllers
 {
     [ApiController]
-    [Route("/Get")]
+    [Route("api/tasks")]
     public class ViewController : ControllerBase
     {
         public static List<Task> taskList = new List<Task>();
@@ -31,7 +31,7 @@ namespace ToDoListAPI.Controllers
             return Ok(taskList);
         }
 
-        [Route("/Post")]
+        [Route("api/tasks/post")]
         [HttpPost(Name = "PostTaskAPI")]
         public IActionResult Create([FromBody] Task newTask)
         {
@@ -44,12 +44,21 @@ namespace ToDoListAPI.Controllers
 
             taskList.Add(instance1);
 
-            if (taskList == null || taskList.Count == 0)
+            Task instance2 = new Task();
             {
-                return BadRequest("Error");
+                instance2.Id = 21;
+                instance2.Description = "This is the first instance";
+                instance2.IsCompleted = false;
             }
 
-            return Ok(taskList[0]);
+            taskList.Add(instance2);
+
+            if (taskList == null || taskList.Count == 0)
+            {
+                return BadRequest("Task data is null or malformed");
+            }
+
+            return Ok(taskList);
 
 
         }
