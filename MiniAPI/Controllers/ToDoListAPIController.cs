@@ -23,8 +23,10 @@ namespace ToDoListAPI.Controllers
         {
             if (tasks == null || tasks.Count == 0)
             {
-                return NotFound();
+                return NotFound("Bro no task was found!");
             }
+
+            return Ok(tasks);
         }
     }
 
