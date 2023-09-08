@@ -12,6 +12,12 @@ namespace ToDoListAPI.Controllers
     [Route("api/tasks")]
     public class ViewController : ControllerBase
     {
+        private readonly ILogger<ViewController> _logger;
+
+        public ViewController(ILogger<ViewController> logger)
+        {
+            _logger = logger;
+        }
         public static List<Task> taskList = new List<Task>();
         static ViewController()
         {
@@ -24,19 +30,14 @@ namespace ToDoListAPI.Controllers
 
             taskList.Add(instance);
         }
-        private readonly ILogger<ViewController> _logger;
 
-        public ViewController(ILogger<ViewController> logger)
-        {
-            _logger = logger;
-        }
-
-
-
-        [HttpGet(Name = "GetTaskAPI")]
+        [HttpGet]
         public IActionResult Get()
         {
-
+            if (taskList == null || taskList.Count == 0)
+            {
+                return BadRequest("Error, there was no Task found");
+            }
             return Ok(taskList);
         }
 
@@ -48,5 +49,25 @@ namespace ToDoListAPI.Controllers
 
             return Ok(newTask);
         }
+
+        [Route("put")]
+        [HttpPut]
+        public IActionResult Put([FromBody] Task newTask)
+        {
+            Task instance = new Task();
+            for (int i = 0; i < taskList.Count; i++)
+            {
+                if (instance.Id == taskList[i].Id)
+                {
+                    instance.Id == taskList[i].Id;
+                    instance.Description == taskList[i].Description;
+                    instance.IsCompleted == taskList[i].IsCompleted;
+                }
+            }
+
+            return Ok(newTask);
+        }
+
+
     }
 }
