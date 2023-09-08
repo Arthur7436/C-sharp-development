@@ -31,7 +31,7 @@ namespace ToDoListAPI.Controllers
             return Ok(taskList);
         }
 
-        [Route("api/post")]
+        [Route("create")]
         [HttpPost(Name = "PostTaskAPI")]
         public IActionResult Create([FromBody] Task newTask)
         {
@@ -44,21 +44,12 @@ namespace ToDoListAPI.Controllers
 
             taskList.Add(newTask);
 
-            Task instance2 = new Task();
-            {
-                instance2.Id = 21;
-                instance2.Description = "This is the first instance";
-                instance2.IsCompleted = false;
-            }
-
-            taskList.Add(newTask);
-
             if (taskList == null || taskList.Count == 0)
             {
                 return BadRequest("Task data is null or malformed");
             }
 
-            return Ok(newTask);
+            return Ok(taskList);
 
 
         }
