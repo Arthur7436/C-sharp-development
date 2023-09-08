@@ -47,6 +47,7 @@ namespace ToDoListAPI.Controllers
 
             taskList.Add(instance1);
             taskList.Add(instance2);
+            taskList.Add(instance3);
 
             if (taskList == null || taskList.Count == 0)
             {
@@ -56,30 +57,17 @@ namespace ToDoListAPI.Controllers
             return Ok(taskList);
         }
 
-        [Route("create")]
-        [HttpPost]
-        public IActionResult Create([FromBody] Task newTask)
-        {
-
-            // taskList.Add(newTask);
-
-            Task instance1 = new Task();
-            {
-                instance1.Id = 21;
-                instance1.Description = "This is the first instance";
-                instance1.IsCompleted = false;
-            }
-
-            newTask.Id = 20;
-
-            // taskList.Add(instance1);
-
-            // return Ok(taskList);
-
-            return Ok(newTask);
+        // [Route("create")]
+        // [HttpPost]
+        // public IActionResult Create([FromBody] Task newTask)
+        // {
+        //     taskList.Add(newTask);
 
 
-        }
+        //     return Ok(newTask);
+
+
+        // }
     }
 
 
