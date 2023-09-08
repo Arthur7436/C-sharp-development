@@ -44,7 +44,7 @@ namespace ToDoListAPI.Controllers
 
             taskList.Add(instance1);
 
-            if (tasks == null || tasks.Count == 0)
+            if (taskList == null || taskList.Count == 0)
             {
                 return BadRequest("Error");
             }
