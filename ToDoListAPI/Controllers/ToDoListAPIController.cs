@@ -72,7 +72,7 @@ namespace ToDoListAPI.Controllers
             return Ok(newTask);
         }
 
-        [Route("put")]
+        [Route("updateId")]
         [HttpPut]
         public IActionResult Put([FromBody] Task put)
         {
