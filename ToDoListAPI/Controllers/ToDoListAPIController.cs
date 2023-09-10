@@ -45,18 +45,12 @@ namespace ToDoListAPI.Controllers
         [HttpPost]
         public IActionResult CreateTask([FromBody] Task newTask)
         {
-            //Iterate over all the Id's
-            //If it equals to ANY then badrequest
-            // if it does not equal to any then add to list
-
-            if (taskList.Any(task => task.Id == newTask.Id))
+            if (taskList.Any(taskListObject => taskListObject.Id == newTask.Id))
             {
                 return BadRequest("This task id already exists");
             }
 
             taskList.Add(newTask);
-
-
             return Ok(newTask);
         }
 
@@ -77,6 +71,22 @@ namespace ToDoListAPI.Controllers
                 }
             }
             return Ok(put);
+        }
+
+        [Route("delete")]
+        [HttpDelete]
+        public IActionResult Delete([FromBody] Task delete)
+        {
+            if (taskList.Any(taskListObject => taskListObject.Id == delete.Id))
+            {
+
+                taskList.Remove(taskList[0]);
+
+            }
+
+
+            return Ok("The Object with requested id has been removed");
+
         }
 
 
