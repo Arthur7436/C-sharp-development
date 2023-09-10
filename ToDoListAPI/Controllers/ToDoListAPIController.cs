@@ -43,22 +43,19 @@ namespace ToDoListAPI.Controllers
 
         [Route("create")]
         [HttpPost]
-        public IActionResult Create([FromBody] Task newTask)
+        public IActionResult CreateTask([FromBody] Task newTask)
         {
-            bool idExists = false;
-            for (int i = 0; i < taskList.Count; i++)
-            {
-                if (newTask.Id == taskList[i].Id)
-                {
-                    idExists = true;
-                    return BadRequest("The Id exists please try again");
+            //Iterate over all the Id's
+            //If it equals to ANY then badrequest
+            // if it does not equal to any then add to list
 
-                }
-                else if (newTask.Id != taskList[i].Id)
-                {
-                    idExists = false;
-                }
+            if (taskList.Any(task => task.Id == newTask.Id))
+            {
+                return BadRequest("This task id already exists");
             }
+
+            taskList.Add(newTask);
+
 
             return Ok(newTask);
         }
