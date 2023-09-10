@@ -51,22 +51,15 @@ namespace ToDoListAPI.Controllers
                 if (newTask.Id == taskList[i].Id)
                 {
                     idExists = true;
+                    return BadRequest("The Id exists please try again");
 
                 }
                 else if (newTask.Id != taskList[i].Id)
                 {
                     idExists = false;
+                    taskList.Add(newTask);
                 }
                 break;
-            }
-
-            if (idExists = true)
-            {
-                return BadRequest("The Id exists please try again");
-            }
-            else if (idExists = false)
-            {
-                taskList.Add(newTask);
             }
 
             return Ok(newTask);
