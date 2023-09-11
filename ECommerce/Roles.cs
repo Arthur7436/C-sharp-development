@@ -2,6 +2,7 @@
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
 using People;
+using UserChoice;
 
 namespace ECommercePlatform.Roles
 {
@@ -90,21 +91,15 @@ namespace ECommercePlatform.Roles
             }
             else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
             {
-                Admin admin = UserCreation.CreateAdmin();
-                Console.WriteLine(admin.ToString());
-                Console.ReadLine();
+                Choices.AdminChoice();
             }
             else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
             {
-                Buyer buyer = UserCreation.CreateBuyer();
-                Console.WriteLine(buyer.ToString());
-                Console.ReadLine();
+                Choices.BuyerChoice();
             }
             else if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
             {
-                Seller seller = UserCreation.CreateSeller();
-                Console.WriteLine(seller.ToString());
-                Console.ReadLine();
+                Choices.SellerChoice();
             }
             else
             {
