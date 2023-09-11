@@ -17,6 +17,8 @@ namespace ToDoListAPI.Controllers
         public ViewController(ILogger<ViewController> logger)
         {
             _logger = logger;
+
+
         }
         public static List<Task> taskList = new List<Task>();
         static ViewController()
@@ -75,18 +77,16 @@ namespace ToDoListAPI.Controllers
 
         [Route("delete")]
         [HttpDelete]
-        public IActionResult Delete([FromBody] Task delete)
+        public IActionResult Delete(Task delete)
         {
-            var taskListObject = taskList.SingleOrDefault(x => x.Id == delete.Id);
-            if (taskListObject != null)
+            var objectTask = taskList.FirstOrDefault(x => x.Id == delete.Id);
+            if (objectTask == null)
             {
-                taskList.Remove(taskListObject);
+                return BadRequest("The Id does not exist");
             }
 
-
-            //taskList.RemoveAt(0);
-
-            return Ok(delete);
+            taskList.Remove(objectTask);
+            return Ok("success");
 
 
         }
