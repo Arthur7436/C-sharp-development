@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
+using People;
 
 namespace ECommercePlatform.Roles
 {
@@ -80,6 +81,44 @@ namespace ECommercePlatform.Roles
                 Console.WriteLine(userRoleDisplay[i]);
             }
         }
+    }
 
+    public class Choice
+    {
+        public static void Displaychoice()
+        {
+            Console.Write("Input: ");
+            string? userRolesInput = Console.ReadLine();
+
+            if (userRolesInput == "q")
+            {
+                return;
+            }
+            else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
+            {
+                Admin admin = UserCreation.CreateAdmin();
+                Console.WriteLine(admin.ToString());
+                Console.ReadLine();
+            }
+            else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
+            {
+                Buyer buyer = UserCreation.CreateBuyer();
+                Console.WriteLine(buyer.ToString());
+                Console.ReadLine();
+            }
+            else if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
+            {
+                Seller seller = UserCreation.CreateSeller();
+                Console.WriteLine(seller.ToString());
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Invalid user input, please try again");
+                Console.WriteLine("Press any key to restart");
+                Console.ReadLine();
+            }
+
+        }
     }
 }
