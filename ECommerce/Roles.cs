@@ -3,13 +3,6 @@ using System.Dynamic;
 
 namespace ECommercePlatform.Roles
 {
-    enum UserRole
-    {
-        Admin,
-        Buyer,
-        Seller
-    }
-
     class Admin
     {
         public int id { get; set; }

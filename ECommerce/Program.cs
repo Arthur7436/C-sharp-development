@@ -1,4 +1,8 @@
-﻿namespace ECommercePlatform
+﻿using System;
+using ECommercePlatform.Roles;
+using People;
+
+namespace ECommercePlatform
 {
     class Program
     {
@@ -20,9 +24,18 @@
                 Console.Write("Input: ");
                 string? userRolesInput = Console.ReadLine();
 
-                if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin") { }
-                if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin") { }
-                if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin") { }
+                if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
+                {
+                    UserCreation.CreateAdmin();
+                }
+                if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
+                {
+
+                }
+                if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
+                {
+
+                }
                 else
                 {
                     Console.WriteLine("Invalid user input, please try again");
