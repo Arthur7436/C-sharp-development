@@ -10,15 +10,11 @@ namespace ECommercePlatform
         {
             do
             {
-
-
                 Console.Clear();
                 Console.WriteLine("Welcome to the ecommerce platform!");
                 Console.WriteLine("Please choose which user you want to be: ");
 
                 DisplayMenu.DisplayListAndChoice();
-
-
 
             } while (DisplayMenu.keepRunning);
         }
