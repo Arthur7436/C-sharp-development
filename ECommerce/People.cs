@@ -19,19 +19,6 @@ namespace People
             return admin;
         }
 
-        public static Seller CreateSeller()
-        {
-            Seller seller = new Seller();
-            {
-                seller.id = 123;
-                seller.FirstName = "Seller";
-                seller.LastName = "Thai";
-                seller.Email = "example@email.com";
-                seller.Country = "country";
-            };
-            return seller;
-        }
-
         public static Buyer CreateBuyer()
         {
             Buyer buyer = new Buyer();
@@ -43,6 +30,19 @@ namespace People
                 buyer.Country = "country";
             };
             return buyer;
+        }
+
+        public static Seller CreateSeller()
+        {
+            Seller seller = new Seller();
+            {
+                seller.id = 123;
+                seller.FirstName = "Seller";
+                seller.LastName = "Thai";
+                seller.Email = "example@email.com";
+                seller.Country = "country";
+            };
+            return seller;
         }
     }
 }

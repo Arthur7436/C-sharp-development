@@ -49,11 +49,29 @@ namespace ECommercePlatform
                 }
                 else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {
-                    UserCreation.CreateSeller();
+                    Buyer buyer = UserCreation.CreateBuyer();
+
+                    Console.WriteLine($"your user details are:");
+                    Console.WriteLine($"Id: {buyer.id}");
+                    Console.WriteLine($"First name: {buyer.FirstName}");
+                    Console.WriteLine($"Last name: {buyer.LastName}");
+                    Console.WriteLine($"Email: {buyer.Email}");
+                    Console.WriteLine($"Country: {buyer.Country}");
+
+                    Console.ReadLine();
                 }
                 else if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
                 {
-                    UserCreation.CreateBuyer();
+                    Seller seller = UserCreation.CreateSeller();
+
+                    Console.WriteLine($"your user details are:");
+                    Console.WriteLine($"Id: {seller.id}");
+                    Console.WriteLine($"First name: {seller.FirstName}");
+                    Console.WriteLine($"Last name: {seller.LastName}");
+                    Console.WriteLine($"Email: {seller.Email}");
+                    Console.WriteLine($"Country: {seller.Country}");
+
+                    Console.ReadLine();
                 }
                 else
                 {
