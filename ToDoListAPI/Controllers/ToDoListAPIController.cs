@@ -58,29 +58,29 @@ namespace ToDoListAPI.Controllers
 
         [Route("updateId")]
         [HttpPut]
-        public IActionResult Put([FromBody] Task put)
+        public IActionResult Put([FromBody] Task updateTask)
         {
 
             for (int i = 0; i < taskList.Count; i++)
             {
-                if (put.Id == taskList[i].Id)
+                if (updateTask.Id == taskList[i].Id)
                 {
-                    taskList[i].Id = put.Id;
-                    taskList[i].Description = put.Description;
-                    taskList[i].IsCompleted = put.IsCompleted;
+                    taskList[i].Id = updateTask.Id;
+                    taskList[i].Description = updateTask.Description;
+                    taskList[i].IsCompleted = updateTask.IsCompleted;
 
                     break;
                 }
             }
-            return Ok(put);
+            return Ok(updateTask);
         }
 
         [Route("delete")]
         [HttpDelete]
-        public IActionResult Delete([FromBody] Task taskToDelete)
+        public IActionResult Delete([FromBody] Task DeleteTask)
         {
             //find if the id exists
-            var item = taskList.FirstOrDefault(x => x.Id == taskToDelete.Id);
+            var item = taskList.FirstOrDefault(x => x.Id == DeleteTask.Id);
             //if not exist, then send bad request
             if (item == null)
             {
