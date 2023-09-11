@@ -11,7 +11,18 @@ namespace ECommercePlatform.Roles
         public string? Email { get; set; }
         public string? Country { get; set; }
 
+        public override string ToString()
+        {
+            return
+            $"Id: {id}\n" +
+            $"First name: {FirstName}\n" +
+            $"Last name: {LastName}\n" +
+            $"Email: {Email}\n" +
+            $"country: {Country}\n";
+        }
     }
+
+
     public class Seller
     {
         public int id { get; set; }
@@ -19,6 +30,16 @@ namespace ECommercePlatform.Roles
         public string? LastName { get; set; }
         public string? Email { get; set; }
         public string? Country { get; set; }
+
+        public override string ToString()
+        {
+            return
+            $"Id: {id}\n" +
+            $"First name: {FirstName}\n" +
+            $"Last name: {LastName}\n" +
+            $"Email: {Email}\n" +
+            $"country: {Country}\n";
+        }
 
     }
 
@@ -29,6 +50,16 @@ namespace ECommercePlatform.Roles
         public string? LastName { get; set; }
         public string? Email { get; set; }
         public string? Country { get; set; }
+
+        public override string ToString()
+        {
+            return
+            $"Id: {id}\n" +
+            $"First name: {FirstName}\n" +
+            $"Last name: {LastName}\n" +
+            $"Email: {Email}\n" +
+            $"country: {Country}\n";
+        }
 
     }
 }

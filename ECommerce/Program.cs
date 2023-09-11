@@ -37,40 +37,19 @@ namespace ECommercePlatform
                 else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
                 {
                     Admin admin = UserCreation.CreateAdmin();
-
-                    Console.WriteLine($"your user details are:");
-                    Console.WriteLine($"Id: {admin.id}");
-                    Console.WriteLine($"First name: {admin.FirstName}");
-                    Console.WriteLine($"Last name: {admin.LastName}");
-                    Console.WriteLine($"Email: {admin.Email}");
-                    Console.WriteLine($"Country: {admin.Country}");
-
+                    Console.WriteLine(admin.ToString());
                     Console.ReadLine();
                 }
                 else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {
                     Buyer buyer = UserCreation.CreateBuyer();
-
-                    Console.WriteLine($"your user details are:");
-                    Console.WriteLine($"Id: {buyer.id}");
-                    Console.WriteLine($"First name: {buyer.FirstName}");
-                    Console.WriteLine($"Last name: {buyer.LastName}");
-                    Console.WriteLine($"Email: {buyer.Email}");
-                    Console.WriteLine($"Country: {buyer.Country}");
-
+                    Console.WriteLine(buyer.ToString());
                     Console.ReadLine();
                 }
                 else if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
                 {
                     Seller seller = UserCreation.CreateSeller();
-
-                    Console.WriteLine($"your user details are:");
-                    Console.WriteLine($"Id: {seller.id}");
-                    Console.WriteLine($"First name: {seller.FirstName}");
-                    Console.WriteLine($"Last name: {seller.LastName}");
-                    Console.WriteLine($"Email: {seller.Email}");
-                    Console.WriteLine($"Country: {seller.Country}");
-
+                    Console.WriteLine(seller.ToString());
                     Console.ReadLine();
                 }
                 else
