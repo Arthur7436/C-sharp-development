@@ -30,11 +30,11 @@ namespace ECommercePlatform
                 }
                 if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {
-
+                    UserCreation.CreateSeller();
                 }
                 if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
                 {
-
+                    UserCreation.CreateBuyer();
                 }
                 else
                 {

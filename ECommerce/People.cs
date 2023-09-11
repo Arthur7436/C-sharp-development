@@ -17,5 +17,29 @@ namespace People
                 admin.country = "country";
             };
         }
+
+        public static void CreateSeller()
+        {
+            Admin admin = new Admin();
+            {
+                admin.id = 123;
+                admin.firstName = "Seller";
+                admin.lastName = "Thai";
+                admin.email = "example@email.com";
+                admin.country = "country";
+            };
+        }
+
+        public static void CreateBuyer()
+        {
+            Admin admin = new Admin();
+            {
+                admin.id = 123;
+                admin.firstName = "Buyer";
+                admin.lastName = "Thai";
+                admin.email = "example@email.com";
+                admin.country = "country";
+            };
+        }
     }
 }
