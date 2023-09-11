@@ -11,10 +11,10 @@ namespace People
             Admin admin = new Admin();
             {
                 admin.id = 123;
-                admin.firstName = "Arthur";
-                admin.lastName = "Thai";
-                admin.email = "example@email.com";
-                admin.country = "country";
+                admin.FirstName = "Arthur";
+                admin.LastName = "Thai";
+                admin.Email = "example@email.com";
+                admin.Country = "country";
             };
         }
 
@@ -23,10 +23,10 @@ namespace People
             Admin admin = new Admin();
             {
                 admin.id = 123;
-                admin.firstName = "Seller";
-                admin.lastName = "Thai";
-                admin.email = "example@email.com";
-                admin.country = "country";
+                admin.FirstName = "Seller";
+                admin.LastName = "Thai";
+                admin.Email = "example@email.com";
+                admin.Country = "country";
             };
         }
 
@@ -35,10 +35,10 @@ namespace People
             Admin admin = new Admin();
             {
                 admin.id = 123;
-                admin.firstName = "Buyer";
-                admin.lastName = "Thai";
-                admin.email = "example@email.com";
-                admin.country = "country";
+                admin.FirstName = "Buyer";
+                admin.LastName = "Thai";
+                admin.Email = "example@email.com";
+                admin.Country = "country";
             };
         }
     }
