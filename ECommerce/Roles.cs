@@ -64,9 +64,10 @@ namespace ECommercePlatform.Roles
         }
     }
 
-    public class Display
+    public class DisplayMenu
     {
-        public static void DisplayList()
+        public static bool keepRunning = true;
+        public static void DisplayListAndChoice()
         {
             List<string> userRoleDisplay = new List<string>()
                 {
@@ -80,19 +81,12 @@ namespace ECommercePlatform.Roles
             {
                 Console.WriteLine(userRoleDisplay[i]);
             }
-        }
-    }
-
-    public class Choice
-    {
-        public static void Displaychoice()
-        {
             Console.Write("Input: ");
             string? userRolesInput = Console.ReadLine();
 
             if (userRolesInput == "q")
             {
-                return;
+                keepRunning = false;
             }
             else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
             {
@@ -118,7 +112,6 @@ namespace ECommercePlatform.Roles
                 Console.WriteLine("Press any key to restart");
                 Console.ReadLine();
             }
-
         }
     }
 }
