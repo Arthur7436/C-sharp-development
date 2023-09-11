@@ -20,12 +20,12 @@ namespace UserChoice
             Console.ReadLine();
         }
 
-        // public static void SellerChoice()
-        // {
-        //     Admin seller = UserCreation.CreateAdmin();
-        //     Console.WriteLine(seller.ToString());
-        //     Console.ReadLine();
-        // }
+        public static void SellerChoice()
+        {
+            Admin seller = UserCreation.CreateAdmin();
+            Console.WriteLine(seller.ToString());
+            Console.ReadLine();
+        }
 
     }
 }
