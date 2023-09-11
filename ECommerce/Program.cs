@@ -11,35 +11,45 @@ namespace ECommercePlatform
             do
             {
                 Console.Clear();
-                Console.WriteLine("welcome to the ecommerce platform!");
+                Console.WriteLine("Welcome to the ecommerce platform!");
                 Console.WriteLine("Please choose which user you want to be: ");
 
                 List<string> userRolesDisplay = new List<string>
                 {
                     "1. Admin",
                     "2. Buyer",
-                    "3. Seller"
+                    "3. Seller",
+                    "Input 'q' to quit the program"
                 };
 
                 for (int i = 0; i < userRolesDisplay.Count; i++)
                 {
-                    Console.WriteLine(userRolesDisplay);
+                    Console.WriteLine(userRolesDisplay[i]);
                 }
-                
+
                 Console.Write("Input: ");
                 string? userRolesInput = Console.ReadLine();
 
-                if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
+                if (userRolesInput == "q")
+                {
+                    return;
+                }
+                else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
                 {
                     Admin admin = UserCreation.CreateAdmin();
 
-                    Console.WriteLine($"The user you logged in as is: ${admin.FirstName}");
+                    Console.WriteLine($"your user details are:");
+                    Console.WriteLine($"Id: {admin.id}");
+                    Console.WriteLine($"First name: {admin.FirstName}");
+                    Console.WriteLine($"Last name: {admin.LastName}");
+                    Console.WriteLine($"Email: {admin.Email}");
+                    Console.WriteLine($"Country: {admin.Country}");
                 }
-                if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
+                else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {
                     UserCreation.CreateSeller();
                 }
-                if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
+                else if (userRolesInput == "3" || userRolesInput == "Seller" || userRolesInput == "seller")
                 {
                     UserCreation.CreateBuyer();
                 }

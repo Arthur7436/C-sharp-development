@@ -13,3 +13,17 @@
 /home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ref/ECommerce.dll
 /home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.pdb
 /home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.genruntimeconfig.cache
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\ECommerce.exe
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\ECommerce.deps.json
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\ECommerce.runtimeconfig.json
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\ECommerce.dll
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\ECommerce.pdb
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.AssemblyInfoInputs.cache
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.AssemblyInfo.cs
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.csproj.CoreCompileInputs.cache
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.dll
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\refint\ECommerce.dll
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.pdb
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.genruntimeconfig.cache
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ref\ECommerce.dll
