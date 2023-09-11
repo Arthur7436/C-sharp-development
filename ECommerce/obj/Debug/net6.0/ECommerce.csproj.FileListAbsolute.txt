@@ -1,0 +1,15 @@
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.csproj.AssemblyReference.cache
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.GeneratedMSBuildEditorConfig.editorconfig
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.AssemblyInfoInputs.cache
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.AssemblyInfo.cs
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.csproj.CoreCompileInputs.cache
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ECommerce
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ECommerce.deps.json
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ECommerce.runtimeconfig.json
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ECommerce.dll
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ref/ECommerce.dll
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/bin/Debug/net6.0/ECommerce.pdb
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.dll
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ref/ECommerce.dll
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.pdb
+/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/obj/Debug/net6.0/ECommerce.genruntimeconfig.cache

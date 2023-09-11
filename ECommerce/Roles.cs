@@ -10,22 +10,6 @@ namespace ECommercePlatform.Roles
         Seller
     }
 
-    enum ProductCategory
-    {
-        Digital,
-        HouseholdItems,
-        Utilities,
-        KitchenWare
-    }
-
-    enum OrderStatus
-    {
-        PartiallyPaid,
-        Paid,
-        Returned,
-        Closed
-    }
-
     class Admin
     {
         public int id { get; set; }

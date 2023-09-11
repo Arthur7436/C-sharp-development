@@ -1,6 +1,7 @@
 using System;
+using ECommercePlatform.Roles;
 
-namespace ECommercePlatform.People
+namespace People
 {
 
 }
