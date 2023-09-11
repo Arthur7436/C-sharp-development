@@ -1,5 +1,4 @@
-﻿using System;
-using ECommercePlatform.Roles;
+﻿using ECommercePlatform.Roles;
 using People;
 
 namespace UserChoice
@@ -15,14 +14,14 @@ namespace UserChoice
 
         public static void BuyerChoice()
         {
-            Admin buyer = UserCreation.CreateAdmin();
+            Buyer buyer = UserCreation.CreateBuyer();
             Console.WriteLine(buyer.ToString());
             Console.ReadLine();
         }
 
         public static void SellerChoice()
         {
-            Admin seller = UserCreation.CreateAdmin();
+            Seller seller = UserCreation.CreateSeller();
             Console.WriteLine(seller.ToString());
             Console.ReadLine();
         }
