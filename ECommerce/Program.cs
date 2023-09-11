@@ -44,6 +44,8 @@ namespace ECommercePlatform
                     Console.WriteLine($"Last name: {admin.LastName}");
                     Console.WriteLine($"Email: {admin.Email}");
                     Console.WriteLine($"Country: {admin.Country}");
+
+                    Console.ReadLine();
                 }
                 else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {

@@ -6,7 +6,7 @@ namespace People
 {
     public static class UserCreation
     {
-       public static Admin CreateAdmin()
+        public static Admin CreateAdmin()
         {
             Admin admin = new Admin();
             {
@@ -19,28 +19,30 @@ namespace People
             return admin;
         }
 
-        public static void CreateSeller()
+        public static Seller CreateSeller()
         {
-            Admin admin = new Admin();
+            Seller seller = new Seller();
             {
-                admin.id = 123;
-                admin.FirstName = "Seller";
-                admin.LastName = "Thai";
-                admin.Email = "example@email.com";
-                admin.Country = "country";
+                seller.id = 123;
+                seller.FirstName = "Seller";
+                seller.LastName = "Thai";
+                seller.Email = "example@email.com";
+                seller.Country = "country";
             };
+            return seller;
         }
 
-        public static void CreateBuyer()
+        public static Buyer CreateBuyer()
         {
-            Admin admin = new Admin();
+            Buyer buyer = new Buyer();
             {
-                admin.id = 123;
-                admin.FirstName = "Buyer";
-                admin.LastName = "Thai";
-                admin.Email = "example@email.com";
-                admin.Country = "country";
+                buyer.id = 123;
+                buyer.FirstName = "Buyer";
+                buyer.LastName = "Thai";
+                buyer.Email = "example@email.com";
+                buyer.Country = "country";
             };
+            return buyer;
         }
     }
 }
