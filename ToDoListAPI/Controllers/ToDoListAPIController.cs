@@ -75,9 +75,16 @@ namespace ToDoListAPI.Controllers
 
         [Route("delete")]
         [HttpDelete]
-        public IActionResult Delete(Type delete)
+        public IActionResult Delete([FromBody] Task delete)
         {
-            taskList.RemoveAt(0);
+            var taskListObject = taskList.SingleOrDefault(x => x.Id == delete.Id);
+            if (taskListObject != null)
+            {
+                taskList.Remove(taskListObject);
+            }
+
+
+            //taskList.RemoveAt(0);
 
             return Ok(delete);
 
