@@ -1,5 +1,3 @@
-using System;
-using System.Runtime.InteropServices;
 using ECommercePlatform.Roles;
 
 namespace People
@@ -8,7 +6,7 @@ namespace People
     {
         public static Admin CreateAdmin()
         {
-            Admin admin = new Admin();
+            Admin admin = new();
             {
                 admin.id = 123;
                 admin.FirstName = "Arthur";
@@ -21,7 +19,7 @@ namespace People
 
         public static Buyer CreateBuyer()
         {
-            Buyer buyer = new Buyer();
+            Buyer buyer = new();
             {
                 buyer.id = 123;
                 buyer.FirstName = "Buyer";
@@ -34,7 +32,7 @@ namespace People
 
         public static Seller CreateSeller()
         {
-            Seller seller = new Seller();
+            Seller seller = new();
             {
                 seller.id = 123;
                 seller.FirstName = "Seller";
