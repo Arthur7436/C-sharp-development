@@ -3,7 +3,7 @@ using System.Dynamic;
 
 namespace ECommercePlatform.Roles
 {
-    class Admin
+    public class Admin
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -12,7 +12,7 @@ namespace ECommercePlatform.Roles
         public string? Country { get; set; }
 
     }
-    class Seller
+    public class Seller
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -22,7 +22,7 @@ namespace ECommercePlatform.Roles
 
     }
 
-    class Buyer
+    public class Buyer
     {
         public int id { get; set; }
         public string? FirstName { get; set; }

@@ -21,12 +21,19 @@ namespace ECommercePlatform
                     "3. Seller"
                 };
 
+                for (int i = 0; i < userRolesDisplay.Count; i++)
+                {
+                    Console.WriteLine(userRolesDisplay);
+                }
+                
                 Console.Write("Input: ");
                 string? userRolesInput = Console.ReadLine();
 
                 if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
                 {
-                    UserCreation.CreateAdmin();
+                    Admin admin = UserCreation.CreateAdmin();
+
+                    Console.WriteLine($"The user you logged in as is: ${admin.FirstName}");
                 }
                 if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
                 {

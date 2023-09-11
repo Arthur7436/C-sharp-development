@@ -4,9 +4,9 @@ using ECommercePlatform.Roles;
 
 namespace People
 {
-    public class UserCreation
+    public static class UserCreation
     {
-        public static void CreateAdmin()
+       public static Admin CreateAdmin()
         {
             Admin admin = new Admin();
             {
@@ -16,6 +16,7 @@ namespace People
                 admin.Email = "example@email.com";
                 admin.Country = "country";
             };
+            return admin;
         }
 
         public static void CreateSeller()
