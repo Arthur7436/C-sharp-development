@@ -1,5 +1,5 @@
 ﻿using ECommercePlatform.Roles;
-//test
+
 namespace ECommercePlatform
 {
     class Program
