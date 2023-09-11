@@ -63,19 +63,23 @@ namespace ECommercePlatform.Roles
         }
     }
 
-    public class UseRoleDisplay
+    public class Display
     {
-        List<string> userRolesDisplay = new List<string>()
+        public static void DisplayList()
+        {
+            List<string> userRoleDisplay = new List<string>()
                 {
                     "1. Admin",
                     "2. Buyer",
                     "3. Seller",
                     "Input 'q' to quit the program"
                 };
-                 
-                 for (int i = 0; i<userRolesDisplay.Count; i++)
-                {
-                    Console.WriteLine(userRolesDisplay[i]);
-                }
-}
+
+            for (int i = 0; i < userRoleDisplay.Count; i++)
+            {
+                Console.WriteLine(userRoleDisplay[i]);
+            }
+        }
+
+    }
 }

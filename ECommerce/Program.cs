@@ -14,18 +14,19 @@ namespace ECommercePlatform
                 Console.WriteLine("Welcome to the ecommerce platform!");
                 Console.WriteLine("Please choose which user you want to be: ");
 
-                List<string> userRolesDisplay = new List<string>
-                {
-                    "1. Admin",
-                    "2. Buyer",
-                    "3. Seller",
-                    "Input 'q' to quit the program"
-                };
+                // List<string> userRolesDisplay = new List<string>
+                // {
+                //     "1. Admin",
+                //     "2. Buyer",
+                //     "3. Seller",
+                //     "Input 'q' to quit the program"
+                // };
 
-                for (int i = 0; i < userRolesDisplay.Count; i++)
-                {
-                    Console.WriteLine(userRolesDisplay[i]);
-                }
+                Display.DisplayList();
+                // for (int i = 0; i < userRolesDisplay.Count; i++)
+                // {
+                //     Console.WriteLine(userRolesDisplay[i]);
+                // }
 
                 Console.Write("Input: ");
                 string? userRolesInput = Console.ReadLine();
