@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ECommercePlatform.Roles
 {
@@ -60,6 +61,21 @@ namespace ECommercePlatform.Roles
             $"Email: {Email}\n" +
             $"country: {Country}\n";
         }
-
     }
+
+    public class UseRoleDisplay
+    {
+        List<string> userRolesDisplay = new List<string>()
+                {
+                    "1. Admin",
+                    "2. Buyer",
+                    "3. Seller",
+                    "Input 'q' to quit the program"
+                };
+                 
+                 for (int i = 0; i<userRolesDisplay.Count; i++)
+                {
+                    Console.WriteLine(userRolesDisplay[i]);
+                }
+}
 }
