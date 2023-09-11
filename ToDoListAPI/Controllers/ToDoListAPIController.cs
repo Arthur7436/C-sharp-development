@@ -77,22 +77,18 @@ namespace ToDoListAPI.Controllers
 
         [Route("delete")]
         [HttpDelete]
-        public IActionResult Delete([FromBody] Task? taskToDelete)
+        public IActionResult Delete([FromBody] Task taskTodDelete)
         {
-
-            if (taskToDelete.Id == null || taskToDelete.Id == 0)
-            {
-                return BadRequest("This is an invalid Id");
-            }
-
-            var objectTask = taskList.FirstOrDefault(x => x.Id == taskToDelete.Id);
-            if (objectTask == null)
+            //find if the id exists
+            var item = taskList.FirstOrDefault(x => x.Id == taskTodDelete.Id);
+            //if not exist, then send bad request
+            if (item == null)
             {
                 return BadRequest("The Id does not exist");
             }
 
-            taskList.Remove(objectTask);
-            return Ok("success");
+            taskList.Remove(item);
+            return Ok("The Id has been successfully been deleted");
 
 
         }
