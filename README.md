@@ -1,30 +1,25 @@
-# Shapes Project
+# Animal Abstract Project
 
 ## Overview
 
-The Shapes Project is a simple C# application developed to demonstrate the use of constructors and interfaces. The project delves into geometric shapes like circles and triangles, highlighting their properties and providing a foundation for understanding object-oriented principles in C#.
+The Animal Abstract Project is a C# exercise that demonstrates the power and flexibility of abstract classes in an object-oriented design context. The project establishes a foundational hierarchy of animals in a theoretical zoo management system.
 
 ## Features
 
-- **Interfaces**: Use of interfaces such as `CircleInterface` and `TriangleInterface` to enforce structure in shape classes.
-- **Constructors**: Practical application of constructors for initializing geometric objects with specific properties.
-- **Polymorphism**: Demonstrates how different objects like circles and triangles can utilize similar interfaces.
+- **Abstract Base Class**: A foundational `Animal` class that contains common properties and methods all animals share.
+- **Derived Class**: `Lion` class that inherits from the `Animal` class and provides a specific implementation.
+- **Polymorphism**: Demonstrates the ability to treat different animal objects in a unified manner based on the abstract class definition.
+- **Enforced Implementation**: Ensures consistent behavior across all animal types by requiring certain methods to be implemented by all derived classes.
 
 ## Components
 
-1. **CircleInterface**: Defines methods and properties for the `Circles` class.
-2. **Circles Class**: Implements `CircleInterface` with methods to calculate circumference and radius.
-3. **TriangleInterface**: Establishes methods and properties for the `Triangles` class.
-4. **Triangles Class**: Implements `TriangleInterface` and provides functionality to calculate the area of a triangle based on given sides.
-5. **Program**: The main entry point that creates instances of the `Circles` and `Triangles` classes and calculates their respective areas.
+1. **Animal (Abstract Class)**: Provides a blueprint for all animals. Contains:
+    - An abstract `Speak()` method.
+    - An abstract `Name` property.
+    - A concrete `Eat()` method.
 
-## Getting Started
+2. **Lion (Concrete Class)**: Represents a lion in the zoo. Implements the abstract methods and properties from `Animal`.
 
-### Prerequisites
-
-- .NET Core 3.1 or later
-- An IDE like Visual Studio or VSCode with C# extension
-
-### Installation
+## Usage
 
 1. Clone the repository:
