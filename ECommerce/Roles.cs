@@ -2,7 +2,16 @@
 
 namespace ECommercePlatform.Roles
 {
-    public class Admin
+    public class User
+    {
+        public int id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? Country { get; set; }
+    }
+
+    public class Admin : User
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -22,7 +31,7 @@ namespace ECommercePlatform.Roles
     }
 
 
-    public class Seller
+    public class Seller : User
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -42,7 +51,7 @@ namespace ECommercePlatform.Roles
 
     }
 
-    public class Buyer
+    public class Buyer : User
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -88,6 +97,57 @@ namespace ECommercePlatform.Roles
             else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
             {
                 Choices.AdminChoice();
+
+                //After selecting admin > show action dashboard (1. View all users 2. Delete users 3.Add users 4.Delete products 5. quit from program)
+                do
+                {
+                    Console.Clear();
+                    List<string> AdminDashboard = new List<string>()
+                    {
+                        "1. View all users",
+                        "2. Delete users",
+                        "3. Add users",
+                        "4. Delete products",
+                        "5. Input 'q' to quit the program",
+                    };
+
+                    for (int i = 0; i < AdminDashboard.Count; i++)
+                    {
+                        Console.WriteLine($"{AdminDashboard[i]}");
+                    }
+
+                    Console.Write("Please enter input:");
+                    string? input = Console.ReadLine();
+
+                    if (input == "q")
+                    {
+                        return;
+                    }
+                    else if (input == "1")
+                    {
+                        //display all users and when press any key return to admin dashboard
+                    }
+                    else if (input == "2")
+                    {
+                        Console.WriteLine("You chose to delete users");
+                        Console.WriteLine("Please choose which users to delete: ");
+                        //Display list of all users in Program
+                        //Based on which user they delete, remove that user from the list
+                    }
+                    else if (input == "3")
+                    {
+                        //Add users to the list
+                    }
+                    else if (input == "4")
+                    {
+                        //Show all the products that are available
+                        //Based on input, delete product from the list
+                    }
+
+
+
+
+                } while (true);
             }
             else if (userRolesInput == "2" || userRolesInput == "Buyer" || userRolesInput == "buyer")
             {

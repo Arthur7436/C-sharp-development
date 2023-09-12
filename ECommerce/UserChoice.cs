@@ -5,6 +5,7 @@ namespace UserChoice
 {
     public static class Choices
     {
+        static List<string> AllUsersList = new List<string>();
         public static void AdminChoice()
         {
             Admin admin = UserCreation.CreateAdmin();
