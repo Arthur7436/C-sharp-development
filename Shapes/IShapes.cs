@@ -15,6 +15,7 @@ namespace IShapes
         {
             double circumference = x;
             double radius = y;
+
         }
 
         public double Circumference()
@@ -27,24 +28,22 @@ namespace IShapes
             return radius;
         }
 
-        public int CalculateTheArea(int circumference, int radius)
+        public double CalculateCircleArea()
         {
             return circumference * radius;
         }
 
-
-
-
-    }
-
-    public interface SquareInterface
-    {
-        int side();
-
-    }
-
-    public class Squares
-    {
-
     }
 }
+
+//    public interface SquareInterface
+//    {
+//        int side();
+
+//    }
+
+//    public class Squares
+//    {
+
+//    }
+//}
