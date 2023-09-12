@@ -1,0 +1,14 @@
+C:\C-sharp-development\Shapes\bin\Debug\net7.0\Shapes.exe
+C:\C-sharp-development\Shapes\bin\Debug\net7.0\Shapes.deps.json
+C:\C-sharp-development\Shapes\bin\Debug\net7.0\Shapes.runtimeconfig.json
+C:\C-sharp-development\Shapes\bin\Debug\net7.0\Shapes.dll
+C:\C-sharp-development\Shapes\bin\Debug\net7.0\Shapes.pdb
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.AssemblyInfoInputs.cache
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.AssemblyInfo.cs
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.csproj.CoreCompileInputs.cache
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.dll
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\refint\Shapes.dll
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.pdb
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\Shapes.genruntimeconfig.cache
+C:\C-sharp-development\Shapes\obj\Debug\net7.0\ref\Shapes.dll

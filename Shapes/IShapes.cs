@@ -1,26 +1,19 @@
 namespace IShapes
 {
-    public interface CircleInterface
+    public interface ICircleInterface
     {
-        double Circumference();
         double Radius();
+        double CalculateCircleArea();
 
     }
-    public class Circles : CircleInterface
+
+    public class Circles : ICircleInterface
     {
-        public double circumference;
         public double radius;
 
-        public Circles(double x, double y)
+        public Circles(double x)
         {
-            double circumference = x;
-            double radius = y;
-
-        }
-
-        public double Circumference()
-        {
-            return circumference;
+            radius = x;
         }
 
         public double Radius()
@@ -30,20 +23,39 @@ namespace IShapes
 
         public double CalculateCircleArea()
         {
-            return circumference * radius;
+            return 3.16 * (radius * radius);
         }
 
     }
+
+
+    public interface ITriangleInterface
+    {
+        double Height();
+        double Base();
+    }
+    public class Triangle : ITriangleInterface
+    {
+        public double height;
+        public double baseOfTriangle;
+
+        public Triangle(double x, double y)
+        {
+            height = x;
+            baseOfTriangle = y;
+        }
+
+        public double Height()
+        {
+            return height;
+        }
+
+        public double Base()
+        {
+            return baseOfTriangle;
+        }
+    }
+
+
+
 }
-
-//    public interface SquareInterface
-//    {
-//        int side();
-
-//    }
-
-//    public class Squares
-//    {
-
-//    }
-//}
