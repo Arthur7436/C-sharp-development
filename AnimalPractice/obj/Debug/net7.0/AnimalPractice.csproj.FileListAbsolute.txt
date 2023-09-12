@@ -1,0 +1,14 @@
+C:\C-sharp-development\AnimalPractice\bin\Debug\net7.0\AnimalPractice.exe
+C:\C-sharp-development\AnimalPractice\bin\Debug\net7.0\AnimalPractice.deps.json
+C:\C-sharp-development\AnimalPractice\bin\Debug\net7.0\AnimalPractice.runtimeconfig.json
+C:\C-sharp-development\AnimalPractice\bin\Debug\net7.0\AnimalPractice.dll
+C:\C-sharp-development\AnimalPractice\bin\Debug\net7.0\AnimalPractice.pdb
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.AssemblyInfoInputs.cache
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.AssemblyInfo.cs
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.csproj.CoreCompileInputs.cache
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.dll
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\refint\AnimalPractice.dll
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.pdb
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\AnimalPractice.genruntimeconfig.cache
+C:\C-sharp-development\AnimalPractice\obj\Debug\net7.0\ref\AnimalPractice.dll
