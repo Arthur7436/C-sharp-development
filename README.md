@@ -1,66 +1,30 @@
-using IShapes;
+My understanding of constructors is that whenever you choose to instantiaze an object, the properties within the constructor can be immediateley used?
 
-namespace Program
-{
-    class Program
-    {
-        public static void Main(string[] args)
-        {
-            Circles newCircle = new Circles(10.00, 10.00);
-            Console.WriteLine(CalculateCircleArea(newCircle));
+E.g. 
+namespace IExample;
 
-        }
+public instance IExample{
+    string WordCombine();
+}
+
+public Class Example{
+    public string x;
+    public string y;
+    
+    public Example(string A, string B){
+        x = A;
+        y = B;
+    }
+
+    public string WordCombine(){
+        return $"{x} {y}";
     }
 }
 
-namespace IShapes
+Program file...
+using IExample;
+
 {
-    public interface CircleInterface
-    {
-        double Circumference();
-        double Radius();
-
-    }
-    public class Circles : CircleInterface
-    {
-        public double circumference;
-        public double radius;
-
-        public Circles(double x, double y)
-        {
-            double circumference = x;
-            double radius = y;
-
-        }
-
-        public double Circumference()
-        {
-            return circumference;
-        }
-
-        public double Radius()
-        {
-            return radius;
-        }
-
-        public double CalculateCircleArea()
-        {
-            return circumference * radius;
-        }
-
-    }
+Example new = new Example(Hello, World);
+Console.WriteLine(new.WordCombine);
 }
-
-//    public interface SquareInterface
-//    {
-//        int side();
-
-//    }
-
-//    public class Squares
-//    {
-
-//    }
-//}
-
-What is wrong with my code? I can't seem to use the calculatecirclearea method on the Program. Am I on the right track?
