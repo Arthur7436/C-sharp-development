@@ -33,6 +33,7 @@ namespace IShapes
     {
         double Height();
         double Base();
+        double AreaOfTriangle();
     }
     public class Triangle : ITriangleInterface
     {
