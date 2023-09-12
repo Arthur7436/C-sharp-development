@@ -1,47 +1,66 @@
+using IShapes;
 
-# Simple Zoo System
+namespace Program
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Circles newCircle = new Circles(10.00, 10.00);
+            Console.WriteLine(CalculateCircleArea(newCircle));
 
-A basic C# project to understand interfaces and constructors by simulating animals in a zoo.
+        }
+    }
+}
 
-## Overview
+namespace IShapes
+{
+    public interface CircleInterface
+    {
+        double Circumference();
+        double Radius();
 
-This project introduces a basic system where animals can perform certain actions like "Speak" or "Eat". The main goals of this project are:
+    }
+    public class Circles : CircleInterface
+    {
+        public double circumference;
+        public double radius;
 
-1. Understand the use and implementation of interfaces.
-2. Familiarize oneself with constructors and their role in class initialization.
+        public Circles(double x, double y)
+        {
+            double circumference = x;
+            double radius = y;
 
-## Components
+        }
 
-### IAnimal Interface
+        public double Circumference()
+        {
+            return circumference;
+        }
 
-- Defined as the main contract that all animal classes should adhere to.
-- Contains two method signatures:
-  - `Speak()`: Represents the sound the animal makes.
-  - `Eat()`: Simulates the animal eating and returns a message indicating so.
+        public double Radius()
+        {
+            return radius;
+        }
 
-### Dog Class
+        public double CalculateCircleArea()
+        {
+            return circumference * radius;
+        }
 
-- Implements the `IAnimal` interface.
-- Constructor initializes the dog's name.
-- `Speak()` method returns "Woof!".
-- `Eat()` method returns "[Dog's Name] is eating.".
+    }
+}
 
-### Cat Class
+//    public interface SquareInterface
+//    {
+//        int side();
 
-- Implements the `IAnimal` interface.
-- Constructor initializes the cat's name.
-- `Speak()` method returns "Meow!".
-- `Eat()` method returns "[Cat's Name] is eating.".
+//    }
 
-## Usage
+//    public class Squares
+//    {
 
-After creating instances of the `Dog` and `Cat` classes, you can call their `Speak()` and `Eat()` methods to simulate their actions.
+//    }
+//}
 
-```csharp
-Dog dog = new Dog("Buddy");
-Console.WriteLine(dog.Speak()); // Outputs: Woof!
-Console.WriteLine(dog.Eat());   // Outputs: Buddy is eating.
-
-Cat cat = new Cat("Whiskers");
-Console.WriteLine(cat.Speak()); // Outputs: Meow!
-Console.WriteLine(cat.Eat());   // Outputs: Whiskers is eating.
+What is wrong with my code? I can't seem to use the calculatecirclearea method on the Program. Am I on the right track?
