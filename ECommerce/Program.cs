@@ -29,11 +29,14 @@ namespace ECommercePlatform
                 {
                     //view all products
                 }
-                if (input == "1") { }
-                if (input == "1") { }
-
-
-
+                if (input == "2")
+                {
+                    //add product
+                }
+                if (input == "3")
+                {
+                    //remove a product
+                }
             } while (true);
         }
     }
