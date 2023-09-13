@@ -1,4 +1,4 @@
-﻿using ECommercePlatform.Roles;
+﻿using System;
 
 namespace ECommercePlatform
 {
@@ -11,10 +11,11 @@ namespace ECommercePlatform
                 Console.Clear();
                 Console.WriteLine("Welcome to the Ecommerce platform!");
                 Console.WriteLine("Please choose which user you want to be: ");
+                Console.ReadLine();
 
-                DisplayMenu.DisplayListAndChoice();
 
-            } while (DisplayMenu.keepRunning);
+
+            } while (true);
         }
     }
 }
