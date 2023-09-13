@@ -1,10 +1,10 @@
-﻿namespace ECommerce.IProduct
+﻿namespace ECommerce.Interface.IProduct
 {
     public interface IProduct
     {
-        int Id();
-        string NameOfProduct();
-        string DescriptionOfProduct();
+        int GetId();
+        string GetNameOfProduct();
+        string GetDescriptionOfProduct();
 
     }
 }

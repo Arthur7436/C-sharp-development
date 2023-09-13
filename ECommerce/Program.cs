@@ -44,7 +44,6 @@
                 }
                 if (input == "2")
                 {
-
                     //add id
                     //add name of product
                     //Description of product

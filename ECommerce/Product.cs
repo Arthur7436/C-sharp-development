@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ECommerce.Interface.IProduct;
 
-namespace ECommerce
+namespace ECommerce.Product
 {
-    internal class Product
+    public class Product : IProduct
     {
+        public int GetId()
+        {
+            return 0;
+        }
+
+        public string GetNameOfProduct()
+        {
+            return 0;
+        }
+
+        public string GetDescriptionOfProduct()
+        {
+            return 0;
+        }
     }
 }
