@@ -1,14 +1,16 @@
-I want to know how to add these user instances that are made from different classes to be added in one list so that I can show the list of all the users within the program.
-Is it possible to delete theses from the list if the user chose to do so?
+I'm struggling to add these hard coded created objects within the userCreation class and add them to a list to be displayed. What might be wrong with my code 
+and preventing me from doing that?
 
 using ECommercePlatform.Roles;
 
 namespace People
 {
-    public static class UserCreation
+    public class UserCreation
     {
+        public static List<User> users = new List<User>();
         public static Admin CreateAdmin()
         {
+
             Admin admin = new();
             {
                 admin.id = 123;
@@ -17,6 +19,7 @@ namespace People
                 admin.Email = "example@email.com";
                 admin.Country = "country";
             };
+            users.Add(admin);
             return admin;
         }
 
@@ -30,6 +33,7 @@ namespace People
                 buyer.Email = "example@email.com";
                 buyer.Country = "country";
             };
+            users.Add(buyer);
             return buyer;
         }
 
@@ -43,18 +47,29 @@ namespace People
                 seller.Email = "example@email.com";
                 seller.Country = "country";
             };
+            users.Add(seller);
             return seller;
         }
     }
 }
-
+using People;
 using UserChoice;
 
 namespace ECommercePlatform.Roles
 {
-    public class Admin
+
+    public class User
     {
         public int id { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? Email { get; set; }
+        public string? Country { get; set; }
+    }
+
+    public class Admin : User
+    {
+        public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
@@ -72,7 +87,7 @@ namespace ECommercePlatform.Roles
     }
 
 
-    public class Seller
+    public class Seller : User
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -92,7 +107,7 @@ namespace ECommercePlatform.Roles
 
     }
 
-    public class Buyer
+    public class Buyer : User
     {
         public int id { get; set; }
         public string? FirstName { get; set; }
@@ -137,9 +152,8 @@ namespace ECommercePlatform.Roles
             }
             else if (userRolesInput == "1" || userRolesInput == "Admin" || userRolesInput == "admin")
             {
-                Choices.AdminChoice();
+                Choices.AdminChoice(); //displays the admin user details
 
-                //After selecting admin > show action dashboard (1. View all users 2. Delete users 3.Add users 4.Delete products 5. quit from program)
                 do
                 {
                     Console.Clear();
@@ -154,7 +168,7 @@ namespace ECommercePlatform.Roles
 
                     for (int i = 0; i < AdminDashboard.Count; i++)
                     {
-                        Console.WriteLine($"{AdminDashboard[i]}");
+                        Console.WriteLine($"{AdminDashboard[i]}"); //displays another dashboard
                     }
 
                     Console.Write("Please enter input:");
@@ -162,18 +176,25 @@ namespace ECommercePlatform.Roles
 
                     if (input == "q")
                     {
-                        return;
+                        return; //returns to main menu
                     }
                     else if (input == "1")
                     {
-                        //display all users and when press any key return to admin dashboard
+                        //display all users 
+                        //for (int i = 0; i < UserCreation.users.Count; i++)
+                        //{
+                        Console.WriteLine(UserCreation.users[0]);
+                        Console.WriteLine(UserCreation.users[1]);
+                        Console.WriteLine(UserCreation.users[2]);
+                        //}
+                        Console.ReadLine();
                     }
                     else if (input == "2")
                     {
                         Console.WriteLine("You chose to delete users");
                         Console.WriteLine("Please choose which users to delete: ");
-                        //Display list of all users in Program
-                        //Based on which user they delete, remove that user from the list
+                        //display all users
+                        //remove chosen users
                     }
                     else if (input == "3")
                     {
@@ -205,5 +226,36 @@ namespace ECommercePlatform.Roles
                 Console.ReadLine();
             }
         }
+    }
+}
+
+using ECommercePlatform.Roles;
+using People;
+
+namespace UserChoice
+{
+    public static class Choices
+    {
+        public static void AdminChoice()
+        {
+            Admin admin = UserCreation.CreateAdmin();
+            Console.WriteLine(admin.ToString());
+            Console.ReadLine();
+        }
+
+        public static void BuyerChoice()
+        {
+            Buyer buyer = UserCreation.CreateBuyer();
+            Console.WriteLine(buyer.ToString());
+            Console.ReadLine();
+        }
+
+        public static void SellerChoice()
+        {
+            Seller seller = UserCreation.CreateSeller();
+            Console.WriteLine(seller.ToString());
+            Console.ReadLine();
+        }
+
     }
 }
