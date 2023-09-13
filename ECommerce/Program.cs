@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ECommercePlatform
+﻿namespace ECommercePlatform
 {
     class Program
     {
@@ -41,11 +39,15 @@ namespace ECommercePlatform
                     {
                         Console.WriteLine("No products to view!");
                         Console.ReadLine();
+
                     }
                 }
                 if (input == "2")
                 {
-                    //add product
+
+                    //add id
+                    //add name of product
+                    //Description of product
                 }
                 if (input == "3")
                 {
