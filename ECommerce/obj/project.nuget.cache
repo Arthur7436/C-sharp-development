@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FfNxUDKFJE+Shbu1/TFSMMvMc1JU0g99Tl8Tu1Ej3Gbw6CeXWwbUJ2s3Uq6WMKdBJHqhMTbd2KTCoKcbDPy9Hw==",
+  "dgSpecHash": "gcgfmViULgtFuG5Jap9BPhzBO2Zdu+FdWRPR+MB8ODTXrCrKJgM2eRHsxbQCllE6rQdQvyquPHp0l63tpfjhqQ==",
   "success": true,
-  "projectFilePath": "/home/arthur/Desktop/Self_Development/C-sharp-development/ECommerce/ECommerce.csproj",
+  "projectFilePath": "C:\\C-sharp-development\\ECommerce\\ECommerce.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
