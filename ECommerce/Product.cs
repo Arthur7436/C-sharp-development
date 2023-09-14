@@ -4,13 +4,8 @@ namespace ECommerce.Product
 {
     public class Product : IProduct
     {
-        public string GetId()
+        public string GetId() //returns a random id for the product
         {
-            //Random random = new Random();
-
-            //const int maxValue = 999;
-            //int number = int.Parse(random.Next(maxValue + 1).ToString("D3"));
-            //return number;
             return Guid.NewGuid().ToString("N");
 
         }

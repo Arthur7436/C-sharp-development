@@ -45,12 +45,21 @@ namespace ECommercePlatform
                 if (input == "2")
                 {
                     Product product = new Product();
-                    //add id
+                    //add id for product
                     Console.Write("Product Id: ");
                     Console.WriteLine(product.GetId());
-                    Console.ReadLine();
+
                     //add name of product
+                    Console.WriteLine("Product name: ");
+                    string? ProductName = Console.ReadLine();
+                    product.GetNameOfProduct();
+
                     //Description of product
+                    Console.WriteLine("Description of product: ");
+                    string? DescriptionOfProduct = Console.ReadLine();
+                    product.GetDescriptionOfProduct();
+
+                    Console.ReadLine();
                 }
                 if (input == "3")
                 {
