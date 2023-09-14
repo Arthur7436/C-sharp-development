@@ -1,4 +1,4 @@
-Can you guide me as to why 'product' instance is not being added to the list and being seen? Help me to understand under the hood.
+Why can't i display the list that should show the product as an entire object?
 
 using ECommerce.Product;
 
@@ -64,13 +64,18 @@ namespace ECommercePlatform
 
                     ListOfProducts.Add(product);
 
-                    Console.WriteLine(product);
+                    //Console.WriteLine(product.Id);
+                    //Console.WriteLine(product.NameOfProduct);
+                    //Console.WriteLine(product.Description);
 
-                    Console.WriteLine(ListOfProducts[0].ToString());
+                    //Console.WriteLine(ListOfProducts[0].ToString());
 
-                    Console.WriteLine(ListOfProducts[0]);
+                    Console.WriteLine(ListOfProducts); //List is not appearing...
 
-                    Console.WriteLine(ListOfProducts.ToArray());
+                    //foreach (Product product in ListOfProducts)
+                    //{
+                    //    Console.WriteLine(product.ToString());
+                    //}
 
 
 
@@ -103,37 +108,3 @@ namespace ECommercePlatform
         }
     }
 }
-
-namespace ECommerce.Product
-{
-    //public class Product : IProduct
-    //{
-    //    public string GetId() //returns a random id for the product
-    //    {
-    //        return Guid.NewGuid().ToString("N");
-
-    //    }
-
-    //    public string GetNameOfProduct()
-    //    {
-
-    //        return "Test";
-    //    }
-
-    //    public string GetDescriptionOfProduct()
-    //    {
-    //        return "Test";
-    //    }
-    //}
-
-    public class Product
-    {
-        public string Id { get; set; }
-        public string NameOfProduct { get; set; }
-        public string Description { get; set; }
-    }
-
-
-
-}
-
