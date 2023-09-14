@@ -6,17 +6,21 @@ namespace ECommerce.Product
     {
         public int GetId()
         {
-            return 0;
+            Random random = new Random();
+
+            const int maxValue = 999;
+            int number = int.Parse(random.Next(maxValue + 1).ToString("D3"));
+            return number;
         }
 
         public string GetNameOfProduct()
         {
-            return 0;
+            return "Test";
         }
 
         public string GetDescriptionOfProduct()
         {
-            return 0;
+            return "Test";
         }
     }
 }

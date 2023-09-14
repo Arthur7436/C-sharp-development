@@ -1,10 +1,12 @@
-﻿namespace ECommercePlatform
+﻿using ECommerce.Product;
+
+namespace ECommercePlatform
 {
     class Program
     {
         static void Main(string[] args)
         {
-            List<string> products = new List<string>();
+            List<string> ListOfProducts = new List<string>();
             do
             {
                 Console.Clear();
@@ -35,16 +37,18 @@
                 else if (input == "1")
                 {
                     //view all products
-                    if (products == null || products.Count == 0)
+                    if (ListOfProducts == null || ListOfProducts.Count == 0)
                     {
                         Console.WriteLine("No products to view!");
-                        Console.ReadLine();
+                        Console.ReadLine(Product.G);
 
                     }
                 }
                 if (input == "2")
                 {
                     //add id
+                    Console.Write("Product Id: ");
+                    Console.WriteLine()
                     //add name of product
                     //Description of product
                 }
