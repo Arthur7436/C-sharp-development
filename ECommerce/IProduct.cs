@@ -2,7 +2,7 @@
 {
     public interface IProduct
     {
-        int GetId();
+        string GetId();
         string GetNameOfProduct();
         string GetDescriptionOfProduct();
 

@@ -40,15 +40,15 @@ namespace ECommercePlatform
                     if (ListOfProducts == null || ListOfProducts.Count == 0)
                     {
                         Console.WriteLine("No products to view!");
-                        Console.ReadLine(Product.G);
-
                     }
                 }
                 if (input == "2")
                 {
+                    Product product = new Product();
                     //add id
                     Console.Write("Product Id: ");
-                    Console.WriteLine()
+                    Console.WriteLine(product.GetId());
+                    Console.ReadLine();
                     //add name of product
                     //Description of product
                 }
