@@ -1,4 +1,5 @@
 ﻿using ECommerce.Product;
+using Newtonsoft.Json;
 
 namespace ECommercePlatform
 {
@@ -7,6 +8,7 @@ namespace ECommercePlatform
         static void Main(string[] args)
         {
             List<Product> ListOfProducts = new List<Product>();
+            string jsonList = JsonConvert.SerializeObject(ListOfProducts); //convert the list into JSON format
 
             do
             {
@@ -27,6 +29,12 @@ namespace ECommercePlatform
                 {
                     AddProduct(ListOfProducts!);
 
+
+                    //when a product has been added, store object in the Test.txt file.
+                    string file = @"C:\FileStorage\Test.txt";
+                    string text = $"{jsonList}";
+                    File.WriteAllText(file, text);
+
                 }
                 if (input == "3")
                 {
@@ -38,6 +46,8 @@ namespace ECommercePlatform
 
         private static void ViewProduct(List<Product> ListOfProducts)
         {
+            //view all products from the text file
+
             //view all products
             if (ListOfProducts == null || ListOfProducts.Count == 0)
             {

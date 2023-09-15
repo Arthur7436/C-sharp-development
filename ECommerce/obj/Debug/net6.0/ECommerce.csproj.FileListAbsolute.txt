@@ -27,3 +27,6 @@ C:\C-sharp-development\ECommerce\obj\Debug\net6.0\refint\ECommerce.dll
 C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.pdb
 C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.genruntimeconfig.cache
 C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ref\ECommerce.dll
+C:\C-sharp-development\ECommerce\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.csproj.AssemblyReference.cache
+C:\C-sharp-development\ECommerce\obj\Debug\net6.0\ECommerce.csproj.CopyComplete
