@@ -80,12 +80,12 @@ namespace ECommercePlatform
                 {
                     Console.WriteLine("Which product would you like to delete?");
 
-                    foreach (Product products in ListOfProducts)
+                    foreach (Product products in ListOfProducts!)
                     {
                         Console.WriteLine(products.ToString());
                     }
 
-                    string userRemovalInput = Console.ReadLine();
+                    string userRemovalInput = Console.ReadLine()!;
 
                     //remove based on name of product
                     if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
