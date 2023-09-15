@@ -36,9 +36,18 @@ namespace ECommercePlatform
                     //string file = @"C:\FileStorage\Test.json";
                     for (int i = 0; i < ListOfProducts.Count; i++)
                     {
+                        if (ListOfProducts?.Count == 1)
+                        {
+                            string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
+                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                        }
+                        else
+                        {
+                            string json = $",{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
+                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                        }
 
-                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)},";
-                        File.AppendAllText(@"C:\FileStorage\Test.json", json);
+
                     }
 
                     //add closing bracket of file
