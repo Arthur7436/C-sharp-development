@@ -65,47 +65,9 @@ namespace ECommercePlatform
                     product.Description = DescriptionOfProductInput!;
 
                     ListOfProducts.Add(product);
-
-                    //Console.WriteLine(product.Id);
-                    //Console.WriteLine(product.NameOfProduct);
-                    //Console.WriteLine(product.Description);
-
-                    //Console.WriteLine(ListOfProducts[0].ToString());
-
-                    //Console.WriteLine(ListOfProducts); //List is not appearing...
-
-                    //foreach (Product products in ListOfProducts)
-                    //{
-                    //    Console.WriteLine(products.Id.ToString());
-                    //    Console.WriteLine(products.NameOfProduct.ToString());
-                    //    Console.WriteLine(products.Description.ToString());
-                    //}
+                    Console.WriteLine(product.ToString());
 
 
-
-
-                    //ADD THE TOSTRING METHOD AND DISPLAY THE OBJECT IN THE LIST WITH PROPERTIES 
-
-
-
-
-
-                    //add id for product
-                    //Console.Write("Product Id: ");
-                    //Console.WriteLine(product.GetId());
-
-
-
-                    //add name of product
-                    //Console.Write("Product name: ");
-                    //string? ProductName = Console.ReadLine();
-
-                    //product.GetNameOfProduct();
-
-                    //Description of product
-                    //Console.Write("Description of product: ");
-                    //string? DescriptionOfProduct = Console.ReadLine();
-                    //product.GetDescriptionOfProduct();
 
                     Console.ReadLine();
                 }
