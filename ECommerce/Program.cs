@@ -41,10 +41,12 @@ namespace ECommercePlatform
                     if (ListOfProducts == null || ListOfProducts.Count == 0)
                     {
                         Console.WriteLine("No products to view!");
+                        Console.ReadLine();
                     }
                     else
                     {
-
+                        Console.WriteLine("Here is the list of all products:");
+                        Console.WriteLine(ListOfProducts);
                     }
                 }
                 if (input == "2")
