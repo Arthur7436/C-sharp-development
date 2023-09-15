@@ -35,9 +35,11 @@ namespace ECommercePlatform
                     //string file = @"C:\FileStorage\Test.json";
                     for (int i = 0; i < ListOfProducts.Count; i++)
                     {
-                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[0], Formatting.Indented)}";
-                        File.WriteAllText(@"C:\FileStorage\Test.json", json);
+                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
+                        File.AppendAllText(@"C:\FileStorage\Test.json", json);
                     }
+
+
 
 
                     //Console.WriteLine(JsonConvert.SerializeObject(ListOfProducts[0])); //it works
