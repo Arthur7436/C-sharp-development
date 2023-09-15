@@ -46,7 +46,14 @@ namespace ECommercePlatform
                     else
                     {
                         Console.WriteLine("Here is the list of all products:");
-                        Console.WriteLine(ListOfProducts);
+
+                        //display all objects within List
+                        foreach (Product products in ListOfProducts)
+                        {
+                            Console.WriteLine(products.ToString());
+                        }
+
+                        Console.ReadLine();
                     }
                 }
                 if (input == "2")
@@ -67,15 +74,19 @@ namespace ECommercePlatform
                     product.Description = DescriptionOfProductInput!;
 
                     ListOfProducts.Add(product);
-                    Console.WriteLine(product.ToString());
 
-
-
-                    Console.ReadLine();
                 }
                 if (input == "3")
                 {
-                    //remove a product
+                    Console.WriteLine("Which product would you like to delete?");
+
+                    foreach (Product products in ListOfProducts)
+                    {
+                        Console.WriteLine(products.ToString());
+                    }
+
+                    string userRemovalInput = Console.ReadLine();
+                    if (userRemovalInput)
                 }
             } while (true);
         }
