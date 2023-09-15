@@ -32,8 +32,8 @@ namespace ECommercePlatform
 
                     //when a product has been added, store object in the Test.txt file.
                     string file = @"C:\FileStorage\Test.json";
-                    string text = "Testing";
-                    File.WriteAllText(file, jsonList);
+                    string text = $"{jsonList[0]}";
+                    File.WriteAllText(file, text);
 
                     Console.WriteLine(ListOfProducts.Count);
 
