@@ -8,7 +8,7 @@ namespace ECommercePlatform
         static void Main(string[] args)
         {
             List<Product> ListOfProducts = new List<Product>();
-            string jsonList = JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented); //convert the list into JSON format
+            //string jsonList = JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented); //convert the list into JSON format
 
             do
             {
@@ -31,9 +31,9 @@ namespace ECommercePlatform
 
 
                     //when a product has been added, store object in the Test.txt file.
-                    string file = @"C:\FileStorage\Test.json";
-                    string text = $"{jsonList[0]}";
-                    File.WriteAllText(file, text);
+                    //string file = @"C:\FileStorage\Test.json";
+                    //string text = $"{JsonConvert.SerializeObject(ListOfProducts[0])}";
+                    //File.WriteAllText(file, text);
 
                     Console.WriteLine(ListOfProducts.Count);
 
@@ -113,6 +113,20 @@ namespace ECommercePlatform
             product.Description = DescriptionOfProductInput!;
 
             ListOfProducts!.Add(product);
+
+            foreach (Product products in ListOfProducts)
+            {
+                Console.WriteLine(JsonConvert.SerializeObject(products, Formatting.Indented));//list the products in json format
+            }
+
+
+            string jsonProduct = JsonConvert.SerializeObject(product);
+            string jsonListOfProduct = JsonConvert.SerializeObject(ListOfProducts.ToString());
+
+            //Console.WriteLine(jsonProduct);
+            //Console.WriteLine(jsonListOfProduct);
+            Console.ReadLine();
+
         }
 
         private static void DisplayMenu()
