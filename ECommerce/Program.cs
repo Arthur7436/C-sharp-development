@@ -30,12 +30,17 @@ namespace ECommercePlatform
                     AddProduct(ListOfProducts!);
 
 
+
                     //when a product has been added, store object in the Test.txt file.
                     //string file = @"C:\FileStorage\Test.json";
-                    //string text = $"{JsonConvert.SerializeObject(ListOfProducts[0])}";
-                    //File.WriteAllText(file, text);
+                    for (int i = 0; i < ListOfProducts.Count; i++)
+                    {
+                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[0], Formatting.Indented)}";
+                        File.WriteAllText(@"C:\FileStorage\Test.json", json);
+                    }
 
-                    Console.WriteLine(ListOfProducts.Count);
+
+                    //Console.WriteLine(JsonConvert.SerializeObject(ListOfProducts[0])); //it works
 
                 }
                 if (input == "3")
@@ -114,14 +119,15 @@ namespace ECommercePlatform
 
             ListOfProducts!.Add(product);
 
-            foreach (Product products in ListOfProducts)
-            {
-                Console.WriteLine(JsonConvert.SerializeObject(products, Formatting.Indented));//list the products in json format
-            }
+            //foreach (Product products in ListOfProducts)
+            //{
+            //Console.WriteLine(JsonConvert.SerializeObject(products, Formatting.Indented));
+
+            //}
 
 
-            string jsonProduct = JsonConvert.SerializeObject(product);
-            string jsonListOfProduct = JsonConvert.SerializeObject(ListOfProducts.ToString());
+            //string jsonProduct = JsonConvert.SerializeObject(product);
+            //string jsonListOfProduct = JsonConvert.SerializeObject(ListOfProducts.ToString());
 
             //Console.WriteLine(jsonProduct);
             //Console.WriteLine(jsonListOfProduct);
