@@ -29,15 +29,20 @@ namespace ECommercePlatform
                 {
                     AddProduct(ListOfProducts!);
 
-
+                    //Add a bracket at the beginning of the file
+                    File.WriteAllText(@"C:\FileStorage\Test.json", "[");
 
                     //when a product has been added, store object in the Test.txt file.
                     //string file = @"C:\FileStorage\Test.json";
                     for (int i = 0; i < ListOfProducts.Count; i++)
                     {
-                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
+
+                        string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)},";
                         File.AppendAllText(@"C:\FileStorage\Test.json", json);
                     }
+
+                    //add closing bracket of file
+                    File.AppendAllText(@"C:\FileStorage\Test.json", "]");
 
 
 
