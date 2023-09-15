@@ -8,9 +8,9 @@
 
         public override string ToString() // figure how to display the entire product object with it's properties
         {
-            return $"Product Id THIS IS FROM THE PRODUCT CLASS!: {Id} \n" +
-                $"Name of Product THIS IS FROM THE PRODUCT CLASS!: {NameOfProduct} \n" +
-                $"Description of Product THIS IS FROM THE PRODUCT CLASS!: {Description}";
+            return $"Product Id: {Id} \n" +
+                $"Name of Product: {NameOfProduct} \n" +
+                $"Description of Product: {Description}";
         }
     }
 
