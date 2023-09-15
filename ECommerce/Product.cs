@@ -1,10 +1,27 @@
-﻿namespace ECommerce.Product
+﻿using ECommerce.Interface.IProduct;
+
+namespace ECommerce.Product
 {
-    public class Product
+    public class Product : IProduct
     {
         public string Id { get; set; }
         public string NameOfProduct { get; set; }
         public string Description { get; set; }
+
+        public string GetDescriptionOfProduct()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetNameOfProduct()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString() // figure how to display the entire product object with it's properties
         {
@@ -12,6 +29,8 @@
                 $"Name of Product: {NameOfProduct} \n" +
                 $"Description of Product: {Description}";
         }
+
+
     }
 
 

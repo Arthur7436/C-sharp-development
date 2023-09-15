@@ -73,7 +73,7 @@ namespace ECommercePlatform
                     string? DescriptionOfProductInput = Console.ReadLine();
                     product.Description = DescriptionOfProductInput!;
 
-                    ListOfProducts.Add(product);
+                    ListOfProducts!.Add(product);
 
                 }
                 if (input == "3")
@@ -90,7 +90,7 @@ namespace ECommercePlatform
                     //remove based on name of product
                     if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
                     {
-                        //go through the entire list and if the list object property matches the nameofproduct, remove that entire object from list
+                        //go through the entire list and if the list object property matches the NameOfProduct, remove that entire object from list
                         for (int i = 0; i < ListOfProducts.Count; i++)
                         {
                             if (ListOfProducts[i].NameOfProduct == userRemovalInput)
