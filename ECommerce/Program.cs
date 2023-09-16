@@ -58,7 +58,7 @@ namespace ECommercePlatform
                             File.AppendAllText(@"C:\FileStorage\Test.json", json);
                         }
                     }
-                    //else if there is atleast one object, append with the ,
+                    //else if there is atleast one object, append with the ,,
                     else
                     {
                         List<Product> existingProducts;
