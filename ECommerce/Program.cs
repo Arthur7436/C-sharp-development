@@ -16,21 +16,20 @@ namespace ECommercePlatform
 
                 string? input = Console.ReadLine();
 
-                if (input == "q")
+                if (input == "q") //quit the program
                 {
-                    //quit program
                     return;
                 }
-                else if (input == "1")
+                else if (input == "1") //view all products available
                 {
                     ViewProduct(ListOfProducts);
                 }
-                else if (input == "2")
+                else if (input == "2") //add the product requested by user
                 {
                     AddProduct(ListOfProducts!);
                     SerializeToJsonFile(ListOfProducts);
                 }
-                else if (input == "3")
+                else if (input == "3") //remove the product requested by user
                 {
                     RemoveProduct(ListOfProducts!);
 
