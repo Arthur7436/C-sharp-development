@@ -110,22 +110,7 @@ namespace ECommercePlatform
             string userRemovalInput = Console.ReadLine()!;
 
             //remove based on name of product
-            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //if users input equals the products name 
-            {
-                //go through the entire list and if the list object property matches the NameOfProduct, remove that entire object from list
-                for (int i = 0; i < ListOfProducts.Count; i++)
-                {
-                    else if (ListOfProducts[i].NameOfProduct == userRemovalInput)
-                    {
-                        ListOfProducts.Remove(ListOfProducts[i]);
-                    }
-                }
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Product has been successfully removed");
-                Console.ResetColor();
-
-                Console.ReadLine();
-            } else if (!ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)
+            if (!ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //if users input equals the products name 
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The product doesn't exist!");
@@ -133,6 +118,19 @@ namespace ECommercePlatform
 
                 Console.ReadLine();
                 return;
+            }
+            
+            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
+            {
+                for (int i = 0; i < ListOfProducts.Count; i++)
+                {                    
+                        ListOfProducts.Remove(ListOfProducts[i]);
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Product has been successfully removed");
+                Console.ResetColor();
+
+                Console.ReadLine();
             }
         }
 
@@ -199,7 +197,5 @@ namespace ECommercePlatform
                 Console.WriteLine(displayMenu[i]);
             }
         }
-
-
     }
 }
