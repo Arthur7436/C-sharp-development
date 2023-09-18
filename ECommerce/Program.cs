@@ -41,21 +41,14 @@ namespace ECommercePlatform
                             File.AppendAllText(@"C:\FileStorage\Test.json", json);
                         }
                     }
-                    //else if there is atleast one object, append with the ,,,
-                    else
+                    //else if there is atleast one object, add to the json file 
+                    else if (ListOfProducts?.Count > 0)
                     {
-                        List<Product> existingProducts;
-                        try
+                        for (int j = 0; j < ListOfProducts.Count; j++)
                         {
-                            string existingJson = File.ReadAllText(@"C:\FileStorage]Test.json");
-                            existingProducts = JsonConvert.DeserializeObject<List<Product>>(existingJson);
+                            string json = $",{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
+                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
                         }
-                        catch
-                        {
-                            existingProducts = new List<Product>();
-                        }
-
-
                     }
 
                     //Deserialize method
