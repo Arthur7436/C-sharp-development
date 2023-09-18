@@ -1,4 +1,4 @@
-﻿namespace ECommerce.Product
+﻿namespace ECommerce
 {
     public class Product
     {

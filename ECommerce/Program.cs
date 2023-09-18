@@ -1,9 +1,10 @@
-﻿using ECommerce.Product;
+﻿using ECommerce;
+using ECommerce.Interface.IProductOperations;
 using Newtonsoft.Json;
 
 namespace ECommercePlatform
 {
-    class Program
+    class Program : IProductOperations
     {
         static void Main(string[] args)
         {
@@ -53,7 +54,7 @@ namespace ECommercePlatform
             File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
         }
 
-        private static void ViewProduct(List<Product> ListOfProducts)
+        public void ViewProduct(List<Product> ListOfProducts)
         {
             //view all products from the text file
 
@@ -77,7 +78,7 @@ namespace ECommercePlatform
             }
         }
 
-        private static void RemoveProduct(List<Product> ListOfProducts)
+        public void RemoveProduct(List<Product> ListOfProducts)
         {
             Console.WriteLine("Which product would you like to delete?");
 
@@ -102,7 +103,7 @@ namespace ECommercePlatform
             }
         }
 
-        private static void AddProduct(List<Product> ListOfProducts)
+        public void AddProduct(List<Product> ListOfProducts)
         {
             Product product = new Product();
 
