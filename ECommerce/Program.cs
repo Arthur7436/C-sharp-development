@@ -33,9 +33,6 @@ namespace ECommercePlatform
                     string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                     File.WriteAllText(@"C:\FileStorage\Test.json", json);
 
-                    //Add a bracket at the beginning of the file
-                    //File.WriteAllText(@"C:\FileStorage\Test.json", "[");
-
                     //if there is at least one object to the list then serialize
                     if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
@@ -58,8 +55,6 @@ namespace ECommercePlatform
                         //Serialize the list with newly added product into file again
                         string newJsonString = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                         File.WriteAllText(@"C:\FileStorage\Test.json", newJsonString);
-
-
                     }
 
                     //add closing bracket of file
