@@ -36,12 +36,6 @@ namespace ECommercePlatform
                     //if there is at least one object to the list then serialize
                     if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
-                        //for (int j = 0; j < ListOfProducts.Count; j++)
-                        //{
-                        //string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                        //File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
-                        //}
-
                         string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                         File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
                     }
