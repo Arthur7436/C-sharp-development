@@ -32,8 +32,6 @@ namespace ECommercePlatform
                 else if (input == "3") //remove the product requested by user
                 {
                     RemoveProduct(ListOfProducts!);
-
-                    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                     SerializeToJsonFile(ListOfProducts);
                 }
             } while (true);
