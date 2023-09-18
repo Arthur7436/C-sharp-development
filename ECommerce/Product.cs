@@ -1,6 +1,8 @@
-﻿namespace ECommerce
+﻿using ECommerce.Interface.IProductOperations;
+
+namespace ECommerce
 {
-    public class Product
+    public class Product : IProduct
     {
         public string Id { get; set; }
         public string NameOfProduct { get; set; }
