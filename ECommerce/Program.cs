@@ -11,7 +11,7 @@ namespace ECommercePlatform
 
             do
             {
-                ListOfProducts = DeserializeJsonFileToList();
+                ListOfProducts = DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
                 DisplayMenu();
 
