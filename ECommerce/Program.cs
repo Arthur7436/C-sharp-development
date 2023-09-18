@@ -28,17 +28,23 @@ namespace ECommercePlatform
                 else if (input == "2")
                 {
                     AddProduct(ListOfProducts!);
-
-                    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
-                    File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
+                    SerializeToJsonFile(ListOfProducts);
                 }
                 else if (input == "3")
                 {
                     RemoveProduct(ListOfProducts!);
+
+                    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+                    SerializeToJsonFile(ListOfProducts);
                 }
             } while (true);
         }
 
+        private static void SerializeToJsonFile(List<Product> ListOfProducts)
+        {
+            string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+            File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
+        }
 
         private static void ViewProduct(List<Product> ListOfProducts)
         {
