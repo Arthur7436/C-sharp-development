@@ -25,7 +25,7 @@ namespace ECommercePlatform
                 {
                     ViewProduct(ListOfProducts);
                 }
-                if (input == "2")
+                else if (input == "2")
                 {
                     AddProduct(ListOfProducts!);
 
@@ -48,11 +48,11 @@ namespace ECommercePlatform
 
                         //Deserialize the entire file into a list
                         string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json");
-                        List<Product> listWithJson = new List<Product>();
+                        //List<Product> listWithJson = new List<Product>();
 
-                        //listWithJson = JsonConvert.DeserializeObject<List<Product>>(jsonString)!;
+                        var list = JsonConvert.DeserializeObject<List<Product>>(jsonString)!;
                         //Product list = JsonSerializer.Deserialize<Product>(jsonString);
-                        var list = (Product)JsonConvert.DeserializeObject(jsonString);
+                        //var list = (Product)JsonConvert.DeserializeObject(jsonString);
 
                         //Add the new product to list
                         AddProduct(ListOfProducts);
@@ -61,8 +61,9 @@ namespace ECommercePlatform
                         for (int j = 0; j < ListOfProducts.Count; j++)
                         {
                             string json = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                            File.WriteAllText(@"C:\FileStorage\Test.json", json);
                         }
+
                     }
 
                     //add closing bracket of file
@@ -71,7 +72,7 @@ namespace ECommercePlatform
                     //Console.WriteLine(JsonConvert.SerializeObject(ListOfProducts[0])); //it works
 
                 }
-                if (input == "3")
+                else if (input == "3")
                 {
                     RemoveProduct(ListOfProducts!);
                 }
