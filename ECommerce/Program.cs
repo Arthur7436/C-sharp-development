@@ -21,6 +21,7 @@ namespace ECommercePlatform
                 {
                     return;
                 }
+                //FIND A WAY TO REMOVE ALL OBJECTS IN JSON FILE
                 else if (input == "1") //view all products available
                 {
                     ViewProduct(ListOfProducts);
@@ -115,34 +116,25 @@ namespace ECommercePlatform
             string? productNameInput = Console.ReadLine();
 
             //if the name of product already exists, then notify user
-            //loop through all the nameofproducts
             for (int i = 0; i < ListOfProducts.Count; i++)
             {
                 if (ListOfProducts[i].NameOfProduct == productNameInput)
                 {
                     Console.WriteLine("This product name already exists!");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Description of product: ");
-                    string? DescriptionOfProductInput = Console.ReadLine();
-                    product.Description = DescriptionOfProductInput!;
-
-                    ListOfProducts!.Add(product);
-
                     Console.ReadLine();
+                    return;
                 }
             }
 
-            //Console.WriteLine("Description of product: ");
-            //string? DescriptionOfProductInput = Console.ReadLine();
-            //product.Description = DescriptionOfProductInput!;
+            product.NameOfProduct = productNameInput;
 
-            //ListOfProducts!.Add(product);
+            Console.WriteLine("Description of product: ");
+            string? DescriptionOfProductInput = Console.ReadLine();
+            product.Description = DescriptionOfProductInput!;
 
-            //Console.ReadLine();
+            ListOfProducts!.Add(product);
 
+            Console.ReadLine();
         }
 
         private static void DisplayMenu()
