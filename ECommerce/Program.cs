@@ -22,9 +22,27 @@ namespace ECommercePlatform
                     return;
                 }
                 //FIND A WAY TO REMOVE ALL OBJECTS IN JSON FILE
+                else if (input == "r")
+                {
+                    ////look into the json file
+                    //string file = File.ReadAllText(@"C:\FileStorage\Test.json");
+                    ////remove the objects in the file
+                    //ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(file)!;
+                    //ListOfProducts.Clear();
+                    ////deserialize empty json file into the list
+                    //string newEmptyJson = JsonConvert.SerializeObject(file)!;
+                    //File.WriteAllText(@"C:\FileStorage\Test.json", newEmptyJson);
+
+                    //remove everything in the list
+                    ListOfProducts.Clear();
+                    //push those changes and serialize as Json 
+                    string json = JsonConvert.SerializeObject(ListOfProducts);
+                    File.WriteAllText(@"C:\FileStorage\Test.json", json);
+                }
                 else if (input == "1") //view all products available
                 {
                     ViewProduct(ListOfProducts);
+
                 }
                 else if (input == "2") //add the product requested by user
                 {
