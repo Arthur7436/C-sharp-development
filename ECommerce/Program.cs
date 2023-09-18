@@ -44,6 +44,7 @@ namespace ECommercePlatform
                     //else if there is atleast one object, add to the json file 
                     else if (ListOfProducts?.Count > 1)
                     {
+                        //Why the below approach? The initial method appends all text with the comma as a result leaves the first object with a comma in front which leads to syntax error. By doing below approach, deserializing the entire list, adding the new product to the list, then serializing the entire list will effectively avoid that issue of having the comma at the first object   
                         //Deserialize the entire file into a list
                         //Add the new product to list
                         //Serialize the list with newly added product into file again
