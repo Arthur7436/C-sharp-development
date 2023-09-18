@@ -44,10 +44,23 @@ namespace ECommercePlatform
                     //else if there is atleast one object, add to the json file 
                     else if (ListOfProducts?.Count > 1)
                     {
-                        //Why the below approach? The initial method appends all text with the comma as a result leaves the first object with a comma in front which leads to syntax error. By doing below approach, deserializing the entire list, adding the new product to the list, then serializing the entire list will effectively avoid that issue of having the comma at the first object   
+                        //Why the below approach? The initial method appends all text with the comma as a result leaves the first object with a comma in front which leads to syntax error. By doing below approach, deserializing the entire list, adding the new product to the list, then serializing the entire list will effectively avoid that issue of having the comma at the first object
+
                         //Deserialize the entire file into a list
+
+                        string jsonFileName = "Test.json";
+                        string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json");
+                        ListOfProducts = (List<Product>)JsonConvert.DeserializeObject(jsonString);
+
                         //Add the new product to list
+                        AddProduct(ListOfProducts);
+
                         //Serialize the list with newly added product into file again
+                        for (int j = 0; j < ListOfProducts.Count; j++)
+                        {
+                            string json = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
+                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                        }
                     }
 
                     //add closing bracket of file
