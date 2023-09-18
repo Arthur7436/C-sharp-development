@@ -8,7 +8,6 @@ namespace ECommercePlatform
         static void Main(string[] args)
         {
             List<Product> ListOfProducts = new List<Product>();
-            //string jsonList = JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented); //convert the list into JSON format
 
             do
             {
