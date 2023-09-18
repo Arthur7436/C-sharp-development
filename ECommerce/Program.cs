@@ -112,16 +112,36 @@ namespace ECommercePlatform
             product.Id = GenerateRandomID;
 
             Console.WriteLine("Name of product: ");
-            string? ProductNameInput = Console.ReadLine();
-            product.NameOfProduct = ProductNameInput!;
+            string? productNameInput = Console.ReadLine();
 
-            Console.WriteLine("Description of product: ");
-            string? DescriptionOfProductInput = Console.ReadLine();
-            product.Description = DescriptionOfProductInput!;
+            //if the name of product already exists, then notify user
+            //loop through all the nameofproducts
+            for (int i = 0; i < ListOfProducts.Count; i++)
+            {
+                if (ListOfProducts[i].NameOfProduct == productNameInput)
+                {
+                    Console.WriteLine("This product name already exists!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Description of product: ");
+                    string? DescriptionOfProductInput = Console.ReadLine();
+                    product.Description = DescriptionOfProductInput!;
 
-            ListOfProducts!.Add(product);
+                    ListOfProducts!.Add(product);
 
-            Console.ReadLine();
+                    Console.ReadLine();
+                }
+            }
+
+            //Console.WriteLine("Description of product: ");
+            //string? DescriptionOfProductInput = Console.ReadLine();
+            //product.Description = DescriptionOfProductInput!;
+
+            //ListOfProducts!.Add(product);
+
+            //Console.ReadLine();
 
         }
 
