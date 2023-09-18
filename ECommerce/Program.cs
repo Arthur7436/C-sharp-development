@@ -32,23 +32,6 @@ namespace ECommercePlatform
                     //Add a bracket at the beginning of the file
                     File.WriteAllText(@"C:\FileStorage\Test.json", "[");
 
-                    //when a product has been added, store object in the Test.txt file.
-                    //string file = @"C:\FileStorage\Test.json";
-                    //for (int i = 0; i < ListOfProducts.Count; i++)
-                    //{
-                    //    if (ListOfProducts?.Count == 1)
-                    //    {
-                    //        string json = $"{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
-                    //        File.AppendAllText(@"C:\FileStorage\Test.json", json);
-                    //    }
-                    //    else
-                    //    {
-                    //        string json = $",{JsonConvert.SerializeObject(ListOfProducts[i], Formatting.Indented)}";
-                    //        File.AppendAllText(@"C:\FileStorage\Test.json", json);
-                    //    }
-
-
-
                     //if there is nothing to the list then append
                     if (ListOfProducts?.Count == 1)
                     {
@@ -169,18 +152,6 @@ namespace ECommercePlatform
 
             ListOfProducts!.Add(product);
 
-            //foreach (Product products in ListOfProducts)
-            //{
-            //Console.WriteLine(JsonConvert.SerializeObject(products, Formatting.Indented));
-
-            //}
-
-
-            //string jsonProduct = JsonConvert.SerializeObject(product);
-            //string jsonListOfProduct = JsonConvert.SerializeObject(ListOfProducts.ToString());
-
-            //Console.WriteLine(jsonProduct);
-            //Console.WriteLine(jsonListOfProduct);
             Console.ReadLine();
 
         }
