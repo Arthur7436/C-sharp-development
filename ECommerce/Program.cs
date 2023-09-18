@@ -11,6 +11,9 @@ namespace ECommercePlatform
 
             do
             {
+                //turn the Json file into ListOfProducts so that memory is stored
+
+
                 DisplayMenu();
 
                 string? input = Console.ReadLine();
