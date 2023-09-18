@@ -56,15 +56,6 @@ namespace ECommercePlatform
                         }
 
 
-
-                        //for (int i = 0; i < ListOfProducts.Count; i++)
-                        //{
-                        //    for (int j = 1; j < ListOfProducts.Count; j++)
-                        //    {
-                        //        string json = $",{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                        //        File.AppendAllText(@"C:\FileStorage\Test.json", json);
-                        //    }
-                        //}
                     }
 
                     //Deserialize method
