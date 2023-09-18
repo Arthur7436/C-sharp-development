@@ -32,8 +32,8 @@ namespace ECommercePlatform
                     //Add a bracket at the beginning of the file
                     File.WriteAllText(@"C:\FileStorage\Test.json", "[");
 
-                    //if there is nothing to the list then append
-                    if (ListOfProducts?.Count == 1)
+                    //if there is at least one object to the list then append
+                    if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
                         for (int j = 0; j < ListOfProducts.Count; j++)
                         {
@@ -42,7 +42,7 @@ namespace ECommercePlatform
                         }
                     }
                     //else if there is atleast one object, add to the json file 
-                    else if (ListOfProducts?.Count > 0)
+                    else if (ListOfProducts?.Count > 1)
                     {
                         for (int j = 0; j < ListOfProducts.Count; j++)
                         {
