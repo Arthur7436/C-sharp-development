@@ -121,11 +121,10 @@ namespace ECommercePlatform
             }
             
             if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
-            {
-                for (int i = 0; i < ListOfProducts.Count; i++)
-                {                    
-                        ListOfProducts.Remove(ListOfProducts[i]);
-                }
+            {                   
+                int index = ListOfProducts.IndexOf(userRemovalInput);
+                ListOfProducts.RemoveAt(index);
+                
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Product has been successfully removed");
                 Console.ResetColor();
