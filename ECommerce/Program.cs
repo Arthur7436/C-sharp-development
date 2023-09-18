@@ -12,7 +12,7 @@ namespace ECommercePlatform
             do
             {
                 ListOfProducts = DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
-
+                
                 DisplayMenu();
 
                 string? input = Console.ReadLine();
@@ -24,15 +24,6 @@ namespace ECommercePlatform
                 //FIND A WAY TO REMOVE ALL OBJECTS IN JSON FILE
                 else if (input == "r")
                 {
-                    ////look into the json file
-                    //string file = File.ReadAllText(@"C:\FileStorage\Test.json");
-                    ////remove the objects in the file
-                    //ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(file)!;
-                    //ListOfProducts.Clear();
-                    ////deserialize empty json file into the list
-                    //string newEmptyJson = JsonConvert.SerializeObject(file)!;
-                    //File.WriteAllText(@"C:\FileStorage\Test.json", newEmptyJson);
-
                     //remove everything in the list
                     ListOfProducts.Clear();
                     //push those changes and serialize as Json 
@@ -166,6 +157,7 @@ namespace ECommercePlatform
                     "1. View all products",
                     "2. Add a product",
                     "3. Remove a product",
+                    "Enter 'r' to exit the program",
                     "Enter 'q' to exit the program"
                 };
 
