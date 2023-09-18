@@ -36,11 +36,14 @@ namespace ECommercePlatform
                     //if there is at least one object to the list then serialize
                     if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
-                        for (int j = 0; j < ListOfProducts.Count; j++)
-                        {
-                            string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
-                        }
+                        //for (int j = 0; j < ListOfProducts.Count; j++)
+                        //{
+                        //string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
+                        //File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
+                        //}
+
+                        string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+                        File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
                     }
                     //else if there is atleast one object, add to the json file 
                     else if (ListOfProducts?.Count > 1)
@@ -50,18 +53,12 @@ namespace ECommercePlatform
                         //Deserialize the entire file 
                         string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json"); //read the JSON file
 
-                        ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!; //deserialize JSON string to List ListOfProducts
+                        ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!; //deserialize JSON string to <List> ListOfProducts
 
                         //Serialize the list with newly added product into file again
                         string newJsonString = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                         File.WriteAllText(@"C:\FileStorage\Test.json", newJsonString);
                     }
-
-                    //add closing bracket of file
-                    // File.AppendAllText(@"C:\FileStorage\Test.json", "]");
-
-                    //Console.WriteLine(JsonConvert.SerializeObject(ListOfProducts[0])); //it works
-
                 }
                 else if (input == "3")
                 {
