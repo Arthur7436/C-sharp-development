@@ -5,7 +5,7 @@
         public string Id { get; set; }
         public string NameOfProduct { get; set; }
         public string Description { get; set; }
-        public override string ToString() // figure how to display the entire product object with it's properties
+        public override string ToString() //convert the product into readable string
         {
             return $"Product Id: {Id} \n" +
                 $"Name of Product: {NameOfProduct} \n" +
