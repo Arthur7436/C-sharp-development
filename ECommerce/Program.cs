@@ -44,15 +44,10 @@ namespace ECommercePlatform
                     //else if there is atleast one object, add to the json file 
                     else if (ListOfProducts?.Count > 1)
                     {
-                        for (int j = 0; j < ListOfProducts.Count; j++)
-                        {
-                            string json = $",{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
-                        }
+                        //Deserialize the entire file into a list
+                        //Add the new product to list
+                        //Serialize the list with newly added product into file again
                     }
-
-                    //Deserialize method
-
 
                     //add closing bracket of file
                     File.AppendAllText(@"C:\FileStorage\Test.json", "]");
