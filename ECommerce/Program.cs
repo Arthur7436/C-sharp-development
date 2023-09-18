@@ -29,16 +29,20 @@ namespace ECommercePlatform
                 {
                     AddProduct(ListOfProducts!);
 
+                    //Add ListOfProducts List to the file
+                    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+                    File.AppendAllText(@"C:\FileStorage\Test.json", json);
+
                     //Add a bracket at the beginning of the file
-                    File.WriteAllText(@"C:\FileStorage\Test.json", "[");
+                    //File.WriteAllText(@"C:\FileStorage\Test.json", "[");
 
                     //if there is at least one object to the list then append
                     if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
                         for (int j = 0; j < ListOfProducts.Count; j++)
                         {
-                            string json = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                            string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
+                            File.AppendAllText(@"C:\FileStorage\Test.json", jsonString);
                         }
                     }
                     //else if there is atleast one object, add to the json file 
@@ -46,28 +50,24 @@ namespace ECommercePlatform
                     {
                         //Why the below approach? The initial method appends all text with the comma as a result leaves the first object with a comma in front which leads to syntax error. By doing below approach, deserializing the entire list, adding the new product to the list, then serializing the entire list will effectively avoid that issue of having the comma at the first object
 
-                        //Deserialize the entire file into a list
+                        //Deserialize the entire file 
                         string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json");
-                        //List<Product> listWithJson = new List<Product>();
 
-                        var list = JsonConvert.DeserializeObject<List<Product>>(jsonString)!;
-                        //Product list = JsonSerializer.Deserialize<Product>(jsonString);
-                        //var list = (Product)JsonConvert.DeserializeObject(jsonString);
+                        ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!;
+
 
                         //Add the new product to list
                         AddProduct(ListOfProducts);
 
                         //Serialize the list with newly added product into file again
-                        for (int j = 0; j < ListOfProducts.Count; j++)
-                        {
-                            string json = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.WriteAllText(@"C:\FileStorage\Test.json", json);
-                        }
+                        string jsonStrings = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+                        File.WriteAllText(@"C:\FileStorage\Test.json", jsonStrings);
+
 
                     }
 
                     //add closing bracket of file
-                    File.AppendAllText(@"C:\FileStorage\Test.json", "]");
+                    // File.AppendAllText(@"C:\FileStorage\Test.json", "]");
 
                     //Console.WriteLine(JsonConvert.SerializeObject(ListOfProducts[0])); //it works
 
