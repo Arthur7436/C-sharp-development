@@ -102,7 +102,7 @@ namespace ECommercePlatform
             Console.WriteLine("Which product would you like to delete?");
             Console.ResetColor();
 
-            foreach (Product products in ListOfProducts!)
+            foreach (Product products in ListOfProducts!) //print out all the products available
             {
                 Console.WriteLine(products.ToString());
             }
@@ -110,12 +110,12 @@ namespace ECommercePlatform
             string userRemovalInput = Console.ReadLine()!;
 
             //remove based on name of product
-            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
+            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //if users input equals the products name 
             {
                 //go through the entire list and if the list object property matches the NameOfProduct, remove that entire object from list
                 for (int i = 0; i < ListOfProducts.Count; i++)
                 {
-                    if (ListOfProducts[i].NameOfProduct == userRemovalInput)
+                    else if (ListOfProducts[i].NameOfProduct == userRemovalInput)
                     {
                         ListOfProducts.Remove(ListOfProducts[i]);
                     }
@@ -125,6 +125,14 @@ namespace ECommercePlatform
                 Console.ResetColor();
 
                 Console.ReadLine();
+            } else if (!ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("The product doesn't exist!");
+                Console.ResetColor();
+
+                Console.ReadLine();
+                return;
             }
         }
 
