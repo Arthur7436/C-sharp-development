@@ -55,9 +55,6 @@ namespace ECommercePlatform
 
                         ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!; //deserialize JSON string to List ListOfProducts
 
-                        //Add the new product to list
-                        AddProduct(ListOfProducts);
-
                         //Serialize the list with newly added product into file again
                         string jsonStrings = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
                         File.WriteAllText(@"C:\FileStorage\Test.json", jsonStrings);
