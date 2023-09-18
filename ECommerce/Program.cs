@@ -122,14 +122,18 @@ namespace ECommercePlatform
             
             if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
             {                   
-                int index = ListOfProducts.IndexOf(userRemovalInput);
-                ListOfProducts.RemoveAt(index);
-                
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Product has been successfully removed");
-                Console.ResetColor();
+                //loop through the whole list 
+                for (int i = 0;  i < ListOfProducts.Count; i++)
+                {
+                    //if the name of product is equal to the userRemovalInput, find the index of that object
+                    if (ListOfProducts[i].NameOfProduct == userRemovalInput)
+                    {
+                        //since index is already found, so delete from list
+                        ListOfProducts.RemoveAt(i);
 
-                Console.ReadLine();
+                        Console.ReadLine();
+                    }
+                }
             }
         }
 
