@@ -50,7 +50,7 @@ namespace ECommercePlatform
 
                         string jsonFileName = "Test.json";
                         string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json");
-                        ListOfProducts = (List<Product>)JsonConvert.DeserializeObject(jsonString);
+                        ListOfProducts = (List<Product>)JsonConvert.DeserializeObject(jsonString); //issue no deserializing into list
 
                         //Add the new product to list
                         AddProduct(ListOfProducts);
