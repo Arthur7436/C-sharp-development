@@ -21,14 +21,9 @@ namespace ECommercePlatform
                 {
                     return;
                 }
-                //FIND A WAY TO REMOVE ALL OBJECTS IN JSON FILE
-                else if (input == "r")
+                else if (input == "r") //reset the list and json file
                 {
-                    //remove everything in the list
-                    ListOfProducts.Clear();
-                    //push those changes and serialize as Json 
-                    string json = JsonConvert.SerializeObject(ListOfProducts);
-                    File.WriteAllText(@"C:\FileStorage\Test.json", json);
+                    ClearProductList(ListOfProducts);
                 }
                 else if (input == "1") //view all products available
                 {
@@ -46,6 +41,15 @@ namespace ECommercePlatform
                     SerializeToJsonFile(ListOfProducts);
                 }
             } while (true);
+        }
+        
+        private static void ClearProductList(List<Product> ListOfProducts)
+        {
+            //remove everything in the list
+            ListOfProducts.Clear();
+            //push those changes and serialize as Json 
+            string json = JsonConvert.SerializeObject(ListOfProducts);
+            File.WriteAllText(@"C:\FileStorage\Test.json", json);
         }
 
         private static List<Product> DeserializeJsonFileToList()
@@ -70,12 +74,17 @@ namespace ECommercePlatform
             //view all products
             if (ListOfProducts == null || ListOfProducts.Count == 0)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("No products to view!");
+                Console.ResetColor();
+
                 Console.ReadLine();
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Here is the list of all products:");
+                Console.ResetColor();
 
                 //display all objects within List
                 foreach (Product products in ListOfProducts)
@@ -89,7 +98,9 @@ namespace ECommercePlatform
 
         private static void RemoveProduct(List<Product> ListOfProducts)
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Which product would you like to delete?");
+            Console.ResetColor();
 
             foreach (Product products in ListOfProducts!)
             {
@@ -109,6 +120,11 @@ namespace ECommercePlatform
                         ListOfProducts.Remove(ListOfProducts[i]);
                     }
                 }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Product has been successfully removed");
+                Console.ResetColor();
+
+                Console.ReadLine();
             }
         }
 
@@ -129,7 +145,10 @@ namespace ECommercePlatform
             {
                 if (ListOfProducts[i].NameOfProduct == productNameInput)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("This product name already exists!");
+                    Console.ResetColor();
+
                     Console.ReadLine();
                     return;
                 }
@@ -142,6 +161,9 @@ namespace ECommercePlatform
             product.Description = DescriptionOfProductInput!;
 
             ListOfProducts!.Add(product);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Product added!");
+            Console.ResetColor();
 
             Console.ReadLine();
         }
@@ -149,7 +171,9 @@ namespace ECommercePlatform
         private static void DisplayMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Welcome to the Ecommerce platform!");
+            Console.ResetColor();
             Console.WriteLine("Please select one of the following: ");
 
             List<string> displayMenu = new List<string>()
@@ -157,7 +181,7 @@ namespace ECommercePlatform
                     "1. View all products",
                     "2. Add a product",
                     "3. Remove a product",
-                    "Enter 'r' to exit the program",
+                    "Enter 'r' to reset the list to null",
                     "Enter 'q' to exit the program"
                 };
 
