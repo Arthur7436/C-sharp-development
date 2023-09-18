@@ -31,18 +31,18 @@ namespace ECommercePlatform
 
                     //Add ListOfProducts List to the file
                     string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
-                    File.AppendAllText(@"C:\FileStorage\Test.json", json);
+                    File.WriteAllText(@"C:\FileStorage\Test.json", json);
 
                     //Add a bracket at the beginning of the file
                     //File.WriteAllText(@"C:\FileStorage\Test.json", "[");
 
-                    //if there is at least one object to the list then append
+                    //if there is at least one object to the list then serialize
                     if (ListOfProducts?.Count == 1) // "== 1" because there is a product already added to the list 
                     {
                         for (int j = 0; j < ListOfProducts.Count; j++)
                         {
                             string jsonString = $"{JsonConvert.SerializeObject(ListOfProducts[j], Formatting.Indented)}";
-                            File.AppendAllText(@"C:\FileStorage\Test.json", jsonString);
+                            File.WriteAllText(@"C:\FileStorage\Test.json", jsonString);
                         }
                     }
                     //else if there is atleast one object, add to the json file 
@@ -51,10 +51,9 @@ namespace ECommercePlatform
                         //Why the below approach? The initial method appends all text with the comma as a result leaves the first object with a comma in front which leads to syntax error. By doing below approach, deserializing the entire list, adding the new product to the list, then serializing the entire list will effectively avoid that issue of having the comma at the first object
 
                         //Deserialize the entire file 
-                        string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json");
+                        string jsonString = File.ReadAllText(@"C:\FileStorage\Test.json"); //read the JSON file
 
-                        ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!;
-
+                        ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(jsonString)!; //deserialize JSON string to List ListOfProducts
 
                         //Add the new product to list
                         AddProduct(ListOfProducts);
