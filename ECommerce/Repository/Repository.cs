@@ -1,4 +1,7 @@
-﻿namespace ECommerce
+﻿using ECommerce.Models;
+using Newtonsoft.Json;
+
+namespace ECommerce.Repository
 {
     public class Repository
     {
@@ -17,7 +20,7 @@
             File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
         }
 
-        public void DeleteMethod(string Id, string NameOfProduct, string Description)
+        public void AddMethod(string Id, string NameOfProduct, string Description)
         {
 
         }

@@ -1,4 +1,4 @@
-﻿namespace ECommerce.Interface.IProductOperations
+﻿namespace Ecommerce.Interfaces.IProductOperations
 {
     public interface IProduct
     {
@@ -9,3 +9,4 @@
 
     }
 }
+

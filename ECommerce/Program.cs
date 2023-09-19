@@ -1,5 +1,9 @@
-﻿using ECommerce;
+﻿using ECommerce.Repository;
 using Newtonsoft.Json;
+using ECommerce;
+using ECommerce.Models;
+using Ecommerce.Interfaces.IProductOperations;
+
 
 namespace ECommercePlatform
 {
