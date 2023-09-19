@@ -1,3 +1,1 @@
-in layman terms teach me wth examples:
-- What are enums and structs and why would they be used? I know that they can be used to create custom types but why?
-- What is the purpose of 'static' usage? What is the difference when I don't use it? In what scenario would I need this? I want to know the 'why' factor.
+Instead of using entity framework, I want to be able to build my DAL from scratch so that it can access the database. What approaches do I need to do in order to do that? 
