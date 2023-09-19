@@ -1,10 +1,6 @@
-﻿using ECommerce.Repository;
+﻿using ECommerce.Models;
+using ECommerce.Repository;
 using Newtonsoft.Json;
-using ECommerce;
-using ECommerce.Models;
-using Ecommerce.Interfaces.IProductOperations;
-
-
 namespace ECommercePlatform
 {
     class Program
@@ -15,7 +11,9 @@ namespace ECommercePlatform
 
             do
             {
-                ListOfProducts = Repository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
+                ProductRepository.ConnectToSqlDb(); //connect program to database
+
+                ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
                 DisplayMenu();
 
@@ -37,12 +35,12 @@ namespace ECommercePlatform
                 else if (input == "2") //add the product requested by user
                 {
                     AddProduct(ListOfProducts!);
-                    Repository.SerializeToJsonFile(ListOfProducts);
+                    ProductRepository.SerializeToJsonFile(ListOfProducts);
                 }
                 else if (input == "3") //remove the product requested by user
                 {
                     RemoveProduct(ListOfProducts!);
-                    Repository.SerializeToJsonFile(ListOfProducts);
+                    ProductRepository.SerializeToJsonFile(ListOfProducts);
                 }
             } while (true);
         }
