@@ -92,7 +92,7 @@ namespace ECommercePlatform
             string userRemovalInput = Console.ReadLine()!;
 
             //remove based on name of product
-            if (!ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //if users input equals the products name 
+            if (!ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //if users inputs a product that already exists => give error
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("The product doesn't exist!");
