@@ -11,7 +11,7 @@ namespace ECommercePlatform
 
             do
             {
-                ListOfProducts = DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
+                ListOfProducts = Repository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
                 DisplayMenu();
 
@@ -51,21 +51,6 @@ namespace ECommercePlatform
             string json = JsonConvert.SerializeObject(ListOfProducts);
             File.WriteAllText(@"C:\FileStorage\Test.json", json);
         }
-
-        //private static List<Product> DeserializeJsonFileToList()
-        //{
-        //    List<Product> ListOfProducts;
-        //    //turn the Json file into ListOfProducts so that memory is stored
-        //    string storedJsonMemory = File.ReadAllText(@"C:\FileStorage\Test.json");
-        //    ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(storedJsonMemory)!;
-        //    return ListOfProducts;
-        //}
-
-        //private static void SerializeToJsonFile(List<Product> ListOfProducts)
-        //{
-        //    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
-        //    File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
-        //}
 
         private static void ViewProduct(List<Product> ListOfProducts)
         {
