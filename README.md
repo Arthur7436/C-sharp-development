@@ -1,5 +1,2 @@
-IF EXISTS (
-	PRINT 'This database exists';
-)
-
-what's wrong with my sql commands in manager?
+- For my code, in what ways can i implement a generic class? When would a generic class be useful to use?
+- Currently I am unable to implement the interface to a class. The class and interface are in different folders. Issues arose once I moved them.
