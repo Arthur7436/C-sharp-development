@@ -1,4 +1,6 @@
-﻿using ECommerce.Models;
+﻿// Ignore Spelling: Json Deserialize
+
+using ECommerce.Models;
 using Newtonsoft.Json;
 
 namespace ECommerce.Repository
