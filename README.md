@@ -1,3 +1,3 @@
-- Can you give me a real life example to a problem that uses DAL ORM to make things more maintainable and non-conflicting
-- Why should i move my serialization/deserialization logic to a repository class? What is a respository class?
-- For the API section: Instead of creating another project, would it still be possible for me to implement API callings in my ECommerce project and it would still work? 
+in layman terms teach me wth examples:
+- What are enums and structs and why would they be used? I know that they can be used to create custom types but why?
+- What is the purpose of 'static' usage? What is the difference when I don't use it? In what scenario would I need this? I want to know the 'why' factor.
