@@ -8,10 +8,10 @@ namespace ECommercePlatform
         static void Main(string[] args)
         {
             List<Product> ListOfProducts = new List<Product>(); //create a list to store all products inside
+            ProductRepository.ConnectToSqlDb(); //connect program to database
 
             do
             {
-                ProductRepository.ConnectToSqlDb(); //connect program to database
 
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
