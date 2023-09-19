@@ -21,6 +21,8 @@ namespace ECommercePlatform
 
                 if (input == "q") //quit the program
                 {
+                    //close the connection of db when they click q
+                    ProductRepository.TurnOffConnectionToDb();
                     return;
                 }
                 else if (input == "r") //reset the list and json file
@@ -30,6 +32,9 @@ namespace ECommercePlatform
                 else if (input == "1") //view all products available
                 {
                     ViewProduct(ListOfProducts);
+
+                    //create sql commands to be able to read from db
+
 
                 }
                 else if (input == "2") //add the product requested by user

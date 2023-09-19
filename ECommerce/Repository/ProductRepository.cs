@@ -51,7 +51,7 @@ namespace ECommerce.Repository
                 Console.WriteLine("Connection to SQL database was successful... ");
                 Console.ResetColor();
                 Thread.Sleep(3000);
-                cnn.Close();
+                //cnn.Close(); Move this till when user enters q
             }
             catch (Exception ex) //if connection to db is unsuccessful
             {
@@ -60,6 +60,21 @@ namespace ECommerce.Repository
                 Console.ResetColor();
                 Thread.Sleep(3000);
             }
+        }
+        public static void TurnOffConnectionToDb()
+        {
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
+
+            string connetionString = null!;
+            SqlConnection cnn;
+
+            connetionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connetionString);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Database closing...");
+            Console.ResetColor();
+            cnn.Close();
         }
 
 
