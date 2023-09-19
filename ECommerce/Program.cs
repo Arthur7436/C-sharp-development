@@ -54,10 +54,7 @@ namespace ECommercePlatform
 
         private static void ViewProduct(List<Product> ListOfProducts)
         {
-            //view all products from the text file
-
-            //view all products
-            if (ListOfProducts == null || ListOfProducts.Count == 0)
+            if (ListOfProducts == null || ListOfProducts.Count == 0) //give error message if list is empty
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("No products to view!");
@@ -65,7 +62,7 @@ namespace ECommercePlatform
 
                 Console.ReadLine();
             }
-            else
+            else //list all the products
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Here is the list of all products:");
