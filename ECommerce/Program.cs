@@ -176,10 +176,10 @@ namespace ECommercePlatform
                     "Enter 'q' to exit the program"
                 };
 
-            //display menu
+
             for (int i = 0; i < displayMenu.Count; i++)
             {
-                Console.WriteLine(displayMenu[i]);
+                Console.WriteLine(displayMenu[i]); //display menu
             }
         }
     }
