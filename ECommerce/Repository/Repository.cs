@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace ECommerce
+﻿namespace ECommerce
 {
     public class Repository
     {

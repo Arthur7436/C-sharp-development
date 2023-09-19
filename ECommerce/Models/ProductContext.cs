@@ -1,9 +1,7 @@
 ﻿namespace ECommerce.Models
 {
-    public class ProductContext : DbContext
+    public class ProductContext
     {
-        public ProductContext() : base("ECommerce")
-        {
-        }
+
     }
 }
