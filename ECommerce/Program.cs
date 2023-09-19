@@ -12,7 +12,7 @@ namespace ECommercePlatform
             do
             {
                 ListOfProducts = DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
-                
+
                 DisplayMenu();
 
                 string? input = Console.ReadLine();
@@ -33,16 +33,16 @@ namespace ECommercePlatform
                 else if (input == "2") //add the product requested by user
                 {
                     AddProduct(ListOfProducts!);
-                    SerializeToJsonFile(ListOfProducts);
+                    Repository.SerializeToJsonFile(ListOfProducts);
                 }
                 else if (input == "3") //remove the product requested by user
                 {
                     RemoveProduct(ListOfProducts!);
-                    SerializeToJsonFile(ListOfProducts);
+                    Repository.SerializeToJsonFile(ListOfProducts);
                 }
             } while (true);
         }
-        
+
         private static void ClearProductList(List<Product> ListOfProducts)
         {
             //remove everything in the list
@@ -52,20 +52,20 @@ namespace ECommercePlatform
             File.WriteAllText(@"C:\FileStorage\Test.json", json);
         }
 
-        private static List<Product> DeserializeJsonFileToList()
-        {
-            List<Product> ListOfProducts;
-            //turn the Json file into ListOfProducts so that memory is stored
-            string storedJsonMemory = File.ReadAllText(@"C:\FileStorage\Test.json");
-            ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(storedJsonMemory)!;
-            return ListOfProducts;
-        }
+        //private static List<Product> DeserializeJsonFileToList()
+        //{
+        //    List<Product> ListOfProducts;
+        //    //turn the Json file into ListOfProducts so that memory is stored
+        //    string storedJsonMemory = File.ReadAllText(@"C:\FileStorage\Test.json");
+        //    ListOfProducts = JsonConvert.DeserializeObject<List<Product>>(storedJsonMemory)!;
+        //    return ListOfProducts;
+        //}
 
-        private static void SerializeToJsonFile(List<Product> ListOfProducts)
-        {
-            string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
-            File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
-        }
+        //private static void SerializeToJsonFile(List<Product> ListOfProducts)
+        //{
+        //    string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
+        //    File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
+        //}
 
         private static void ViewProduct(List<Product> ListOfProducts)
         {
@@ -119,11 +119,11 @@ namespace ECommercePlatform
                 Console.ReadLine();
                 return;
             }
-            
+
             if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
-            {                   
+            {
                 //loop through the whole list 
-                for (int i = 0;  i < ListOfProducts.Count; i++)
+                for (int i = 0; i < ListOfProducts.Count; i++)
                 {
                     //if the name of product is equal to the userRemovalInput, find the index of that object
                     if (ListOfProducts[i].NameOfProduct == userRemovalInput)
