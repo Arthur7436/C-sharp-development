@@ -44,18 +44,20 @@ namespace ECommerce.Repository
             cnn = new SqlConnection(connetionString);
 
             //See if the connection works
-            try
+            try //if connection to db is successful
             {
                 cnn.Open();
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Connection to SQL database was successful! ");
+                Console.WriteLine("Connection to SQL database was successful... ");
                 Console.ResetColor();
                 Thread.Sleep(3000);
                 cnn.Close();
             }
-            catch (Exception ex)
+            catch (Exception ex) //if connection to db is unsuccessful
             {
-                Console.WriteLine("Can not open connection ! ");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Can not open connection... ");
+                Console.ResetColor();
                 Thread.Sleep(3000);
             }
         }
