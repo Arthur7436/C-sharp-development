@@ -18,5 +18,18 @@ namespace ECommerce
             string json = $"{JsonConvert.SerializeObject(ListOfProducts, Formatting.Indented)}";
             File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
         }
+
+        public void DeleteMethod(string Id, string NameOfProduct, string Description)
+        {
+
+        }
+
+
+
+
+
+
+
+
     }
 }
