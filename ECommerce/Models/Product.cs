@@ -1,7 +1,4 @@
-﻿using ECommerce.Interface.IProductOperations;
-using System.ComponentModel.DataAnnotations;
-
-namespace ECommerce.Models
+﻿namespace ECommerce.Models
 {
     public class Product : IProduct
     {
