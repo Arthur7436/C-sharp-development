@@ -13,9 +13,5 @@ namespace ECommerce
                 $"Name of Product: {NameOfProduct} \n" +
                 $"Description of Product: {Description}";
         }
-
     }
-
-
-
 }
