@@ -102,7 +102,7 @@ namespace ECommercePlatform
                 return;
             }
 
-            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput))
+            if (ListOfProducts.Any(x => x.NameOfProduct == userRemovalInput)) //else remove the product from the list
             {
                 //loop through the whole list 
                 for (int i = 0; i < ListOfProducts.Count; i++)
@@ -110,7 +110,7 @@ namespace ECommercePlatform
                     //if the name of product is equal to the userRemovalInput, find the index of that object
                     if (ListOfProducts[i].NameOfProduct == userRemovalInput)
                     {
-                        //since index is already found, so delete from list
+                        //remove from list
                         ListOfProducts.RemoveAt(i);
 
                         Console.ReadLine();
@@ -163,7 +163,7 @@ namespace ECommercePlatform
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Welcome to the Ecommerce platform!");
+            Console.WriteLine("Welcome to the E-commerce platform!");
             Console.ResetColor();
             Console.WriteLine("Please select one of the following: ");
 
