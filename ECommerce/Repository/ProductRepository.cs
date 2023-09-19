@@ -29,7 +29,7 @@ namespace ECommerce.Repository
 
         public static void ConnectToSqlDb()
         {
-            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine);
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Storage of password in variable was successful!");
             Console.ResetColor();
@@ -37,7 +37,7 @@ namespace ECommerce.Repository
 
 
             //Attempt to connect console application to server database
-            string connetionString = null;
+            string connetionString = null!;
             SqlConnection cnn;
 
             connetionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
