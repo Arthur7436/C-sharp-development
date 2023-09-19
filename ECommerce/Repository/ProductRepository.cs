@@ -31,7 +31,7 @@ namespace ECommerce.Repository
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Storage of password in variable was successful!");
+            Console.WriteLine("Storage of password in variable was successful...");
             Console.ResetColor();
             Thread.Sleep(3000);
 
@@ -56,7 +56,7 @@ namespace ECommerce.Repository
             catch (Exception ex) //if connection to db is unsuccessful
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Can not open connection... ");
+                Console.WriteLine("Cannot open connection... ");
                 Console.ResetColor();
                 Thread.Sleep(3000);
             }
