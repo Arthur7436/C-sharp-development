@@ -220,7 +220,6 @@ namespace ECommercePlatform
             for (int i = 0; i < ListOfProducts.Count; i++)
             {
                 sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values({i + 1},'" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
-
             }
 
             //push the product into sql db
