@@ -73,7 +73,7 @@ namespace ECommerce.Repository
             Console.WriteLine("Database connection closing...");
             Console.ResetColor();
             cnn.Close();
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
         }
 
 
