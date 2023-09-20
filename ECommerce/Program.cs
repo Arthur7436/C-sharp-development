@@ -36,7 +36,6 @@ namespace ECommercePlatform
                     ViewSqlDb(); //views what is in db
 
                     Console.ReadLine();
-
                 }
                 else if (input == "2") //add the product requested by user via the console application
                 {
