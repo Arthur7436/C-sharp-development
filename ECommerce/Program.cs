@@ -136,6 +136,7 @@ namespace ECommercePlatform
 
             }
         }
+
         private static void ViewSqlDb()
         {
             //create sql commands to be able to read from db
