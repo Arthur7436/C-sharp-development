@@ -37,10 +37,13 @@ namespace ECommerce.Repository
 
 
             //Attempt to connect console application to server database
+
+            //variable declaration
             string connetionString = null!;
             SqlConnection cnn;
-
             connetionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+
+            //assign connection
             cnn = new SqlConnection(connetionString);
 
             //See if the connection works
@@ -72,7 +75,7 @@ namespace ECommerce.Repository
             cnn = new SqlConnection(connetionString);
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Database closing...");
+            Console.WriteLine("Database connection closing...");
             Console.ResetColor();
             cnn.Close();
             Thread.Sleep(3000);
