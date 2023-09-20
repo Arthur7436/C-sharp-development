@@ -40,7 +40,7 @@ namespace ECommercePlatform
                 }
                 else if (input == "2") //add the product requested by user via the console application
                 {
-                    AddProduct(ListOfProducts!);
+                    AddProductToJsonAndSqlDb(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
 
                 }
@@ -58,6 +58,18 @@ namespace ECommercePlatform
 
         private static void UpdateProduct(List<Product> ListOfProducts)
         {
+            //set sql variables
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
+
+            //Ask the user
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Which product did you want to update: ");
             Console.ResetColor();
@@ -83,11 +95,11 @@ namespace ECommercePlatform
 
                 for (int j = 0; j < ListOfProducts.Count; j++)
                 {
-                    Console.WriteLine($"{j + 1}: {productDetails[j]}");
+                    Console.WriteLine($"{j + 1}: {productDetails[j]}"); //display properties of Product that can be updated
                 }
 
                 int? numInput = int.Parse(Console.ReadLine());
-                if (numInput == 1)//HANDLE SYSTEM IF USER INPUTS NOT A NUMBER
+                if (numInput == 1) //<-------HANDLE SYSTEM IF USER INPUTS NOT A NUMBER -------->
                 {
                     Console.WriteLine("Enter new product name: ");
                     string? newProductName = Console.ReadLine();
@@ -100,6 +112,19 @@ namespace ECommercePlatform
                         {
                             ListOfProducts[i].NameOfProduct = newProductName;
                             ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
+                            //update in sql db
+                            cnn.Open();
+                            sql = "Update dbo.Product set NameOfProduct='" + $"{newProductName}" + $"' where NameOfProduct={UserInput}";
+
+                            command = new SqlCommand(sql, cnn);
+
+                            adapter.UpdateCommand = new SqlCommand(sql, cnn);
+                            adapter.UpdateCommand.ExecuteNonQuery();
+
+                            command.Dispose();
+                            cnn.Close();
+
+
 
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Product name updated!");
@@ -279,7 +304,7 @@ namespace ECommercePlatform
             }
         }
 
-        private static void AddProduct(List<Product> ListOfProducts)
+        private static void AddProductToJsonAndSqlDb(List<Product> ListOfProducts)
         {
             //set sql variables
             SqlCommand command;
