@@ -22,11 +22,6 @@ namespace ECommerce.Repository
             File.WriteAllText(@"C:\FileStorage\Test.json", json); //add ListOfProducts <List> into JSON file
         }
 
-        public void AddMethod(string Id, string NameOfProduct, string Description)
-        {
-
-        }
-
         public static void ConnectToSqlDb()
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
