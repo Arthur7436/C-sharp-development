@@ -188,12 +188,6 @@ namespace ECommercePlatform
 
                         Console.ReadLine();
                     }
-
-
-
-
-
-
                 }
             }
         }
