@@ -80,7 +80,7 @@ namespace ECommercePlatform
                         }
 
                         int? numInput = int.Parse(Console.ReadLine());
-                        if (numInput == 1)
+                        if (numInput == 1)//HANDLE SYSTEM IF USER INPUTS NOT A NUMBER
                         {
                             Console.WriteLine("Enter new product name: ");
                             string? newProductName = Console.ReadLine();
@@ -114,6 +114,11 @@ namespace ECommercePlatform
                                 {
                                     ListOfProducts[i].Description = newProductDescription;
                                     ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
+
+                                    Console.ForegroundColor = ConsoleColor.Green;
+                                    Console.WriteLine("Product description updated!");
+                                    Console.ResetColor();
+                                    Thread.Sleep(500);
                                 }
                             }
                         }
