@@ -35,36 +35,7 @@ namespace ECommercePlatform
                 {
                     ViewProduct(ListOfProducts);
 
-                    //create sql commands to be able to read from db
-                    SqlCommand command;
-                    SqlDataReader dataReader;
-                    String sql, Output = "";
-
-                    string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
-
-                    sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
-
-                    string connectionString = null!;
-                    SqlConnection cnn;
-                    connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
-
-                    //assign connection
-                    cnn = new SqlConnection(connectionString);
-                    cnn.Open();
-                    command = new SqlCommand(sql, cnn);
-                    dataReader = command.ExecuteReader();
-
-                    while (dataReader.Read())
-                    {
-                        Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
-                    }
-
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("SQL database:");
-                    Console.ResetColor();
-                    Console.WriteLine(Output);
-                    Console.ReadLine();
-
+                    ViewSqlDb();
 
                 }
                 else if (input == "2") //add the product requested by user
@@ -80,6 +51,39 @@ namespace ECommercePlatform
             } while (true);
         }
 
+        private static void ViewSqlDb()
+        {
+            //create sql commands to be able to read from db
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+
+            sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+
+            //assign connection
+            cnn = new SqlConnection(connectionString);
+            cnn.Open();
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("SQL database:");
+            Console.ResetColor();
+            Console.WriteLine(Output);
+            Console.ReadLine();
+        }
+
         private static void ClearProductList(List<Product> ListOfProducts)
         {
             //remove everything in the list
@@ -89,7 +93,7 @@ namespace ECommercePlatform
             File.WriteAllText(@"C:\FileStorage\Test.json", json);
         }
 
-        private static void ViewProduct(List<Product> ListOfProducts)
+        private static void ViewProduct(List<Product> ListOfProducts) //ListOfProducts <List> is already  deserialized into a list from the file
         {
             if (ListOfProducts == null || ListOfProducts.Count == 0) //give error message if list is empty
             {
