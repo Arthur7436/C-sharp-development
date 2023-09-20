@@ -36,12 +36,13 @@ namespace ECommercePlatform
                     ViewSqlDb();
 
                 }
-                else if (input == "2") //add the product requested by user
+                else if (input == "2") //add the product requested by user via the console application
                 {
                     AddProduct(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
 
-                    //push the list into sql db
+
+
 
                 }
                 else if (input == "3") //remove the product requested by user
@@ -158,6 +159,10 @@ namespace ECommercePlatform
                         //remove from list
                         ListOfProducts.RemoveAt(i);
 
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Product successfully removed!");
+                        Console.ResetColor();
+
                         Console.ReadLine();
                     }
                 }
@@ -166,6 +171,20 @@ namespace ECommercePlatform
 
         private static void AddProduct(List<Product> ListOfProducts)
         {
+
+            //set sql variables
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
+
+            //Create instance and add details to the instance which will be added to the list
+
             Product product = new Product();
 
             string GenerateRandomID = Guid.NewGuid().ToString("N");
@@ -200,6 +219,24 @@ namespace ECommercePlatform
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Product added!");
             Console.ResetColor();
+
+            //Loop through the list and find the row number + Id + NameOfProduct + Description in order to be sent to sql db
+            for (int i = 0; i < ListOfProducts.Count; i++)
+            {
+                sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values({i + 1},'" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
+
+            }
+
+            //push the list into sql db
+
+            command = new SqlCommand(sql, cnn);
+            adapter.InsertCommand = new SqlCommand(sql, cnn);
+
+            cnn.Open();
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            cnn.Close();
 
             Console.ReadLine();
         }
