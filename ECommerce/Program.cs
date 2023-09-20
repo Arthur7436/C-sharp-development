@@ -123,6 +123,18 @@ namespace ECommercePlatform
 
         private static void RemoveProduct(List<Product> ListOfProducts)
         {
+            //set sql variables
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
+
+            //collect info from user
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Which product would you like to delete?");
             Console.ResetColor();
@@ -131,6 +143,8 @@ namespace ECommercePlatform
             {
                 Console.WriteLine(products.ToString());
             }
+
+            //<------------PRINT OUT DB LIST AS WELL------------->
 
             string userRemovalInput = Console.ReadLine()!;
 
