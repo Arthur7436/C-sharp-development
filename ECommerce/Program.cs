@@ -41,9 +41,6 @@ namespace ECommercePlatform
                     AddProduct(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
 
-
-
-
                 }
                 else if (input == "3") //remove the product requested by user
                 {
@@ -171,7 +168,6 @@ namespace ECommercePlatform
 
         private static void AddProduct(List<Product> ListOfProducts)
         {
-
             //set sql variables
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
