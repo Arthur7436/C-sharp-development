@@ -41,7 +41,6 @@ namespace ECommercePlatform
                 {
                     AddProductToJsonAndSqlDb(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
-
                 }
                 else if (input == "3") //remove the product requested by user
                 {
