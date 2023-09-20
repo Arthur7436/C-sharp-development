@@ -51,7 +51,7 @@ namespace ECommerce.Repository
                 Console.WriteLine("Connection to SQL database was successful... ");
                 Console.ResetColor();
                 Thread.Sleep(3000);
-                //cnn.Close(); Move this till when user enters q
+                //cnn.Close(); Move this to TurnOffConnectionToDb method when user enters q
             }
             catch (Exception ex) //if connection to db is unsuccessful
             {
