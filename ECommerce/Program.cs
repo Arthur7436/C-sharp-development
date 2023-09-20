@@ -40,6 +40,9 @@ namespace ECommercePlatform
                 {
                     AddProduct(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
+
+                    //push the list into sql db
+
                 }
                 else if (input == "3") //remove the product requested by user
                 {
@@ -79,6 +82,9 @@ namespace ECommercePlatform
             Console.WriteLine("SQL database:");
             Console.ResetColor();
             Console.WriteLine(Output);
+            dataReader.Close();
+            command.Dispose();
+            cnn.Close();
             Console.ReadLine();
         }
 
