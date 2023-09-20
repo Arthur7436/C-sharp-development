@@ -49,6 +49,48 @@ namespace ECommercePlatform
                     RemoveProduct(ListOfProducts!);
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
                 }
+                else if (input == "4") //update the product requested by user
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("Which product did you want to update: ");
+                    Console.ResetColor();
+
+                    foreach (Product products in ListOfProducts)
+                    {
+                        Console.WriteLine(products);
+                    }
+
+                    string? UserInput = Console.ReadLine();
+                    //loop through list and if the name of product equals userInput then ask which they want to update: NameOfProduct or Description
+                    for (int i = 0; i < ListOfProducts.Count; i++)
+                    {
+                        if (ListOfProducts.Any(x => x.NameOfProduct == UserInput))
+                        //if (ListOfProducts[i].NameOfProduct == UserInput)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine($"Which do you want to update for '{ListOfProducts[i].NameOfProduct}':");
+                            Console.ResetColor();
+
+                            List<string> productDetails = new List<string>();
+                            productDetails.Add("Name of Product");
+                            productDetails.Add("Description of product");
+
+                            for (int j = 0; j < ListOfProducts.Count; j++)
+                            {
+                                Console.WriteLine($"{j + 1}: {productDetails[j]}");
+                            }
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("Product doesn't exist");
+                            break;
+                        }
+                    }
+
+                    Console.ReadLine();
+
+                }
             } while (true);
         }
 
