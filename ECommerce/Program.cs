@@ -83,7 +83,6 @@ namespace ECommercePlatform
             dataReader.Close();
             command.Dispose();
             cnn.Close();
-            Console.ReadLine();
         }
 
         private static void ClearProductList(List<Product> ListOfProducts)
@@ -146,7 +145,9 @@ namespace ECommercePlatform
             }
 
             //<------------PRINT OUT DB LIST AS WELL------------->
+            ViewSqlDb();
 
+            Console.Write("Input: ");
             string userRemovalInput = Console.ReadLine()!;
 
             //remove based on name of product
