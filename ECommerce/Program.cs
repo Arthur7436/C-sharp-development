@@ -35,6 +35,8 @@ namespace ECommercePlatform
 
                     ViewSqlDb(); //views what is in db
 
+                    Console.ReadLine();
+
                 }
                 else if (input == "2") //add the product requested by user via the console application
                 {
@@ -144,7 +146,6 @@ namespace ECommercePlatform
                 Console.WriteLine(products.ToString());
             }
 
-            //<------------PRINT OUT DB LIST AS WELL------------->
             ViewSqlDb();
 
             Console.Write("Input: ");
