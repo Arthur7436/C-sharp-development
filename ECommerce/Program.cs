@@ -62,31 +62,50 @@ namespace ECommercePlatform
 
                     string? UserInput = Console.ReadLine();
                     //loop through list and if the name of product equals userInput then ask which they want to update: NameOfProduct or Description
-                    for (int i = 0; i < ListOfProducts.Count; i++)
+                    List<string> productDetails = new List<string>();
+                    productDetails.Add("Name of Product");
+                    productDetails.Add("Description of product");
+
+
+
+                    if (ListOfProducts.Any(x => x.NameOfProduct == UserInput)) //if user selects a product via NameOfProduct
                     {
-                        if (ListOfProducts.Any(x => x.NameOfProduct == UserInput))
-                        //if (ListOfProducts[i].NameOfProduct == UserInput)
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"Which property did you want to update for '{UserInput}':");
+                        Console.ResetColor();
+
+                        for (int j = 0; j < ListOfProducts.Count; j++)
                         {
-                            Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.WriteLine($"Which do you want to update for '{ListOfProducts[i].NameOfProduct}':");
-                            Console.ResetColor();
-
-                            List<string> productDetails = new List<string>();
-                            productDetails.Add("Name of Product");
-                            productDetails.Add("Description of product");
-
-                            for (int j = 0; j < ListOfProducts.Count; j++)
-                            {
-                                Console.WriteLine($"{j + 1}: {productDetails[j]}");
-                            }
-
+                            Console.WriteLine($"{j + 1}: {productDetails[j]}");
                         }
-                        else
+
+                        int? numInput = int.Parse(Console.ReadLine());
+                        if (numInput == 1)
                         {
-                            Console.WriteLine("Product doesn't exist");
-                            break;
+                            Console.WriteLine("Enter new product name: ");
+                            string? newProductName = Console.ReadLine();
+
+                            //update the Object's property NameOfProduct
+                            //go through whole list and find the object's index
+                            for (int i = 0; i < ListOfProducts.Count; i++)
+                            {
+                                if (ListOfProducts[i].NameOfProduct == UserInput)
+                                {
+                                    ListOfProducts[i].NameOfProduct = newProductName;
+                                }
+                            }
+                        }
+                        else if (numInput == 2)
+                        {
+                            Console.WriteLine("Enter new product description: ");
                         }
                     }
+                    else
+                    {
+                        Console.WriteLine("Product doesn't exist");
+                        break;
+                    }
+
 
                     Console.ReadLine();
 
