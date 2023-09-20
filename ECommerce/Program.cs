@@ -92,12 +92,30 @@ namespace ECommercePlatform
                                 if (ListOfProducts[i].NameOfProduct == UserInput)
                                 {
                                     ListOfProducts[i].NameOfProduct = newProductName;
+                                    ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
+
+                                    Console.ForegroundColor = ConsoleColor.Green;
+                                    Console.WriteLine("Product name updated!");
+                                    Console.ResetColor();
+                                    Thread.Sleep(500);
                                 }
                             }
                         }
                         else if (numInput == 2)
                         {
                             Console.WriteLine("Enter new product description: ");
+                            string? newProductDescription = Console.ReadLine();
+
+                            //update the Object's property NameOfProduct
+                            //go through whole list and find the object's index
+                            for (int i = 0; i < ListOfProducts.Count; i++)
+                            {
+                                if (ListOfProducts[i].NameOfProduct == UserInput)
+                                {
+                                    ListOfProducts[i].Description = newProductDescription;
+                                    ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
+                                }
+                            }
                         }
                     }
                     else
@@ -105,10 +123,6 @@ namespace ECommercePlatform
                         Console.WriteLine("Product doesn't exist");
                         break;
                     }
-
-
-                    Console.ReadLine();
-
                 }
             } while (true);
         }
