@@ -1,6 +1,8 @@
 ﻿using ECommerce.Models;
 using ECommerce.Repository;
 using Newtonsoft.Json;
+using System.Data.SqlClient;
+
 namespace ECommercePlatform
 {
     class Program
@@ -34,6 +36,32 @@ namespace ECommercePlatform
                     ViewProduct(ListOfProducts);
 
                     //create sql commands to be able to read from db
+                    SqlCommand command;
+                    SqlDataReader dataReader;
+                    String sql, Output = "";
+
+                    string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+
+                    sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+
+                    string connectionString = null!;
+                    SqlConnection cnn;
+                    connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+
+                    //assign connection
+                    cnn = new SqlConnection(connectionString);
+                    cnn.Open();
+                    command = new SqlCommand(sql, cnn);
+                    dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
+                    }
+
+                    Console.WriteLine("This is reading from the SQL database");
+                    Console.WriteLine(Output);
+                    Console.ReadLine();
 
 
                 }

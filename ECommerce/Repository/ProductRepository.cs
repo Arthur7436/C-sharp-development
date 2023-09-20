@@ -39,12 +39,12 @@ namespace ECommerce.Repository
             //Attempt to connect console application to server database
 
             //variable declaration
-            string connetionString = null!;
+            string connectionString = null!;
             SqlConnection cnn;
-            connetionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
 
             //assign connection
-            cnn = new SqlConnection(connetionString);
+            cnn = new SqlConnection(connectionString);
 
             //See if the connection works
             try //if connection to db is successful
@@ -68,11 +68,11 @@ namespace ECommerce.Repository
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
 
-            string connetionString = null!;
+            string connectionString = null!;
             SqlConnection cnn;
 
-            connetionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
-            cnn = new SqlConnection(connetionString);
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Database connection closing...");
