@@ -31,9 +31,9 @@ namespace ECommercePlatform
                 }
                 else if (input == "1") //view all products available
                 {
-                    ViewProduct(ListOfProducts);
+                    ViewProduct(ListOfProducts); //views what is in list & JSON file
 
-                    ViewSqlDb();
+                    ViewSqlDb(); //views what is in db
 
                 }
                 else if (input == "2") //add the product requested by user via the console application
