@@ -59,7 +59,9 @@ namespace ECommercePlatform
                         Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
                     }
 
-                    Console.WriteLine("This is reading from the SQL database");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine("SQL database:");
+                    Console.ResetColor();
                     Console.WriteLine(Output);
                     Console.ReadLine();
 
