@@ -172,7 +172,7 @@ namespace ECommercePlatform
                         ListOfProducts.RemoveAt(i);
 
                         //remove product also from sql db
-                        sql = $"Delete dbo.Product where Id={i + 1}";
+                        sql = $"Delete dbo.Product where Identify={i + 1}";
 
                         command = new SqlCommand(sql, cnn);
 
