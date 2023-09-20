@@ -18,13 +18,12 @@ namespace ECommercePlatform
 
                 DisplayMenu();
 
-                string? input = Console.ReadLine();
+                string? input = Console.ReadLine(); //store the users input into variable to determine program flow
 
                 if (input == "q") //quit the program
                 {
-                    //close the connection of db when they click q
-                    ProductRepository.TurnOffConnectionToDb();
-                    return;
+                    ProductRepository.TurnOffConnectionToDb(); //close the connection of db when they click q
+                    return; //close the program
                 }
                 else if (input == "r") //reset the list and json file
                 {
