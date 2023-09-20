@@ -227,8 +227,7 @@ namespace ECommercePlatform
 
             }
 
-            //push the list into sql db
-
+            //push the product into sql db
             command = new SqlCommand(sql, cnn);
             adapter.InsertCommand = new SqlCommand(sql, cnn);
 
