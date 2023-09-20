@@ -109,7 +109,7 @@ namespace ECommercePlatform
                     Console.WriteLine(products.ToString());
                 }
 
-                Console.ReadLine();
+                Console.WriteLine();
             }
         }
 
