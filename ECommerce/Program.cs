@@ -133,6 +133,7 @@ namespace ECommercePlatform
             SqlConnection cnn;
             connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
             cnn = new SqlConnection(connectionString);
+            cnn.Open();
 
             //collect info from user
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -170,12 +171,29 @@ namespace ECommercePlatform
                         //remove from list
                         ListOfProducts.RemoveAt(i);
 
+                        //remove product also from sql db
+                        sql = $"Delete dbo.Product where Id={i + 1}";
+
+                        command = new SqlCommand(sql, cnn);
+
+                        adapter.DeleteCommand = new SqlCommand(sql, cnn);
+                        adapter.DeleteCommand.ExecuteNonQuery();
+
+                        command.Dispose();
+                        cnn.Close();
+
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Product successfully removed!");
                         Console.ResetColor();
 
                         Console.ReadLine();
                     }
+
+
+
+
+
+
                 }
             }
         }
