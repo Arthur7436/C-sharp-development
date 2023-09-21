@@ -126,11 +126,6 @@ namespace ECommercePlatform
 
                 }
 
-                //foreach (string products in productDetails)
-                //{
-                //    Console.WriteLine(products); //print out the options with numbers next to them
-                //}
-
                 int? numInput = int.Parse(Console.ReadLine());
                 if (numInput == 1) //<-------HANDLE SYSTEM IF USER INPUTS NOT A NUMBER -------->
                 {
