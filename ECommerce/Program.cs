@@ -39,12 +39,12 @@ namespace ECommercePlatform
                 }
                 else if (input == "2") //add the product requested by user via the console application
                 {
-                    ProductRepository.AddProductToJsonAndSqlDb(ListOfProducts!);
-                    ProductRepository.SerializeToJsonFile(ListOfProducts);
+                    ProductRepository.AddProductToJsonAndSqlDb(ListOfProducts!); //Add product to JSON file and SQL db
+                    ProductRepository.SerializeToJsonFile(ListOfProducts); //Serialize the updated list to the JSON file
                 }
                 else if (input == "3") //remove the product requested by user
                 {
-                    ProductRepository.RemoveProduct(ListOfProducts!);
+                    ProductRepository.RemoveProduct(ListOfProducts!);//removes the requested product
                     ProductRepository.SerializeToJsonFile(ListOfProducts);
                 }
                 else if (input == "4") //update the product requested by user
