@@ -7,7 +7,7 @@ namespace ECommerce.Models
     {
         [ScaffoldColumn(false)]
         public string? Id { get; set; }
-        [Required, StringLength(50), Display(Name = "Name")]
+        [Required, StringLength(50), Display(Name = "NameOfProduct")]
         public string? NameOfProduct { get; set; }
         [Required, StringLength(50), Display(Name = "Description")]
         public string? Description { get; set; }
