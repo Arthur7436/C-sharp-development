@@ -119,7 +119,7 @@ namespace ECommercePlatform
                 Console.WriteLine($"Which property did you want to update for '{UserInput}':");
                 Console.ResetColor();
 
-                for (int j = 0; j < (ListOfProducts.Count - 1); j++)
+                for (int j = 0; j < (productDetails.Count); j++)
                 {
                     Console.WriteLine($"{j + 1}: {productDetails[j]}"); //display properties of Product that can be updated
                     //if we have reached to the last option of the list then break
