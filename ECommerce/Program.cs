@@ -173,6 +173,18 @@ namespace ECommercePlatform
                             ListOfProducts[i].Description = newProductDescription;
                             ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
 
+                            //update in sql db
+                            cnn.Open();
+                            sql = "Update dbo.Product set Description='" + $"{UserInput}" + $"' where row={i + 1}"; //Update the column NameOfProduct at the row of that product
+
+                            command = new SqlCommand(sql, cnn);
+
+                            adapter.UpdateCommand = new SqlCommand(sql, cnn);
+                            adapter.UpdateCommand.ExecuteNonQuery();
+
+                            command.Dispose();
+                            cnn.Close();
+
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Product description updated!");
                             Console.ResetColor();
