@@ -119,18 +119,17 @@ namespace ECommercePlatform
                 Console.WriteLine($"Which property did you want to update for '{UserInput}':");
                 Console.ResetColor();
 
-                ////for (int j = 0; j < ListOfProducts.Count; j++)
-                //{
-                //    //Console.WriteLine($"{j + 1}: {productDetails[j]}"); //display properties of Product that can be updated
-                //    Console.WriteLine($"{productDetails[j]}");
-                //    //if we have reached to the last option of the list then break
-
-                //}
-
-                foreach (string products in productDetails)
+                for (int j = 0; j < (ListOfProducts.Count - 1); j++)
                 {
-                    Console.WriteLine(products);
+                    Console.WriteLine($"{j + 1}: {productDetails[j]}"); //display properties of Product that can be updated
+                    //if we have reached to the last option of the list then break
+
                 }
+
+                //foreach (string products in productDetails)
+                //{
+                //    Console.WriteLine(products); //print out the options with numbers next to them
+                //}
 
                 int? numInput = int.Parse(Console.ReadLine());
                 if (numInput == 1) //<-------HANDLE SYSTEM IF USER INPUTS NOT A NUMBER -------->
