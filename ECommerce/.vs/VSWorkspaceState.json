@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Interfaces",
+    "\\Models",
     "\\Repository"
   ],
-  "SelectedNode": "\\ECommerce.csproj",
+  "SelectedNode": "\\Interfaces\\IProduct.cs",
   "PreviewInSolutionExplorer": false
 }
