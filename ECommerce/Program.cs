@@ -16,29 +16,7 @@ namespace ECommercePlatform
             {
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
-                //set sql variables
-                SqlCommand command;
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                String sql = "";
-
-                string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
-                string connectionString = null!;
-                SqlConnection cnn;
-                connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
-                cnn = new SqlConnection(connectionString);
-
-                cnn.Open();
-
-                //Make Identify to be sequential numbering
-                //sql = "select Identify* row_number() over(partition by NameOfProduct order by Identify) from dbo.Product Identify";
-                sql = "DECLARE @id INT SET @id = 0 UPDATE dbo.Product SET @id = Identify = @id + 1";
-
-                command = new SqlCommand(sql, cnn);
-                adapter.UpdateCommand = new SqlCommand(sql, cnn);
-                adapter.UpdateCommand.ExecuteNonQuery();
-
-                command.Dispose();
-                cnn.Close();
+                MakeIdentifyColumnNumberingUpToDate();
 
                 DisplayMenu();
 
@@ -76,6 +54,32 @@ namespace ECommercePlatform
                     UpdateProduct(ListOfProducts!);
                 }
             } while (true);
+        }
+
+        private static void MakeIdentifyColumnNumberingUpToDate()
+        {
+            //set sql variables
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
+
+            cnn.Open();
+
+            //Make Identify to be sequential numbering
+            sql = "DECLARE @id INT SET @id = 0 UPDATE dbo.Product SET @id = Identify = @id + 1";
+
+            command = new SqlCommand(sql, cnn);
+            adapter.UpdateCommand = new SqlCommand(sql, cnn);
+            adapter.UpdateCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            cnn.Close();
         }
 
         private static void UpdateProduct(List<Product> ListOfProducts)
