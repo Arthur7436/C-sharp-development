@@ -176,7 +176,7 @@ namespace ECommercePlatform
 
                             //update in sql db
                             cnn.Open();
-                            sql = "Update dbo.Product set Description='" + $"{UserInput}" + $"' where Identify={i + 1}"; //Update the column Description at the row of that product
+                            sql = "Update dbo.Product set Description='" + $"{newProductDescription}" + $"' where Identify={i + 1}"; //Update the column Description at the row of that product
 
                             command = new SqlCommand(sql, cnn);
 
