@@ -20,6 +20,8 @@ namespace ECommercePlatform
 
                 string? input = Console.ReadLine(); //store the users input into variable to determine program flow
 
+                //FIND A WAY TO MAKE SWITCH FOR THE IF-ELSE PROGRAM FLOW AT THE BOTTOM
+
                 if (input == "q") //quit the program
                 {
                     ProductRepository.TurnOffConnectionToDb(); //close the connection of db when they click q
