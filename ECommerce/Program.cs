@@ -45,7 +45,7 @@ namespace ECommercePlatform
                 else if (input == "3") //remove the product requested by user
                 {
                     ProductRepository.RemoveProduct(ListOfProducts!);//removes the requested product
-                    ProductRepository.SerializeToJsonFile(ListOfProducts);
+                    ProductRepository.SerializeToJsonFile(ListOfProducts);//Serialize the updated list to the JSON file
                 }
                 else if (input == "4") //update the product requested by user
                 {
