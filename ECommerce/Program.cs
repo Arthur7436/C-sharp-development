@@ -16,6 +16,29 @@ namespace ECommercePlatform
             {
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
+                //set sql variables
+                SqlCommand command;
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                String sql = "";
+
+                string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+                string connectionString = null!;
+                SqlConnection cnn;
+                connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+                cnn = new SqlConnection(connectionString);
+
+                cnn.Open();
+
+                //Make Identify to be sequential numbering
+                sql = "select Identify* row_number() from dbo.Product Identify";
+
+                command = new SqlCommand(sql, cnn);
+                adapter.UpdateCommand = new SqlCommand(sql, cnn);
+                adapter.UpdateCommand.ExecuteNonQuery();
+
+                command.Dispose();
+                cnn.Close();
+
                 DisplayMenu();
 
                 string? input = Console.ReadLine(); //store the users input into variable to determine program flow
@@ -109,10 +132,10 @@ namespace ECommercePlatform
                         if (ListOfProducts[i].NameOfProduct == UserInput)
                         {
                             ListOfProducts[i].NameOfProduct = newProductName;
-                            ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten
+                            ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten at the start of Main Program
                             //update in sql db
                             cnn.Open();
-                            sql = "Update dbo.Product set NameOfProduct='" + $"{newProductName}" + $"' where NameOfProduct={UserInput}";
+                            sql = "Update dbo.Product set NameOfProduct='" + $"{UserInput}" + $"' where row={i + 1}"; //Update the column NameOfProduct at the row of that product
 
                             command = new SqlCommand(sql, cnn);
 
@@ -204,7 +227,7 @@ namespace ECommercePlatform
             File.WriteAllText(@"C:\FileStorage\Test.json", json);
         }
 
-        private static void ViewProduct(List<Product> ListOfProducts) //ListOfProducts <List> is already  deserialized into a list from the file
+        private static void ViewProduct(List<Product> ListOfProducts) //ListOfProducts <List> is already deserialized into a list from the file
         {
             if (ListOfProducts == null || ListOfProducts.Count == 0) //give error message if list is empty
             {
