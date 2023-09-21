@@ -49,7 +49,7 @@ namespace ECommercePlatform
                 }
                 else if (input == "4") //update the product requested by user
                 {
-                    ProductRepository.UpdateProduct(ListOfProducts!);
+                    ProductRepository.UpdateProduct(ListOfProducts!);//Updates the products name or description in both JSON file and SQL db
                 }
             } while (true);
         }
