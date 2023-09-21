@@ -14,9 +14,9 @@ namespace ECommercePlatform
             {
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
-                ProductRepository.MakeIdentifyColumnNumberingUpToDate();
+                ProductRepository.MakeIdentifyColumnNumberingUpToDate(); //Makes SQL db column for "Identify" in chronological numerical sequence 
 
-                ProductRepository.DisplayMenu();
+                ProductRepository.DisplayMenu();//Display the menu to user
 
                 string? input = Console.ReadLine(); //store the users input into variable to determine program flow
 
