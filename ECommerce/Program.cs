@@ -140,11 +140,12 @@ namespace ECommercePlatform
                             ProductRepository.SerializeToJsonFile(ListOfProducts); //serialize to json file so that it would not be overwritten at the start of Main Program
                             //update in sql db
                             cnn.Open();
-                            sql = "Update dbo.Product set NameOfProduct='" + $"{UserInput}" + $"' where row={i + 1}"; //Update the column NameOfProduct at the row of that product
+                            sql = "Update dbo.Product set NameOfProduct='" + $"{newProductName}" + $"' where Identify={i + 1}"; //Update the column NameOfProduct at the row of that product
 
                             command = new SqlCommand(sql, cnn);
 
                             adapter.UpdateCommand = new SqlCommand(sql, cnn);
+                            Console.WriteLine(adapter.UpdateCommand.ExecuteNonQuery());
                             adapter.UpdateCommand.ExecuteNonQuery();
 
                             command.Dispose();
@@ -175,7 +176,7 @@ namespace ECommercePlatform
 
                             //update in sql db
                             cnn.Open();
-                            sql = "Update dbo.Product set Description='" + $"{UserInput}" + $"' where row={i + 1}"; //Update the column NameOfProduct at the row of that product
+                            sql = "Update dbo.Product set Description='" + $"{UserInput}" + $"' where Identify={i + 1}"; //Update the column Description at the row of that product
 
                             command = new SqlCommand(sql, cnn);
 
