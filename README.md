@@ -1,2 +1,1 @@
-- For my code, in what ways can i implement a generic class? When would a generic class be useful to use?
-- Currently I am unable to implement the interface to a class. The class and interface are in different folders. Issues arose once I moved them.
+in my code i'm storing the sql command in a variable. I want to make a COLUMN in  TABLE to be ordered and updated in sequential numbering starting from 1. How do I do that?
