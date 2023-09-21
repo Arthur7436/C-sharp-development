@@ -25,9 +25,9 @@ namespace ECommercePlatform
                     ProductRepository.TurnOffConnectionToDb(); //close the connection of db when they click q
                     return; //close the program
                 }
-                else if (input == "r") //reset the list and json file
+                else if (input == "r") //reset program memory
                 {
-                    ProductRepository.ClearProductList(ListOfProducts);
+                    ProductRepository.ClearProductList(ListOfProducts); //reset the list and json file
                 }
                 else if (input == "1") //view all products available
                 {
