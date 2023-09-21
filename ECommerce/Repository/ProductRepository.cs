@@ -365,7 +365,7 @@ namespace ECommerce.Repository
             }
         }
 
-        public static void AddProductToJsonAndSqlDb(List<Product> ListOfProducts)
+        public static void AddProductToListAndSqlDb(List<Product> ListOfProducts)
         {
             //set sql variables
             SqlCommand command;
