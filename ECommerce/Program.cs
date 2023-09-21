@@ -30,7 +30,8 @@ namespace ECommercePlatform
                 cnn.Open();
 
                 //Make Identify to be sequential numbering
-                sql = "select Identify* row_number() from dbo.Product Identify";
+                //sql = "select Identify* row_number() over(partition by NameOfProduct order by Identify) from dbo.Product Identify";
+                sql = "DECLARE @id INT SET @id = 0 UPDATE dbo.Product SET @id = Identify = @id + 1";
 
                 command = new SqlCommand(sql, cnn);
                 adapter.UpdateCommand = new SqlCommand(sql, cnn);
