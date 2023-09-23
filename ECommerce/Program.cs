@@ -1,5 +1,6 @@
 ﻿using ECommerce.Models;
 using ECommerce.Repository;
+using System.Data.SqlClient;
 
 namespace ECommercePlatform
 {
@@ -12,6 +13,41 @@ namespace ECommercePlatform
 
             do
             {
+                //When sql db is updated then update the json file (in case via web api app, db is updated.. this initialises the list when Ecommerce app starts)
+                string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Storage of password in variable was successful...");
+                Console.ResetColor();
+                Thread.Sleep(500);
+
+                //Attempt to connect console application to server database
+
+                //variable declaration
+                string connectionString = null!;
+                SqlConnection cnn;
+                connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+
+                //assign connection
+                cnn = new SqlConnection(connectionString);
+
+                //See if the connection works
+                try //if connection to db is successful
+                {
+                    cnn.Open();
+                }
+                catch (Exception ex) //if connection to db is unsuccessful
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Cannot open connection... ");
+                    Console.ResetColor();
+                    Thread.Sleep(3000);
+                }
+
+
+
+
+
+
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
                 ProductRepository.MakeIdentifyColumnNumberingUpToDate(); //Makes SQL db column for "Identify" in chronological numerical sequence 
