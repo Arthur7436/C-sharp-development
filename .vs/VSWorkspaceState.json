@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AnimalAbstractConcrete"
+    "\\ECommerce",
+    "\\ECommerce\\obj"
   ],
+  "SelectedNode": "\\ECommerce\\ECommerce.csproj",
   "PreviewInSolutionExplorer": false
 }
