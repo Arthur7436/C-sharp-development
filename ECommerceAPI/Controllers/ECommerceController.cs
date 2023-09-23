@@ -94,6 +94,14 @@ namespace ECommerceAPI.Controllers
             command.Dispose();
             cnn.Close();
 
+            if (product.NameOfProduct == null)
+            {
+                return BadRequest("Product name is empty!");
+            }
+            if (product.Description == null)
+            {
+                return BadRequest("Product description is empty!");
+            }
 
 
         }
