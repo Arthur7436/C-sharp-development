@@ -13,7 +13,7 @@ namespace ECommercePlatform
 
             do
             {
-                //When sql db is updated then update the json file (in case via web api app, db is updated.. this initialises the list when Ecommerce app starts)
+                //Make sql db as SOT and store in the file at the beginning
                 string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Storage of password in variable was successful...");
@@ -67,6 +67,8 @@ namespace ECommercePlatform
                 dataReader.Close();
                 command.Dispose();
                 cnn.Close();
+
+                ProductRepository.SerializeToJsonFile(ListOfProducts); //serializes the most up to date list into a json file
 
 
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
