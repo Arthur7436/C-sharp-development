@@ -7,6 +7,65 @@ namespace ECommerce.Repository
 {
     public class ProductRepository
     {
+        public static void InstantiateJsonFileFromSqlDb(List<Product> ListOfProducts)
+        {
+            //Make sql db as SOT and store in the file at the beginning
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Storage of password in variable was successful...");
+            Console.ResetColor();
+            Thread.Sleep(500);
+
+            //Attempt to connect console application to server database
+
+            //variable declaration
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+
+            //assign connection
+            cnn = new SqlConnection(connectionString);
+
+            //create sql commands to be able to read from db
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+            sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            //See if the connection works
+            try //if connection to db is successful
+            {
+                cnn.Open();
+
+            }
+            catch (Exception ex) //if connection to db is unsuccessful
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Cannot open connection... ");
+                Console.ResetColor();
+                Thread.Sleep(3000);
+            }
+
+            //convert what is in the db and deserialize into json file
+            //List<Product> products = new List<Product>();
+
+            while (dataReader.Read())
+            {
+                Product product = new Product();
+                product.Id = (string)dataReader["Id"];
+                product.NameOfProduct = (string)dataReader["NameOfProduct"];
+                product.Description = (string)dataReader["Description"];
+                ListOfProducts.Add(product);
+            }
+
+            dataReader.Close();
+            command.Dispose();
+            cnn.Close();
+
+            ProductRepository.SerializeToJsonFile(ListOfProducts); //serializes the most up to date list into a json file
+        }
         public static List<Product> DeserializeJsonFileToList()
         {
             List<Product> ListOfProducts;
