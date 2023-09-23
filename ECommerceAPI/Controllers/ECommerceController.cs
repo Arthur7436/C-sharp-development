@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 namespace ECommerceAPI.Controllers
 {
     [ApiController]
-    [Route("[Ecommerce]")]
+    [Route("api/Ecommerce")]
     public class ECommerceController : ControllerBase
     {
         private readonly ILogger<ECommerceController> _logger;
@@ -83,7 +83,7 @@ namespace ECommerceAPI.Controllers
             cnn = new SqlConnection(connectionString);
 
             //push data into sql db
-            sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
+            sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{100}" + "', '" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
             command = new SqlCommand(sql, cnn);
             adapter.InsertCommand = new SqlCommand(sql, cnn);
 
