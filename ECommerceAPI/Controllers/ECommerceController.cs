@@ -17,7 +17,7 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpGet(Name = "GetECommerce")]
-        public IEnumerable<Product> Get()
+        public IActionResult Get()
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
 
@@ -48,21 +48,21 @@ namespace ECommerceAPI.Controllers
             while (dataReader.Read())
             {
                 Product product = new Product();
-                product.Id = dataReader.ToString();
-                product.NameOfProduct = dataReader.ToString();
-                product.Description = dataReader.ToString();
-
-                string jsonFormat = JsonConvert.SerializeObject(product);
-
+                product.Id = (string)dataReader["Id"];
+                product.NameOfProduct = (string)dataReader["NameOfProduct"];
+                product.Description = (string)dataReader["Description"];
                 products.Add(product);
             }
 
-
+            dataReader.Close();
+            command.Dispose();
+            cnn.Close();
 
             //serialize the list into json format
+            //string json = JsonConvert.SerializeObject(products, Formatting.Indented);
             string json = JsonConvert.SerializeObject(products, Formatting.Indented);
 
-            return json;
+            return Ok(json);
 
         }
     }
