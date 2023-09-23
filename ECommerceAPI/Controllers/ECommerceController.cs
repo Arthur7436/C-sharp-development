@@ -82,7 +82,6 @@ namespace ECommerceAPI.Controllers
             connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
             cnn = new SqlConnection(connectionString);
 
-
             //push data into sql db
             sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
             command = new SqlCommand(sql, cnn);
@@ -94,6 +93,10 @@ namespace ECommerceAPI.Controllers
             command.Dispose();
             cnn.Close();
 
+            if (product.Id == null)
+            {
+                return BadRequest("Product Id is empty!");
+            }
             if (product.NameOfProduct == null)
             {
                 return BadRequest("Product name is empty!");
