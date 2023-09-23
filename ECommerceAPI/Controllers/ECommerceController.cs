@@ -103,7 +103,7 @@ namespace ECommerceAPI.Controllers
                 return BadRequest("Product description is empty!");
             }
 
-
+            return Ok(product);
         }
     }
 
