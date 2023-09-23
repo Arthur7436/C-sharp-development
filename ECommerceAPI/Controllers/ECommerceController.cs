@@ -1,5 +1,5 @@
-using ECommerce.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Data.SqlClient;
 
 namespace ECommerceAPI.Controllers
@@ -16,11 +16,9 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpGet(Name = "GetECommerce")]
-        public IEnumerable<Product> Get()
+        public string Get()
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
-
-            _logger.LogInformation("Storage of password in variable was successful...");
 
             //Attempt to connect console application to server database
 
@@ -29,16 +27,33 @@ namespace ECommerceAPI.Controllers
             SqlConnection cnn;
             connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
 
+            //assign connection
             cnn = new SqlConnection(connectionString);
 
-            try
+            //create sql commands to be able to read from db
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+            sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+
+            //Open connection
+            cnn.Open();
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            //create a list to store the output
+            List<string> products = new List<string>();
+
+            while (dataReader.Read())
             {
-                cnn.Open();
+                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
+                products.Add(Output);
             }
-            catch (Exception ex)
-            {
-                _logger.LogInformation($"{ex.Message}");
-            }
+
+            //serialize the list into json format
+            string jsonGet = JsonConvert.SerializeObject(products, Formatting.Indented);
+
+            return jsonGet;
 
         }
     }
