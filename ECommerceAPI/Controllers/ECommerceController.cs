@@ -1,6 +1,5 @@
 using ECommerce.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using System.Data.SqlClient;
 
 namespace ECommerceAPI.Controllers
@@ -47,17 +46,20 @@ namespace ECommerceAPI.Controllers
 
             while (dataReader.Read())
             {
-                Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
+                Product product = new Product();
+                product.Id = dataReader.ToString();
+                product.NameOfProduct = dataReader.ToString();
+                product.Description = dataReader.ToString();
+
+                products.Add(product);
             }
 
-            products.Add(Output);
+
 
             //serialize the list into json format
-            string jsonGet = JsonConvert.SerializeObject(products, Formatting.Indented);
+            //products = JsonConvert.SerializeObject(products, Formatting.Indented);
 
-            foreach ()
-
-                return jsonGet;
+            return products;
 
         }
     }
