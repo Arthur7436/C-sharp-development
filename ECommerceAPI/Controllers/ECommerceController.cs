@@ -1,3 +1,4 @@
+using ECommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Data.SqlClient;
@@ -16,7 +17,7 @@ namespace ECommerceAPI.Controllers
         }
 
         [HttpGet(Name = "GetECommerce")]
-        public string Get()
+        public IEnumerable<Product> Get()
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
 
@@ -42,18 +43,21 @@ namespace ECommerceAPI.Controllers
             dataReader = command.ExecuteReader();
 
             //create a list to store the output
-            List<string> products = new List<string>();
+            List<Product> products = new List<Product>();
 
             while (dataReader.Read())
             {
                 Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + " - " + dataReader.GetValue(2) + " - " + dataReader.GetValue(3) + "\n";
-                products.Add(Output);
             }
+
+            products.Add(Output);
 
             //serialize the list into json format
             string jsonGet = JsonConvert.SerializeObject(products, Formatting.Indented);
 
-            return jsonGet;
+            foreach ()
+
+                return jsonGet;
 
         }
     }
