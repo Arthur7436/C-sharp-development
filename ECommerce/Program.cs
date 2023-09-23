@@ -30,10 +30,19 @@ namespace ECommercePlatform
                 //assign connection
                 cnn = new SqlConnection(connectionString);
 
+                //create sql commands to be able to read from db
+                SqlCommand command;
+                SqlDataReader dataReader;
+                String sql, Output = "";
+                sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+                command = new SqlCommand(sql, cnn);
+                dataReader = command.ExecuteReader();
+
                 //See if the connection works
                 try //if connection to db is successful
                 {
                     cnn.Open();
+
                 }
                 catch (Exception ex) //if connection to db is unsuccessful
                 {
@@ -43,9 +52,21 @@ namespace ECommercePlatform
                     Thread.Sleep(3000);
                 }
 
+                //convert what is in the db and deserialize into json file
+                //List<Product> products = new List<Product>();
 
+                while (dataReader.Read())
+                {
+                    Product product = new Product();
+                    product.Id = (string)dataReader["Id"];
+                    product.NameOfProduct = (string)dataReader["NameOfProduct"];
+                    product.Description = (string)dataReader["Description"];
+                    ListOfProducts.Add(product);
+                }
 
-
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
 
 
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
