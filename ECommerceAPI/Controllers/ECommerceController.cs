@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 namespace ECommerceAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[Ecommerce]")]
     public class ECommerceController : ControllerBase
     {
         private readonly ILogger<ECommerceController> _logger;
@@ -16,7 +16,7 @@ namespace ECommerceAPI.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetECommerce")]
+        [HttpGet(Name = "GetProduct")]
         public IActionResult Get()
         {
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
@@ -65,5 +65,38 @@ namespace ECommerceAPI.Controllers
             return Ok(json);
 
         }
+
+        [HttpPost]
+        [Route("/post")]
+        public IActionResult Post([FromBody] Product product) //deserialize incoming request and map it against Product object 
+        {
+
+            //set sql variables
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            String sql = "";
+
+            string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!;
+            string connectionString = null!;
+            SqlConnection cnn;
+            connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
+            cnn = new SqlConnection(connectionString);
+
+
+            //push data into sql db
+            sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
+            command = new SqlCommand(sql, cnn);
+            adapter.InsertCommand = new SqlCommand(sql, cnn);
+
+            cnn.Open();
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            cnn.Close();
+
+
+
+        }
     }
+
 }
