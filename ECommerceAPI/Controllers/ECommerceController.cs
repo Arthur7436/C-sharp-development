@@ -93,6 +93,7 @@ namespace ECommerceAPI.Controllers
             command.Dispose();
             cnn.Close();
 
+            //validate logic
             if (product.Id == null)
             {
                 return BadRequest("Product Id is empty!");
