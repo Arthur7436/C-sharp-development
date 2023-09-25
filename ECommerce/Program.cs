@@ -10,6 +10,7 @@ namespace ECommercePlatform
             List<Product> ListOfProducts = new List<Product>(); //create a list to store all products inside
             ProductRepository.ConnectToSqlDb(); //connect program to database
 
+
             do
             {
                 ProductRepository.InstantiateJsonFileFromSqlDb(ListOfProducts);
@@ -39,7 +40,7 @@ namespace ECommercePlatform
 
                     ProductRepository.ViewSqlDb(); //views what is in db
 
-                    Console.ReadLine();
+                    Thread.Sleep(500);
                 }
                 else if (input == "2") //add the product requested by user via the console application
                 {

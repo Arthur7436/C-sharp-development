@@ -12,7 +12,7 @@ namespace ECommerce.Repository
             //Make sql db as SOT and store in the file at the beginning
             string pwd = Environment.GetEnvironmentVariable("SQL_PASSWORD", EnvironmentVariableTarget.Machine)!; //used SETX command to store SQL_PASSWORD into local machine so that credentials are not hard-coded
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Storage of password in variable was successful...");
+            //Console.WriteLine("Storage of password in variable was successful...");
             Console.ResetColor();
             Thread.Sleep(500);
 
@@ -25,14 +25,6 @@ namespace ECommerce.Repository
 
             //assign connection
             cnn = new SqlConnection(connectionString);
-
-            //create sql commands to be able to read from db
-            SqlCommand command;
-            SqlDataReader dataReader;
-            String sql, Output = "";
-            sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
-            command = new SqlCommand(sql, cnn);
-            dataReader = command.ExecuteReader();
 
             //See if the connection works
             try //if connection to db is successful
@@ -48,8 +40,17 @@ namespace ECommerce.Repository
                 Thread.Sleep(3000);
             }
 
+            //create sql commands to be able to read from db
+            SqlCommand command;
+            SqlDataReader dataReader;
+            String sql, Output = "";
+            sql = "Select Identify,Id,NameOfProduct,Description from dbo.Product";
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+
             //convert what is in the db and deserialize into json file
-            //List<Product> products = new List<Product>();
+            List<Product> products = new List<Product>();
 
             while (dataReader.Read())
             {
@@ -57,14 +58,14 @@ namespace ECommerce.Repository
                 product.Id = (string)dataReader["Id"];
                 product.NameOfProduct = (string)dataReader["NameOfProduct"];
                 product.Description = (string)dataReader["Description"];
-                ListOfProducts.Add(product);
+                products.Add(product);
             }
 
             dataReader.Close();
             command.Dispose();
             cnn.Close();
 
-            ProductRepository.SerializeToJsonFile(ListOfProducts); //serializes the most up to date list into a json file
+            ProductRepository.SerializeToJsonFile(products); //serializes the most up to date list into a json file
         }
         public static List<Product> DeserializeJsonFileToList()
         {
@@ -407,7 +408,7 @@ namespace ECommerce.Repository
                         sql = $"Delete dbo.Product where Identify={i + 1}";
 
                         command = new SqlCommand(sql, cnn);
-
+                        cnn.Open();
                         adapter.DeleteCommand = new SqlCommand(sql, cnn);
                         adapter.DeleteCommand.ExecuteNonQuery();
 
