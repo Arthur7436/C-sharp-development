@@ -100,13 +100,10 @@ namespace ECommerceAPI.Controllers
             }
 
             //find the exact amount of products in the list
+            int numOfProducts = products.Count();
 
-
-            //find the last row number and store in variable
             //store the var in sql str below
-
-
-            sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{100}" + "', '" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
+            sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{numOfProducts + 1}" + "', '" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
             command = new SqlCommand(sql, cnn);
             adapter.InsertCommand = new SqlCommand(sql, cnn);
 
