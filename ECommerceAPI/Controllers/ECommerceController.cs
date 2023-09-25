@@ -72,6 +72,7 @@ namespace ECommerceAPI.Controllers
         {
 
             //set sql variables
+            SqlDataReader dataReader;
             SqlCommand command;
             SqlDataAdapter adapter = new SqlDataAdapter();
             String sql = "";
@@ -82,7 +83,21 @@ namespace ECommerceAPI.Controllers
             connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
             cnn = new SqlConnection(connectionString);
 
-            //push data into sql db
+
+            //find a way to create the correct Identify value
+            //go through the sql db, specifically the Identify column
+            //Open connection
+            cnn.Open();
+            command = new SqlCommand(sql, cnn);
+            dataReader = command.ExecuteReader();
+
+            //create a list to store the output
+            List<Product> products = new List<Product>();
+
+            //find the last row number and store in variable
+            //store the var in sql str below
+
+
             sql = $"Insert into dbo.Product (Identify,Id,NameOfProduct,Description) values('" + $"{100}" + "', '" + $"{product.Id}" + "', '" + $"{product.NameOfProduct}" + "' , '" + $"{product.Description}" + "')";
             command = new SqlCommand(sql, cnn);
             adapter.InsertCommand = new SqlCommand(sql, cnn);
