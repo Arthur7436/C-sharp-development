@@ -13,7 +13,7 @@ namespace ECommercePlatform
 
             do
             {
-                ProductRepository.InstantiateJsonFileFromSqlDb(ListOfProducts);
+                ProductRepository.InstantiateJsonFileFromSqlDb(ListOfProducts); //json file is to reflect sql db at all times
 
                 ListOfProducts = ProductRepository.DeserializeJsonFileToList(); //allows product stored in file as memory upon start up
 
