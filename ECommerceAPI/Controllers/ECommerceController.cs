@@ -83,8 +83,6 @@ namespace ECommerceAPI.Controllers
             connectionString = $"Data Source=AUL0953;Initial Catalog=ProductDB;User ID=sa;Password={pwd}";
             cnn = new SqlConnection(connectionString);
 
-
-            //find a way to create the correct Identify value
             //go through the sql db, specifically the Identify column
             //Open connection
             cnn.Open();
@@ -93,6 +91,16 @@ namespace ECommerceAPI.Controllers
 
             //create a list to store the output
             List<Product> products = new List<Product>();
+
+            while (dataReader.Read())
+            {
+                Product identify = new Product();
+                identify.Id = (string)dataReader["Id"];
+                products.Add(identify);
+            }
+
+            //find the exact amount of products in the list
+
 
             //find the last row number and store in variable
             //store the var in sql str below
